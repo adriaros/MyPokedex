@@ -10,16 +10,31 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    var coordinator: Coordinator?
+    var coordinator: Coordinator
+    var rootViewController: UIViewController
     
     override init() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        coordinator = MainCoordinator(window: window, tabBarController: TabBarController())
+        rootViewController = UIViewController()
+        coordinator = MainCoordinator(rootViewController: rootViewController, tabBarController: TabBarController())
     }
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
-        coordinator?.start()
+        window?.rootViewController = rootViewController
+        window?.makeKeyAndVisible()
+        
+        let homeCoordinator = HomeCoordinator()
+        homeCoordinator.start()
+        
+        let favouritesCoordinator = FavouritesCoordinator()
+        favouritesCoordinator.start()
+        
+        let profileCoordinator = ProfileCoordinator()
+        profileCoordinator.start()
+        
+        coordinator.childCoordinators = [homeCoordinator, favouritesCoordinator, profileCoordinator]
+        coordinator.start()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

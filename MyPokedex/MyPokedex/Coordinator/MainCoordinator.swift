@@ -11,38 +11,39 @@ import UIKit
 class MainCoordinator: Coordinator {
     
     var childCoordinators: [Coordinator] = []
-    var navigationController: UINavigationController
+    var navigationController: UINavigationController?
     
-    let window: UIWindow?
-    let tabBarController: TabBarController!
+    let tabBarController: TabBarController
+    let rootViewController: UIViewController
     
-    init(window: UIWindow?, tabBarController: TabBarController) {
-        self.window = window
+    init(rootViewController: UIViewController, tabBarController: TabBarController) {
         self.tabBarController = tabBarController
-        self.navigationController = UINavigationController()
+        self.rootViewController = rootViewController
     }
     
     func start() {
         
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
+        guard let home = childCoordinators[0].navigationController else {
+            return
+        }
         
-        let homeViewController = UIViewController()
-        homeViewController.view.backgroundColor = .systemBackground
+        home.tabBarItem = UITabBarItem(title: "Home", image: ImageAsset.TabBar.home.image, tag: 0)
         
-        let favouritesViewController = UIViewController()
-        favouritesViewController.view.backgroundColor = .systemBackground
+        guard let favourites = childCoordinators[1].navigationController else {
+            return
+        }
         
-        let profileViewController = UIViewController()
-        profileViewController.view.backgroundColor = .systemBackground
+        favourites.tabBarItem = UITabBarItem(title: "Favourites", image: ImageAsset.TabBar.home.image, tag: 1)
         
-        homeViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
-        favouritesViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
-        profileViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 2)
+        guard let profile = childCoordinators[2].navigationController else {
+            return
+        }
         
-        tabBarController.viewControllers = [homeViewController, favouritesViewController, profileViewController]
+        profile.tabBarItem = UITabBarItem(title: "Profile", image: ImageAsset.TabBar.home.image, tag: 2)
+        
+        tabBarController.viewControllers = [home, favourites, profile]
         tabBarController.modalPresentationStyle = .fullScreen
         
-        navigationController.present(tabBarController, animated: false)
+        rootViewController.present(tabBarController, animated: false)
     }
 }

@@ -9,12 +9,12 @@ import UIKit
 
 enum ImageAsset {
     
-    enum Splash: String {
+    enum TabBar: String {
         
         var image: UIImage? {
             return UIImage(named: self.rawValue)?.withRenderingMode(.alwaysOriginal)
         }
         
-        case launch = "Launch"
+        case home = "face.smiling"
     }
 }
