@@ -10,28 +10,31 @@ import UIKit
 
 class MainCoordinator: Coordinator {
     
+    var childCoordinators: [Coordinator] = []
+    var navigationController: UINavigationController
+    
     let window: UIWindow?
     let tabBarController: TabBarController!
     
     init(window: UIWindow?, tabBarController: TabBarController) {
         self.window = window
         self.tabBarController = tabBarController
+        self.navigationController = UINavigationController()
     }
     
     func start() {
         
-        let rootViewController = UIViewController()
-        window?.rootViewController = rootViewController
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         
         let homeViewController = UIViewController()
-        homeViewController.view.backgroundColor = .red
+        homeViewController.view.backgroundColor = .systemBackground
         
         let favouritesViewController = UIViewController()
-        favouritesViewController.view.backgroundColor = .blue
+        favouritesViewController.view.backgroundColor = .systemBackground
         
         let profileViewController = UIViewController()
-        profileViewController.view.backgroundColor = .yellow
+        profileViewController.view.backgroundColor = .systemBackground
         
         homeViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
         favouritesViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
@@ -40,6 +43,6 @@ class MainCoordinator: Coordinator {
         tabBarController.viewControllers = [homeViewController, favouritesViewController, profileViewController]
         tabBarController.modalPresentationStyle = .fullScreen
         
-        rootViewController.present(tabBarController, animated: false)
+        navigationController.present(tabBarController, animated: false)
     }
 }
