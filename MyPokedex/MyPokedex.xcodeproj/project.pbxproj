@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1117824927CBEF05008F8B8F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117824827CBEF05008F8B8F /* Coordinator.swift */; };
+		1117824B27CBF037008F8B8F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117824A27CBF037008F8B8F /* MainCoordinator.swift */; };
+		1117825327CBF730008F8B8F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117825227CBF730008F8B8F /* main.swift */; };
 		11A814EC27CBDF07001E2485 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A814EB27CBDF07001E2485 /* AppDelegate.swift */; };
 		11A814EE27CBDF07001E2485 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A814ED27CBDF07001E2485 /* SceneDelegate.swift */; };
-		11A814F027CBDF07001E2485 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A814EF27CBDF07001E2485 /* ViewController.swift */; };
-		11A814F327CBDF07001E2485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11A814F127CBDF07001E2485 /* Main.storyboard */; };
+		11A814F027CBDF07001E2485 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A814EF27CBDF07001E2485 /* TabBarController.swift */; };
 		11A814F527CBDF08001E2485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A814F427CBDF08001E2485 /* Assets.xcassets */; };
 		11A814F827CBDF08001E2485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11A814F627CBDF08001E2485 /* LaunchScreen.storyboard */; };
 		11A8150127CBE2DC001E2485 /* ImageAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A8150027CBE2DC001E2485 /* ImageAssets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1117824827CBEF05008F8B8F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		1117824A27CBF037008F8B8F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		1117825227CBF730008F8B8F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		11A814E827CBDF07001E2485 /* MyPokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A814EB27CBDF07001E2485 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11A814ED27CBDF07001E2485 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		11A814EF27CBDF07001E2485 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		11A814F227CBDF07001E2485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		11A814EF27CBDF07001E2485 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		11A814F427CBDF08001E2485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11A814F727CBDF08001E2485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11A814F927CBDF08001E2485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,6 +43,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1117824727CBEEF3008F8B8F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1117824827CBEF05008F8B8F /* Coordinator.swift */,
+				1117824A27CBF037008F8B8F /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		1117824C27CBF0AE008F8B8F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1117825227CBF730008F8B8F /* main.swift */,
+				11A814EB27CBDF07001E2485 /* AppDelegate.swift */,
+				11A814ED27CBDF07001E2485 /* SceneDelegate.swift */,
+				11A814F627CBDF08001E2485 /* LaunchScreen.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1117824F27CBF26A008F8B8F /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				11A814EF27CBDF07001E2485 /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		11A814DF27CBDF07001E2485 = {
 			isa = PBXGroup;
 			children = (
@@ -58,12 +90,10 @@
 		11A814EA27CBDF07001E2485 /* MyPokedex */ = {
 			isa = PBXGroup;
 			children = (
+				1117824F27CBF26A008F8B8F /* TabBar */,
+				1117824727CBEEF3008F8B8F /* Coordinator */,
 				11A814FF27CBE2B9001E2485 /* Assets */,
-				11A814EB27CBDF07001E2485 /* AppDelegate.swift */,
-				11A814ED27CBDF07001E2485 /* SceneDelegate.swift */,
-				11A814EF27CBDF07001E2485 /* ViewController.swift */,
-				11A814F127CBDF07001E2485 /* Main.storyboard */,
-				11A814F627CBDF08001E2485 /* LaunchScreen.storyboard */,
+				1117824C27CBF0AE008F8B8F /* Main */,
 				11A814F927CBDF08001E2485 /* Info.plist */,
 			);
 			path = MyPokedex;
@@ -138,7 +168,6 @@
 			files = (
 				11A814F827CBDF08001E2485 /* LaunchScreen.storyboard in Resources */,
 				11A814F527CBDF08001E2485 /* Assets.xcassets in Resources */,
-				11A814F327CBDF07001E2485 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,8 +178,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11A814F027CBDF07001E2485 /* ViewController.swift in Sources */,
+				11A814F027CBDF07001E2485 /* TabBarController.swift in Sources */,
+				1117825327CBF730008F8B8F /* main.swift in Sources */,
+				1117824B27CBF037008F8B8F /* MainCoordinator.swift in Sources */,
 				11A814EC27CBDF07001E2485 /* AppDelegate.swift in Sources */,
+				1117824927CBEF05008F8B8F /* Coordinator.swift in Sources */,
 				11A8150127CBE2DC001E2485 /* ImageAssets.swift in Sources */,
 				11A814EE27CBDF07001E2485 /* SceneDelegate.swift in Sources */,
 			);
@@ -159,14 +191,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		11A814F127CBDF07001E2485 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				11A814F227CBDF07001E2485 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		11A814F627CBDF08001E2485 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -306,7 +330,6 @@
 				INFOPLIST_FILE = MyPokedex/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +357,6 @@
 				INFOPLIST_FILE = MyPokedex/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
