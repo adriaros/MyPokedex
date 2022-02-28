@@ -14,21 +14,16 @@ class HomeCoordinator: Coordinator {
     var navigationController: UINavigationController?
     
     func start() {
-        let homeViewController = HomeViewController()
-        homeViewController.view.backgroundColor = .systemBackground
+        let homeViewController = HomeRouter.create(coordinator: self)
         navigationController = UINavigationController(rootViewController: homeViewController)
     }
-}
-
-class HomeViewController: UIViewController {
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
+    func pushToDetail(animated: Bool) {
+        let detailViewController = DetailRouter.create()
+        navigationController?.pushViewController(detailViewController, animated: animated)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.isNavigationBarHidden = false
+    func pop(animated: Bool) {
+        navigationController?.popViewController(animated: animated)
     }
 }

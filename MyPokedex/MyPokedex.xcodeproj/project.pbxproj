@@ -13,6 +13,34 @@
 		1117825527CBFFEA008F8B8F /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117825427CBFFEA008F8B8F /* HomeCoordinator.swift */; };
 		1117825727CC0046008F8B8F /* FavouritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117825627CC0046008F8B8F /* FavouritesCoordinator.swift */; };
 		1117825927CC005F008F8B8F /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117825827CC005F008F8B8F /* ProfileCoordinator.swift */; };
+		114E0AC727CD5A0800147365 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AC127CD5A0800147365 /* HomePresenter.swift */; };
+		114E0AC827CD5A0800147365 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AC227CD5A0800147365 /* HomeRouter.swift */; };
+		114E0AC927CD5A0800147365 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AC327CD5A0800147365 /* HomeViewController.swift */; };
+		114E0ACA27CD5A0800147365 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AC427CD5A0800147365 /* HomeProtocols.swift */; };
+		114E0ACB27CD5A0800147365 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AC527CD5A0800147365 /* HomeInteractor.swift */; };
+		114E0ACC27CD5A0800147365 /* HomeEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AC627CD5A0800147365 /* HomeEntities.swift */; };
+		114E0ACE27CD5A6E00147365 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114E0ACD27CD5A6E00147365 /* HomeViewController.xib */; };
+		114E0AD527CD5C6300147365 /* FavouritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0ACF27CD5C6300147365 /* FavouritesPresenter.swift */; };
+		114E0AD627CD5C6300147365 /* FavouritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AD027CD5C6300147365 /* FavouritesRouter.swift */; };
+		114E0AD727CD5C6300147365 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AD127CD5C6300147365 /* FavouritesViewController.swift */; };
+		114E0AD827CD5C6300147365 /* FavouritesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AD227CD5C6300147365 /* FavouritesProtocols.swift */; };
+		114E0AD927CD5C6300147365 /* FavouritesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AD327CD5C6300147365 /* FavouritesInteractor.swift */; };
+		114E0ADA27CD5C6300147365 /* FavouritesEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AD427CD5C6300147365 /* FavouritesEntities.swift */; };
+		114E0ADC27CD5CB300147365 /* FavouritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114E0ADB27CD5CB300147365 /* FavouritesViewController.xib */; };
+		114E0AE327CD5CE100147365 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0ADD27CD5CE100147365 /* ProfilePresenter.swift */; };
+		114E0AE427CD5CE100147365 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0ADE27CD5CE100147365 /* ProfileRouter.swift */; };
+		114E0AE527CD5CE100147365 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0ADF27CD5CE100147365 /* ProfileViewController.swift */; };
+		114E0AE627CD5CE100147365 /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AE027CD5CE100147365 /* ProfileProtocols.swift */; };
+		114E0AE727CD5CE100147365 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AE127CD5CE100147365 /* ProfileInteractor.swift */; };
+		114E0AE827CD5CE100147365 /* ProfileEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AE227CD5CE100147365 /* ProfileEntities.swift */; };
+		114E0AEA27CD5D1400147365 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114E0AE927CD5D1400147365 /* ProfileViewController.xib */; };
+		114E0AF227CD5D8700147365 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AEC27CD5D8700147365 /* DetailPresenter.swift */; };
+		114E0AF327CD5D8700147365 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AED27CD5D8700147365 /* DetailRouter.swift */; };
+		114E0AF427CD5D8700147365 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AEE27CD5D8700147365 /* DetailViewController.swift */; };
+		114E0AF527CD5D8700147365 /* DetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AEF27CD5D8700147365 /* DetailProtocols.swift */; };
+		114E0AF627CD5D8700147365 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AF027CD5D8700147365 /* DetailInteractor.swift */; };
+		114E0AF727CD5D8700147365 /* DetailEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AF127CD5D8700147365 /* DetailEntities.swift */; };
+		114E0AF927CD5DB000147365 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114E0AF827CD5DB000147365 /* DetailViewController.xib */; };
 		11A814EC27CBDF07001E2485 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A814EB27CBDF07001E2485 /* AppDelegate.swift */; };
 		11A814EE27CBDF07001E2485 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A814ED27CBDF07001E2485 /* SceneDelegate.swift */; };
 		11A814F027CBDF07001E2485 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A814EF27CBDF07001E2485 /* TabBarController.swift */; };
@@ -28,6 +56,34 @@
 		1117825427CBFFEA008F8B8F /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		1117825627CC0046008F8B8F /* FavouritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesCoordinator.swift; sourceTree = "<group>"; };
 		1117825827CC005F008F8B8F /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		114E0AC127CD5A0800147365 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		114E0AC227CD5A0800147365 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		114E0AC327CD5A0800147365 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		114E0AC427CD5A0800147365 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		114E0AC527CD5A0800147365 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		114E0AC627CD5A0800147365 /* HomeEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntities.swift; sourceTree = "<group>"; };
+		114E0ACD27CD5A6E00147365 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		114E0ACF27CD5C6300147365 /* FavouritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesPresenter.swift; sourceTree = "<group>"; };
+		114E0AD027CD5C6300147365 /* FavouritesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesRouter.swift; sourceTree = "<group>"; };
+		114E0AD127CD5C6300147365 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		114E0AD227CD5C6300147365 /* FavouritesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesProtocols.swift; sourceTree = "<group>"; };
+		114E0AD327CD5C6300147365 /* FavouritesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesInteractor.swift; sourceTree = "<group>"; };
+		114E0AD427CD5C6300147365 /* FavouritesEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesEntities.swift; sourceTree = "<group>"; };
+		114E0ADB27CD5CB300147365 /* FavouritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouritesViewController.xib; sourceTree = "<group>"; };
+		114E0ADD27CD5CE100147365 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		114E0ADE27CD5CE100147365 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		114E0ADF27CD5CE100147365 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		114E0AE027CD5CE100147365 /* ProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
+		114E0AE127CD5CE100147365 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		114E0AE227CD5CE100147365 /* ProfileEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEntities.swift; sourceTree = "<group>"; };
+		114E0AE927CD5D1400147365 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		114E0AEC27CD5D8700147365 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		114E0AED27CD5D8700147365 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		114E0AEE27CD5D8700147365 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		114E0AEF27CD5D8700147365 /* DetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProtocols.swift; sourceTree = "<group>"; };
+		114E0AF027CD5D8700147365 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		114E0AF127CD5D8700147365 /* DetailEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEntities.swift; sourceTree = "<group>"; };
+		114E0AF827CD5DB000147365 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		11A814E827CBDF07001E2485 /* MyPokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A814EB27CBDF07001E2485 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11A814ED27CBDF07001E2485 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +136,73 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		114E0ABD27CD598300147365 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				114E0ABE27CD598B00147365 /* Home */,
+				114E0ABF27CD59DE00147365 /* Favourites */,
+				114E0AC027CD59E800147365 /* Profile */,
+				114E0AEB27CD5D6500147365 /* Detail */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		114E0ABE27CD598B00147365 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				114E0AC327CD5A0800147365 /* HomeViewController.swift */,
+				114E0AC127CD5A0800147365 /* HomePresenter.swift */,
+				114E0AC527CD5A0800147365 /* HomeInteractor.swift */,
+				114E0AC227CD5A0800147365 /* HomeRouter.swift */,
+				114E0AC427CD5A0800147365 /* HomeProtocols.swift */,
+				114E0AC627CD5A0800147365 /* HomeEntities.swift */,
+				114E0ACD27CD5A6E00147365 /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		114E0ABF27CD59DE00147365 /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				114E0AD127CD5C6300147365 /* FavouritesViewController.swift */,
+				114E0ACF27CD5C6300147365 /* FavouritesPresenter.swift */,
+				114E0AD327CD5C6300147365 /* FavouritesInteractor.swift */,
+				114E0AD027CD5C6300147365 /* FavouritesRouter.swift */,
+				114E0AD227CD5C6300147365 /* FavouritesProtocols.swift */,
+				114E0AD427CD5C6300147365 /* FavouritesEntities.swift */,
+				114E0ADB27CD5CB300147365 /* FavouritesViewController.xib */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
+		114E0AC027CD59E800147365 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				114E0ADF27CD5CE100147365 /* ProfileViewController.swift */,
+				114E0AE127CD5CE100147365 /* ProfileInteractor.swift */,
+				114E0ADD27CD5CE100147365 /* ProfilePresenter.swift */,
+				114E0ADE27CD5CE100147365 /* ProfileRouter.swift */,
+				114E0AE027CD5CE100147365 /* ProfileProtocols.swift */,
+				114E0AE227CD5CE100147365 /* ProfileEntities.swift */,
+				114E0AE927CD5D1400147365 /* ProfileViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		114E0AEB27CD5D6500147365 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				114E0AEE27CD5D8700147365 /* DetailViewController.swift */,
+				114E0AEC27CD5D8700147365 /* DetailPresenter.swift */,
+				114E0AF027CD5D8700147365 /* DetailInteractor.swift */,
+				114E0AED27CD5D8700147365 /* DetailRouter.swift */,
+				114E0AEF27CD5D8700147365 /* DetailProtocols.swift */,
+				114E0AF127CD5D8700147365 /* DetailEntities.swift */,
+				114E0AF827CD5DB000147365 /* DetailViewController.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		11A814DF27CBDF07001E2485 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +222,7 @@
 		11A814EA27CBDF07001E2485 /* MyPokedex */ = {
 			isa = PBXGroup;
 			children = (
+				114E0ABD27CD598300147365 /* App */,
 				1117824F27CBF26A008F8B8F /* TabBar */,
 				1117824727CBEEF3008F8B8F /* Coordinator */,
 				11A814FF27CBE2B9001E2485 /* Assets */,
@@ -175,8 +299,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				114E0ADC27CD5CB300147365 /* FavouritesViewController.xib in Resources */,
+				114E0AF927CD5DB000147365 /* DetailViewController.xib in Resources */,
 				11A814F827CBDF08001E2485 /* LaunchScreen.storyboard in Resources */,
 				11A814F527CBDF08001E2485 /* Assets.xcassets in Resources */,
+				114E0AEA27CD5D1400147365 /* ProfileViewController.xib in Resources */,
+				114E0ACE27CD5A6E00147365 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,16 +315,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				114E0AE427CD5CE100147365 /* ProfileRouter.swift in Sources */,
 				11A814F027CBDF07001E2485 /* TabBarController.swift in Sources */,
+				114E0AE327CD5CE100147365 /* ProfilePresenter.swift in Sources */,
+				114E0AD827CD5C6300147365 /* FavouritesProtocols.swift in Sources */,
+				114E0AC827CD5A0800147365 /* HomeRouter.swift in Sources */,
 				1117825327CBF730008F8B8F /* main.swift in Sources */,
+				114E0ACB27CD5A0800147365 /* HomeInteractor.swift in Sources */,
+				114E0AD627CD5C6300147365 /* FavouritesRouter.swift in Sources */,
+				114E0AF527CD5D8700147365 /* DetailProtocols.swift in Sources */,
+				114E0AD927CD5C6300147365 /* FavouritesInteractor.swift in Sources */,
+				114E0AD727CD5C6300147365 /* FavouritesViewController.swift in Sources */,
+				114E0AE827CD5CE100147365 /* ProfileEntities.swift in Sources */,
+				114E0AF627CD5D8700147365 /* DetailInteractor.swift in Sources */,
 				1117825727CC0046008F8B8F /* FavouritesCoordinator.swift in Sources */,
+				114E0ACA27CD5A0800147365 /* HomeProtocols.swift in Sources */,
+				114E0ADA27CD5C6300147365 /* FavouritesEntities.swift in Sources */,
 				1117824B27CBF037008F8B8F /* MainCoordinator.swift in Sources */,
+				114E0AF327CD5D8700147365 /* DetailRouter.swift in Sources */,
 				11A814EC27CBDF07001E2485 /* AppDelegate.swift in Sources */,
 				1117824927CBEF05008F8B8F /* Coordinator.swift in Sources */,
 				1117825527CBFFEA008F8B8F /* HomeCoordinator.swift in Sources */,
+				114E0AF427CD5D8700147365 /* DetailViewController.swift in Sources */,
+				114E0AF227CD5D8700147365 /* DetailPresenter.swift in Sources */,
+				114E0AE627CD5CE100147365 /* ProfileProtocols.swift in Sources */,
 				11A8150127CBE2DC001E2485 /* ImageAssets.swift in Sources */,
+				114E0AD527CD5C6300147365 /* FavouritesPresenter.swift in Sources */,
+				114E0ACC27CD5A0800147365 /* HomeEntities.swift in Sources */,
 				1117825927CC005F008F8B8F /* ProfileCoordinator.swift in Sources */,
 				11A814EE27CBDF07001E2485 /* SceneDelegate.swift in Sources */,
+				114E0AE527CD5CE100147365 /* ProfileViewController.swift in Sources */,
+				114E0AC927CD5A0800147365 /* HomeViewController.swift in Sources */,
+				114E0AF727CD5D8700147365 /* DetailEntities.swift in Sources */,
+				114E0AE727CD5CE100147365 /* ProfileInteractor.swift in Sources */,
+				114E0AC727CD5A0800147365 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

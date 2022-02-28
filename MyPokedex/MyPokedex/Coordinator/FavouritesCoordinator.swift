@@ -14,21 +14,7 @@ class FavouritesCoordinator: Coordinator {
     var navigationController: UINavigationController?
     
     func start() {
-        let favouritesViewController = FavouritesViewController()
-        favouritesViewController.view.backgroundColor = .systemBackground
+        let favouritesViewController = FavouritesRouter.create()
         navigationController = UINavigationController(rootViewController: favouritesViewController)
-    }
-}
-
-class FavouritesViewController: UIViewController {
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.isNavigationBarHidden = false
     }
 }
