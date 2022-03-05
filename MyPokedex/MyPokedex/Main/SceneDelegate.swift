@@ -11,14 +11,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     var coordinator: Coordinator
-    var rootViewController: UIViewController
+    var rootViewController: TabBarController
     var container: Factory
     
     override init() {
         window = UIWindow(frame: UIScreen.main.bounds)
         container = DependencyFactory()
-        rootViewController = UIViewController()
-        coordinator = MainCoordinator(rootViewController: rootViewController, tabBarController: TabBarController(), container: container)
+        rootViewController = container.makeTabBar()
+        coordinator = MainCoordinator(tabBarController: rootViewController, container: container)
     }
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {

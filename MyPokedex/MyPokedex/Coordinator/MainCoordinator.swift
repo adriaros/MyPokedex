@@ -14,12 +14,10 @@ class MainCoordinator: Coordinator {
     var navigationController: UINavigationController?
     
     let tabBarController: TabBarController
-    let rootViewController: UIViewController
     let container: Factory
     
-    init(rootViewController: UIViewController, tabBarController: TabBarController, container: Factory) {
+    init(tabBarController: TabBarController, container: Factory) {
         self.tabBarController = tabBarController
-        self.rootViewController = rootViewController
         self.container = container
     }
     
@@ -56,7 +54,5 @@ class MainCoordinator: Coordinator {
         
         tabBarController.viewControllers = [home, favourites, profile]
         tabBarController.modalPresentationStyle = .fullScreen
-        
-        rootViewController.present(tabBarController, animated: false)
     }
 }
