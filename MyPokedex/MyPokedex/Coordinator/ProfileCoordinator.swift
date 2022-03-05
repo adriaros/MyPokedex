@@ -13,8 +13,14 @@ class ProfileCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController?
     
+    let container: Factory
+    
+    init(container: Factory) {
+        self.container = container
+    }
+    
     func start() {
-        let profileViewController = ProfileRouter.create()
+        let profileViewController = container.makeProfile()
         navigationController = UINavigationController(rootViewController: profileViewController)
     }
 }

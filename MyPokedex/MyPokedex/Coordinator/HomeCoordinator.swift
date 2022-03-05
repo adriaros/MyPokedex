@@ -13,13 +13,19 @@ class HomeCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController?
     
+    let container: Factory
+    
+    init(container: Factory) {
+        self.container = container
+    }
+    
     func start() {
-        let homeViewController = HomeRouter.create(coordinator: self)
+        let homeViewController = container.makeHome(coordinator: self)
         navigationController = UINavigationController(rootViewController: homeViewController)
     }
     
     func pushToDetail(animated: Bool) {
-        let detailViewController = DetailRouter.create()
+        let detailViewController = container.makeDetail()
         navigationController?.pushViewController(detailViewController, animated: animated)
     }
     

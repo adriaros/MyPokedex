@@ -13,8 +13,8 @@ class DependencyFactory: Factory {
         TabBarController()
     }
     
-    func makeHome() -> HomeViewController {
-        HomeRouter.create(coordinator: nil) as! HomeViewController
+    func makeHome(coordinator: HomeCoordinator) -> HomeViewController {
+        HomeRouter.create(coordinator: coordinator) as! HomeViewController
     }
     
     func makeDetail() -> DetailViewController {

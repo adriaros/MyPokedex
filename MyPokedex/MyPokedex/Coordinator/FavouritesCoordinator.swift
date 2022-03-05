@@ -13,8 +13,14 @@ class FavouritesCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController?
     
+    let container: Factory
+    
+    init(container: Factory) {
+        self.container = container
+    }
+    
     func start() {
-        let favouritesViewController = FavouritesRouter.create()
+        let favouritesViewController = container.makeFavourites()
         navigationController = UINavigationController(rootViewController: favouritesViewController)
     }
 }

@@ -15,13 +15,26 @@ class MainCoordinator: Coordinator {
     
     let tabBarController: TabBarController
     let rootViewController: UIViewController
+    let container: Factory
     
-    init(rootViewController: UIViewController, tabBarController: TabBarController) {
+    init(rootViewController: UIViewController, tabBarController: TabBarController, container: Factory) {
         self.tabBarController = tabBarController
         self.rootViewController = rootViewController
+        self.container = container
     }
     
     func start() {
+        
+        let homeCoordinator = HomeCoordinator(container: container)
+        homeCoordinator.start()
+        
+        let favouritesCoordinator = FavouritesCoordinator(container: container)
+        favouritesCoordinator.start()
+        
+        let profileCoordinator = ProfileCoordinator(container: container)
+        profileCoordinator.start()
+        
+        childCoordinators = [homeCoordinator, favouritesCoordinator, profileCoordinator]
         
         guard let home = childCoordinators[0].navigationController else {
             return

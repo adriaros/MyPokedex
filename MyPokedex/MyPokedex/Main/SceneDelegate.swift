@@ -12,28 +12,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     var coordinator: Coordinator
     var rootViewController: UIViewController
+    var container: Factory
     
     override init() {
         window = UIWindow(frame: UIScreen.main.bounds)
+        container = DependencyFactory()
         rootViewController = UIViewController()
-        coordinator = MainCoordinator(rootViewController: rootViewController, tabBarController: TabBarController())
+        coordinator = MainCoordinator(rootViewController: rootViewController, tabBarController: TabBarController(), container: container)
     }
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
-        
-        let homeCoordinator = HomeCoordinator()
-        homeCoordinator.start()
-        
-        let favouritesCoordinator = FavouritesCoordinator()
-        favouritesCoordinator.start()
-        
-        let profileCoordinator = ProfileCoordinator()
-        profileCoordinator.start()
-        
-        coordinator.childCoordinators = [homeCoordinator, favouritesCoordinator, profileCoordinator]
         coordinator.start()
     }
 
