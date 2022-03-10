@@ -23,13 +23,4 @@ class HomeCoordinator: Coordinator {
         let homeViewController = container.makeHome(coordinator: self)
         navigationController = UINavigationController(rootViewController: homeViewController)
     }
-    
-    func pushToDetail(animated: Bool) {
-        let detailViewController = container.makeDetail()
-        navigationController?.pushViewController(detailViewController, animated: animated)
-    }
-    
-    func pop(animated: Bool) {
-        navigationController?.popViewController(animated: animated)
-    }
 }
