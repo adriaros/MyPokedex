@@ -15,6 +15,7 @@
 		110601FE27DA896500A4023C /* MockDependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601FD27DA896500A4023C /* MockDependencyFactory.swift */; };
 		1106020027DAA43B00A4023C /* FavouritesCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601FF27DAA43B00A4023C /* FavouritesCoordinatorTest.swift */; };
 		1106020227DAA44900A4023C /* ProfileCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1106020127DAA44900A4023C /* ProfileCoordinatorTest.swift */; };
+		1106020427DAACFF00A4023C /* MainCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1106020327DAACFF00A4023C /* MainCoordinatorTest.swift */; };
 		110E6A0427CEA00D00C7768E /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E6A0327CEA00D00C7768E /* Factory.swift */; };
 		110E6A0627CEA03F00C7768E /* DependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E6A0527CEA03F00C7768E /* DependencyFactory.swift */; };
 		1117824927CBEF05008F8B8F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117824827CBEF05008F8B8F /* Coordinator.swift */; };
@@ -79,6 +80,7 @@
 		110601FD27DA896500A4023C /* MockDependencyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDependencyFactory.swift; sourceTree = "<group>"; };
 		110601FF27DAA43B00A4023C /* FavouritesCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesCoordinatorTest.swift; sourceTree = "<group>"; };
 		1106020127DAA44900A4023C /* ProfileCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorTest.swift; sourceTree = "<group>"; };
+		1106020327DAACFF00A4023C /* MainCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorTest.swift; sourceTree = "<group>"; };
 		110E6A0327CEA00D00C7768E /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		110E6A0527CEA03F00C7768E /* DependencyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyFactory.swift; sourceTree = "<group>"; };
 		1117824827CBEF05008F8B8F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				110601F727DA84C200A4023C /* Mock */,
+				1106020327DAACFF00A4023C /* MainCoordinatorTest.swift */,
 				110601FA27DA892400A4023C /* HomeCoordinatorTest.swift */,
 				110601FF27DAA43B00A4023C /* FavouritesCoordinatorTest.swift */,
 				1106020127DAA44900A4023C /* ProfileCoordinatorTest.swift */,
@@ -469,6 +472,7 @@
 				110601F627DA83B400A4023C /* FactoryTest.swift in Sources */,
 				110601F927DA887300A4023C /* MockHomeCoordinator.swift in Sources */,
 				1106020227DAA44900A4023C /* ProfileCoordinatorTest.swift in Sources */,
+				1106020427DAACFF00A4023C /* MainCoordinatorTest.swift in Sources */,
 				110601FE27DA896500A4023C /* MockDependencyFactory.swift in Sources */,
 				1106020027DAA43B00A4023C /* FavouritesCoordinatorTest.swift in Sources */,
 				110601FB27DA892400A4023C /* HomeCoordinatorTest.swift in Sources */,

@@ -15,6 +15,7 @@ enum ImageAsset {
             return UIImage(named: self.rawValue)?.withRenderingMode(.alwaysOriginal)
         }
         
-        case home = "face.smiling"
+        case base = "tabbar_pokeball"
+        case selected = "tabbar_open_pokeball_color"
     }
 }

@@ -22,7 +22,6 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        
         let homeCoordinator = HomeCoordinator(container: container)
         homeCoordinator.start()
         
@@ -38,19 +37,22 @@ class MainCoordinator: Coordinator {
             return
         }
         
-        home.tabBarItem = UITabBarItem(title: "Home", image: ImageAsset.TabBar.home.image, tag: 0)
+        home.tabBarItem = UITabBarItem(title: "Home", image: ImageAsset.TabBar.base.image, selectedImage: ImageAsset.TabBar.selected.image)
+        home.tabBarItem.tag = 0
         
         guard let favourites = childCoordinators[1].navigationController else {
             return
         }
         
-        favourites.tabBarItem = UITabBarItem(title: "Favourites", image: ImageAsset.TabBar.home.image, tag: 1)
+        favourites.tabBarItem = UITabBarItem(title: "Favourites", image: ImageAsset.TabBar.base.image, selectedImage: ImageAsset.TabBar.selected.image)
+        favourites.tabBarItem.tag = 1
         
         guard let profile = childCoordinators[2].navigationController else {
             return
         }
         
-        profile.tabBarItem = UITabBarItem(title: "Profile", image: ImageAsset.TabBar.home.image, tag: 2)
+        profile.tabBarItem = UITabBarItem(title: "Profile", image: ImageAsset.TabBar.base.image, selectedImage: ImageAsset.TabBar.selected.image)
+        profile.tabBarItem.tag = 2
         
         tabBarController.viewControllers = [home, favourites, profile]
         tabBarController.modalPresentationStyle = .fullScreen
