@@ -10,6 +10,7 @@ import UIKit
 
 protocol HomePresenterToViewProtocol: AnyObject {
     var presenter: HomeViewToPresenterProtocol? { get set }
+    var tableView: UITableView! { get set }
 }
 
 protocol HomeInteractorToPresenterProtocol: AnyObject {
@@ -28,5 +29,4 @@ protocol HomeViewToPresenterProtocol: AnyObject {
 
 protocol HomePresenterToRouterProtocol: AnyObject {
     static func create(coordinator: HomeCoordinator?) -> UIViewController
-    func pushToDetail()
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110601E327DA80F600A4023C /* HomeTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601E227DA80F600A4023C /* HomeTableViewDataSource.swift */; };
+		110601E527DA811100A4023C /* HomeTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601E427DA811100A4023C /* HomeTableViewDelegate.swift */; };
 		110E6A0427CEA00D00C7768E /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E6A0327CEA00D00C7768E /* Factory.swift */; };
 		110E6A0627CEA03F00C7768E /* DependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E6A0527CEA03F00C7768E /* DependencyFactory.swift */; };
 		1117824927CBEF05008F8B8F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117824827CBEF05008F8B8F /* Coordinator.swift */; };
@@ -52,6 +54,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		110601E227DA80F600A4023C /* HomeTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDataSource.swift; sourceTree = "<group>"; };
+		110601E427DA811100A4023C /* HomeTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDelegate.swift; sourceTree = "<group>"; };
 		110E6A0327CEA00D00C7768E /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		110E6A0527CEA03F00C7768E /* DependencyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyFactory.swift; sourceTree = "<group>"; };
 		1117824827CBEF05008F8B8F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -109,6 +113,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		110601E127DA80E600A4023C /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				110601E227DA80F600A4023C /* HomeTableViewDataSource.swift */,
+				110601E427DA811100A4023C /* HomeTableViewDelegate.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 		110E6A0027CE9FDC00C7768E /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +192,7 @@
 		114E0ABE27CD598B00147365 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				110601E127DA80E600A4023C /* TableView */,
 				114E0AC327CD5A0800147365 /* HomeViewController.swift */,
 				114E0AC127CD5A0800147365 /* HomePresenter.swift */,
 				114E0AC527CD5A0800147365 /* HomeInteractor.swift */,
@@ -359,8 +373,10 @@
 				114E0AD727CD5C6300147365 /* FavouritesViewController.swift in Sources */,
 				114E0AE827CD5CE100147365 /* ProfileEntities.swift in Sources */,
 				114E0AF627CD5D8700147365 /* DetailInteractor.swift in Sources */,
+				110601E327DA80F600A4023C /* HomeTableViewDataSource.swift in Sources */,
 				1117825727CC0046008F8B8F /* FavouritesCoordinator.swift in Sources */,
 				114E0ACA27CD5A0800147365 /* HomeProtocols.swift in Sources */,
+				110601E527DA811100A4023C /* HomeTableViewDelegate.swift in Sources */,
 				114E0ADA27CD5C6300147365 /* FavouritesEntities.swift in Sources */,
 				1117824B27CBF037008F8B8F /* MainCoordinator.swift in Sources */,
 				114E0AF327CD5D8700147365 /* DetailRouter.swift in Sources */,

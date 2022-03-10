@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MyPokedex" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="mSd-fg-WmQ" id="gBw-Be-4wQ"/>
                 <outlet property="view" destination="iN0-l3-epB" id="skS-gY-DaX"/>
             </connections>
         </placeholder>
@@ -18,30 +19,20 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsB-i5-p2M">
-                    <rect key="frame" x="184" y="437.5" width="46" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xld-yQ-UlC">
-                    <rect key="frame" x="173.5" y="488.5" width="67" height="31"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                    <connections>
-                        <action selector="onDetail:" destination="-1" eventType="touchUpInside" id="jcR-p9-3hp"/>
-                    </connections>
-                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mSd-fg-WmQ">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="xld-yQ-UlC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="bz4-nr-EV4"/>
-                <constraint firstItem="GsB-i5-p2M" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fjf-OR-Nn5"/>
-                <constraint firstItem="xld-yQ-UlC" firstAttribute="top" secondItem="GsB-i5-p2M" secondAttribute="bottom" constant="30" id="iDs-9S-A23"/>
-                <constraint firstItem="GsB-i5-p2M" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="iPV-QZ-Iny"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="mSd-fg-WmQ" secondAttribute="bottom" id="Gyd-Fi-L14"/>
+                <constraint firstItem="mSd-fg-WmQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Njp-Qh-bJl"/>
+                <constraint firstItem="mSd-fg-WmQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="bOj-8W-reJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mSd-fg-WmQ" secondAttribute="trailing" id="opS-2O-MwT"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="101"/>
+            <point key="canvasLocation" x="137.68115942028987" y="100.44642857142857"/>
         </view>
     </objects>
     <resources>

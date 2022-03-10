@@ -29,8 +29,4 @@ class HomeRouter: HomePresenterToRouterProtocol {
         
         return view
     }
-    
-    func pushToDetail() {
-        coordinator?.pushToDetail(animated: true)
-    }
 }

@@ -12,9 +12,11 @@ class HomeViewController: UIViewController {
     
     var presenter: HomeViewToPresenterProtocol?
     
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter?.setupView()
+        configureTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,8 +29,10 @@ class HomeViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
     }
     
-    @IBAction func onDetail(_ sender: Any) {
-        presenter?.router?.pushToDetail()
+    func configureTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.rowHeight = 80
     }
 }
 
