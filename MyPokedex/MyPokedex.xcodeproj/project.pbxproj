@@ -52,12 +52,16 @@
 		114E0AF627CD5D8700147365 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AF027CD5D8700147365 /* DetailInteractor.swift */; };
 		114E0AF727CD5D8700147365 /* DetailEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AF127CD5D8700147365 /* DetailEntities.swift */; };
 		114E0AF927CD5DB000147365 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114E0AF827CD5DB000147365 /* DetailViewController.xib */; };
+		1192078427DCB9A7004D963A /* HomeItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192078227DCB9A7004D963A /* HomeItemTableViewCell.swift */; };
+		1192078527DCB9A7004D963A /* HomeItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1192078327DCB9A7004D963A /* HomeItemTableViewCell.xib */; };
+		1192078927DCBD35004D963A /* DSShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192078827DCBD35004D963A /* DSShape.swift */; };
 		11A814EC27CBDF07001E2485 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A814EB27CBDF07001E2485 /* AppDelegate.swift */; };
 		11A814EE27CBDF07001E2485 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A814ED27CBDF07001E2485 /* SceneDelegate.swift */; };
 		11A814F027CBDF07001E2485 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A814EF27CBDF07001E2485 /* TabBarController.swift */; };
 		11A814F527CBDF08001E2485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A814F427CBDF08001E2485 /* Assets.xcassets */; };
 		11A814F827CBDF08001E2485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11A814F627CBDF08001E2485 /* LaunchScreen.storyboard */; };
 		11A8150127CBE2DC001E2485 /* ImageAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A8150027CBE2DC001E2485 /* ImageAssets.swift */; };
+		11AF1B2F27DCC45500BFD641 /* DSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AF1B2E27DCC45500BFD641 /* DSLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +121,9 @@
 		114E0AF027CD5D8700147365 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		114E0AF127CD5D8700147365 /* DetailEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEntities.swift; sourceTree = "<group>"; };
 		114E0AF827CD5DB000147365 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		1192078227DCB9A7004D963A /* HomeItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemTableViewCell.swift; sourceTree = "<group>"; };
+		1192078327DCB9A7004D963A /* HomeItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeItemTableViewCell.xib; sourceTree = "<group>"; };
+		1192078827DCBD35004D963A /* DSShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSShape.swift; sourceTree = "<group>"; };
 		11A814E827CBDF07001E2485 /* MyPokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A814EB27CBDF07001E2485 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11A814ED27CBDF07001E2485 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +132,7 @@
 		11A814F727CBDF08001E2485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11A814F927CBDF08001E2485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11A8150027CBE2DC001E2485 /* ImageAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAssets.swift; sourceTree = "<group>"; };
+		11AF1B2E27DCC45500BFD641 /* DSLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +156,7 @@
 		110601E127DA80E600A4023C /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				1192078127DCB98F004D963A /* Cells */,
 				110601E227DA80F600A4023C /* HomeTableViewDataSource.swift */,
 				110601E427DA811100A4023C /* HomeTableViewDelegate.swift */,
 			);
@@ -237,7 +246,7 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		1117824C27CBF0AE008F8B8F /* Main */ = {
+		1117824C27CBF0AE008F8B8F /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				1117825227CBF730008F8B8F /* main.swift */,
@@ -245,7 +254,7 @@
 				11A814ED27CBDF07001E2485 /* SceneDelegate.swift */,
 				11A814F627CBDF08001E2485 /* LaunchScreen.storyboard */,
 			);
-			path = Main;
+			path = Application;
 			sourceTree = "<group>";
 		};
 		1117824F27CBF26A008F8B8F /* TabBar */ = {
@@ -256,7 +265,7 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
-		114E0ABD27CD598300147365 /* App */ = {
+		114E0ABD27CD598300147365 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				114E0ABE27CD598B00147365 /* Home */,
@@ -264,7 +273,7 @@
 				114E0AC027CD59E800147365 /* Profile */,
 				114E0AEB27CD5D6500147365 /* Detail */,
 			);
-			path = App;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		114E0ABE27CD598B00147365 /* Home */ = {
@@ -324,6 +333,32 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		1192078127DCB98F004D963A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1192078227DCB9A7004D963A /* HomeItemTableViewCell.swift */,
+				1192078327DCB9A7004D963A /* HomeItemTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1192078627DCBD20004D963A /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				1192078727DCBD28004D963A /* Shape */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		1192078727DCBD28004D963A /* Shape */ = {
+			isa = PBXGroup;
+			children = (
+				1192078827DCBD35004D963A /* DSShape.swift */,
+				11AF1B2E27DCC45500BFD641 /* DSLabel.swift */,
+			);
+			path = Shape;
+			sourceTree = "<group>";
+		};
 		11A814DF27CBDF07001E2485 = {
 			isa = PBXGroup;
 			children = (
@@ -345,12 +380,13 @@
 		11A814EA27CBDF07001E2485 /* MyPokedex */ = {
 			isa = PBXGroup;
 			children = (
+				1192078627DCBD20004D963A /* DesignSystem */,
 				110E6A0127CE9FED00C7768E /* Factory */,
 				1117824727CBEEF3008F8B8F /* Coordinator */,
 				1117824F27CBF26A008F8B8F /* TabBar */,
-				114E0ABD27CD598300147365 /* App */,
+				114E0ABD27CD598300147365 /* Modules */,
 				11A814FF27CBE2B9001E2485 /* Assets */,
-				1117824C27CBF0AE008F8B8F /* Main */,
+				1117824C27CBF0AE008F8B8F /* Application */,
 				11A814F927CBDF08001E2485 /* Info.plist */,
 			);
 			path = MyPokedex;
@@ -455,6 +491,7 @@
 			files = (
 				114E0ADC27CD5CB300147365 /* FavouritesViewController.xib in Resources */,
 				114E0AF927CD5DB000147365 /* DetailViewController.xib in Resources */,
+				1192078527DCB9A7004D963A /* HomeItemTableViewCell.xib in Resources */,
 				11A814F827CBDF08001E2485 /* LaunchScreen.storyboard in Resources */,
 				11A814F527CBDF08001E2485 /* Assets.xcassets in Resources */,
 				114E0AEA27CD5D1400147365 /* ProfileViewController.xib in Resources */,
@@ -488,6 +525,7 @@
 				11A814F027CBDF07001E2485 /* TabBarController.swift in Sources */,
 				114E0AE327CD5CE100147365 /* ProfilePresenter.swift in Sources */,
 				114E0AD827CD5C6300147365 /* FavouritesProtocols.swift in Sources */,
+				11AF1B2F27DCC45500BFD641 /* DSLabel.swift in Sources */,
 				114E0AC827CD5A0800147365 /* HomeRouter.swift in Sources */,
 				1117825327CBF730008F8B8F /* main.swift in Sources */,
 				114E0ACB27CD5A0800147365 /* HomeInteractor.swift in Sources */,
@@ -498,7 +536,9 @@
 				114E0AE827CD5CE100147365 /* ProfileEntities.swift in Sources */,
 				114E0AF627CD5D8700147365 /* DetailInteractor.swift in Sources */,
 				110601E327DA80F600A4023C /* HomeTableViewDataSource.swift in Sources */,
+				1192078927DCBD35004D963A /* DSShape.swift in Sources */,
 				1117825727CC0046008F8B8F /* FavouritesCoordinator.swift in Sources */,
+				1192078427DCB9A7004D963A /* HomeItemTableViewCell.swift in Sources */,
 				114E0ACA27CD5A0800147365 /* HomeProtocols.swift in Sources */,
 				110601E527DA811100A4023C /* HomeTableViewDelegate.swift in Sources */,
 				114E0ADA27CD5C6300147365 /* FavouritesEntities.swift in Sources */,

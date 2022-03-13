@@ -19,23 +19,41 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="1YK-pl-V4P">
+                    <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mSd-fg-WmQ">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch" translatesAutoresizingMaskIntoConstraints="NO" id="dn1-Jf-xQe">
+                    <rect key="frame" x="0.0" y="64" width="414" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="buy-oL-LUg"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="mSd-fg-WmQ" firstAttribute="top" secondItem="dn1-Jf-xQe" secondAttribute="bottom" id="4eW-gt-xut"/>
+                <constraint firstItem="dn1-Jf-xQe" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="7AR-qf-bxP"/>
+                <constraint firstItem="1YK-pl-V4P" firstAttribute="top" secondItem="dn1-Jf-xQe" secondAttribute="bottom" id="BrJ-CA-tsk"/>
+                <constraint firstItem="dn1-Jf-xQe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Eld-cI-cBo"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="mSd-fg-WmQ" secondAttribute="bottom" id="Gyd-Fi-L14"/>
-                <constraint firstItem="mSd-fg-WmQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Njp-Qh-bJl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dn1-Jf-xQe" secondAttribute="trailing" id="X2V-N5-xvb"/>
                 <constraint firstItem="mSd-fg-WmQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="bOj-8W-reJ"/>
+                <constraint firstItem="1YK-pl-V4P" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="leV-ck-ht2"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mSd-fg-WmQ" secondAttribute="trailing" id="opS-2O-MwT"/>
+                <constraint firstItem="1YK-pl-V4P" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="pZS-Jj-Cu6"/>
+                <constraint firstItem="1YK-pl-V4P" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="zLg-6s-emc"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="100.44642857142857"/>
         </view>
     </objects>
     <resources>
+        <image name="Launch" width="1280" height="471"/>
+        <image name="home_pokemon" width="1233.5" height="897"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
