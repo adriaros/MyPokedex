@@ -10,7 +10,6 @@
 		110601E327DA80F600A4023C /* HomeTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601E227DA80F600A4023C /* HomeTableViewDataSource.swift */; };
 		110601E527DA811100A4023C /* HomeTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601E427DA811100A4023C /* HomeTableViewDelegate.swift */; };
 		110601F627DA83B400A4023C /* FactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601F527DA83B400A4023C /* FactoryTest.swift */; };
-		110601F927DA887300A4023C /* MockHomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601F827DA887300A4023C /* MockHomeCoordinator.swift */; };
 		110601FB27DA892400A4023C /* HomeCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601FA27DA892400A4023C /* HomeCoordinatorTest.swift */; };
 		110601FE27DA896500A4023C /* MockDependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601FD27DA896500A4023C /* MockDependencyFactory.swift */; };
 		1106020027DAA43B00A4023C /* FavouritesCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601FF27DAA43B00A4023C /* FavouritesCoordinatorTest.swift */; };
@@ -62,6 +61,10 @@
 		11A814F827CBDF08001E2485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11A814F627CBDF08001E2485 /* LaunchScreen.storyboard */; };
 		11A8150127CBE2DC001E2485 /* ImageAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A8150027CBE2DC001E2485 /* ImageAssets.swift */; };
 		11AF1B2F27DCC45500BFD641 /* DSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AF1B2E27DCC45500BFD641 /* DSLabel.swift */; };
+		11AF1B3427DE19BA00BFD641 /* HomeItemTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AF1B3327DE19B900BFD641 /* HomeItemTableViewCellTest.swift */; };
+		11AF1B3627DE19CB00BFD641 /* HomeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AF1B3527DE19CB00BFD641 /* HomeTest.swift */; };
+		11AF1B3927DE1F8B00BFD641 /* DSShapeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AF1B3827DE1F8B00BFD641 /* DSShapeTest.swift */; };
+		11AF1B3B27DE20B800BFD641 /* DSLabelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AF1B3A27DE20B800BFD641 /* DSLabelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +82,6 @@
 		110601E427DA811100A4023C /* HomeTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDelegate.swift; sourceTree = "<group>"; };
 		110601EA27DA833300A4023C /* MyPokedexUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPokedexUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		110601F527DA83B400A4023C /* FactoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryTest.swift; sourceTree = "<group>"; };
-		110601F827DA887300A4023C /* MockHomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeCoordinator.swift; sourceTree = "<group>"; };
 		110601FA27DA892400A4023C /* HomeCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorTest.swift; sourceTree = "<group>"; };
 		110601FD27DA896500A4023C /* MockDependencyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDependencyFactory.swift; sourceTree = "<group>"; };
 		110601FF27DAA43B00A4023C /* FavouritesCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesCoordinatorTest.swift; sourceTree = "<group>"; };
@@ -133,6 +135,10 @@
 		11A814F927CBDF08001E2485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11A8150027CBE2DC001E2485 /* ImageAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAssets.swift; sourceTree = "<group>"; };
 		11AF1B2E27DCC45500BFD641 /* DSLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSLabel.swift; sourceTree = "<group>"; };
+		11AF1B3327DE19B900BFD641 /* HomeItemTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemTableViewCellTest.swift; sourceTree = "<group>"; };
+		11AF1B3527DE19CB00BFD641 /* HomeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTest.swift; sourceTree = "<group>"; };
+		11AF1B3827DE1F8B00BFD641 /* DSShapeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSShapeTest.swift; sourceTree = "<group>"; };
+		11AF1B3A27DE20B800BFD641 /* DSLabelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSLabelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,8 +172,10 @@
 		110601EB27DA833300A4023C /* MyPokedexUnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				11AF1B3727DE1F5E00BFD641 /* DesignSystem */,
 				110601F427DA839A00A4023C /* Factory */,
 				110601F327DA834500A4023C /* Coordinators */,
+				11AF1B3027DE199F00BFD641 /* Modules */,
 			);
 			path = MyPokedexUnitTests;
 			sourceTree = "<group>";
@@ -175,7 +183,6 @@
 		110601F327DA834500A4023C /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				110601F727DA84C200A4023C /* Mock */,
 				1106020327DAACFF00A4023C /* MainCoordinatorTest.swift */,
 				110601FA27DA892400A4023C /* HomeCoordinatorTest.swift */,
 				110601FF27DAA43B00A4023C /* FavouritesCoordinatorTest.swift */,
@@ -191,14 +198,6 @@
 				110601F527DA83B400A4023C /* FactoryTest.swift */,
 			);
 			path = Factory;
-			sourceTree = "<group>";
-		};
-		110601F727DA84C200A4023C /* Mock */ = {
-			isa = PBXGroup;
-			children = (
-				110601F827DA887300A4023C /* MockHomeCoordinator.swift */,
-			);
-			path = Mock;
 			sourceTree = "<group>";
 		};
 		110601FC27DA895900A4023C /* Mock */ = {
@@ -401,6 +400,32 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		11AF1B3027DE199F00BFD641 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				11AF1B3127DE19A600BFD641 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		11AF1B3127DE19A600BFD641 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				11AF1B3327DE19B900BFD641 /* HomeItemTableViewCellTest.swift */,
+				11AF1B3527DE19CB00BFD641 /* HomeTest.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		11AF1B3727DE1F5E00BFD641 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				11AF1B3827DE1F8B00BFD641 /* DSShapeTest.swift */,
+				11AF1B3A27DE20B800BFD641 /* DSLabelTest.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -506,13 +531,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11AF1B3627DE19CB00BFD641 /* HomeTest.swift in Sources */,
 				110601F627DA83B400A4023C /* FactoryTest.swift in Sources */,
-				110601F927DA887300A4023C /* MockHomeCoordinator.swift in Sources */,
 				1106020227DAA44900A4023C /* ProfileCoordinatorTest.swift in Sources */,
 				1106020427DAACFF00A4023C /* MainCoordinatorTest.swift in Sources */,
 				110601FE27DA896500A4023C /* MockDependencyFactory.swift in Sources */,
+				11AF1B3B27DE20B800BFD641 /* DSLabelTest.swift in Sources */,
+				11AF1B3427DE19BA00BFD641 /* HomeItemTableViewCellTest.swift in Sources */,
 				1106020027DAA43B00A4023C /* FavouritesCoordinatorTest.swift in Sources */,
 				110601FB27DA892400A4023C /* HomeCoordinatorTest.swift in Sources */,
+				11AF1B3927DE1F8B00BFD641 /* DSShapeTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

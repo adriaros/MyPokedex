@@ -28,6 +28,7 @@ class HomeItemTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         containerShape.style = .rounded
+        containerShape.alpha = 0.7
     }
     
     func configure(title: String, description: String, image: UIImage?) {
