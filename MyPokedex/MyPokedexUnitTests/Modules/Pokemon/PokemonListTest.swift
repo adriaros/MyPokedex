@@ -29,7 +29,7 @@ class PokemonListTest: XCTestCase {
     }
     
     private func buildTestingScenario() {
-        vc = MockPokemonListRouter.create(coordinator: nil) as? PokemonListViewController
+        vc = MockPokemonListRouter.create() as? PokemonListViewController
         presenter = vc.presenter as? PokemonListPresenter
         interactor = presenter.interactor as? PokemonListInteractor
         router = presenter.router as? MockPokemonListRouter
@@ -56,7 +56,7 @@ class PokemonListTest: XCTestCase {
 
 class MockPokemonListRouter: PokemonListPresenterToRouterProtocol {
     
-    static func create(coordinator: HomeCoordinator?) -> UIViewController {
+    static func create() -> UIViewController {
         let view = PokemonListViewController()
         let presenter = PokemonListPresenter()
         let interactor = PokemonListInteractor()

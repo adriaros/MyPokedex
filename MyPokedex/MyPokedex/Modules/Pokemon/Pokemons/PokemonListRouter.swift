@@ -10,9 +10,7 @@ import UIKit
 
 class PokemonListRouter: PokemonListPresenterToRouterProtocol {
     
-    var coordinator: HomeCoordinator?
-    
-    class func create(coordinator: HomeCoordinator?) -> UIViewController {
+    class func create() -> UIViewController {
         
         let view = PokemonListViewController()
         let presenter = PokemonListPresenter()
@@ -24,8 +22,6 @@ class PokemonListRouter: PokemonListPresenterToRouterProtocol {
         presenter.router = router
         presenter.interactor = interactor
         interactor.presenter = presenter
-        
-        router.coordinator = coordinator
         
         return view
     }

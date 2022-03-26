@@ -32,7 +32,7 @@ class MockDependencyFactory: Factory {
         profileViewController
     }
     
-    func makePokemonList(coordinator: HomeCoordinator?) -> PokemonListViewController {
+    func makePokemonList() -> PokemonListViewController {
         PokemonListViewController
     }
 }

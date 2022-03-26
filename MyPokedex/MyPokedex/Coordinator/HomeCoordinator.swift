@@ -29,7 +29,7 @@ class HomeCoordinator: Coordinator {
     }
     
     func pokemonList() {
-        let pokemonListViewController = container.makePokemonList(coordinator: self)
+        let pokemonListViewController = container.makePokemonList()
         pokemonListViewController.navigationItem.leftBarButtonItem = leftBarButtonItem
         pokemonListViewController.navigationItem.title = "Pokémons"
         navigationController?.pushViewController(pokemonListViewController, animated: true)
