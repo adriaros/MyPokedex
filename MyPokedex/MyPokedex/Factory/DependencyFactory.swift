@@ -9,6 +9,14 @@ import Foundation
 
 class DependencyFactory: Factory {
     
+    lazy var network: NetworkProvider = {
+        NetworkManager()
+    }()
+    
+    lazy var pokemonRepository: PokemonCloudRepository = {
+        PokemonRepository(network: network)
+    }()
+    
     func makeTabBar() -> TabBarController {
         TabBarController()
     }
@@ -26,6 +34,7 @@ class DependencyFactory: Factory {
     }
     
     func makePokemonList() -> PokemonListViewController {
-        PokemonListRouter.create() as! PokemonListViewController
+        let pokemonListUseCase = GetPokemonListUseCase(provider: pokemonRepository)
+        return PokemonListRouter.create(dataProvider: pokemonListUseCase) as! PokemonListViewController
     }
 }
