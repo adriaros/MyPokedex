@@ -29,4 +29,5 @@ protocol HomeViewToPresenterProtocol: AnyObject {
 
 protocol HomePresenterToRouterProtocol: AnyObject {
     static func create(coordinator: HomeCoordinator?) -> UIViewController
+    func pokemons()
 }

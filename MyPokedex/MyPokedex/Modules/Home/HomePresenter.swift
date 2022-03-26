@@ -15,7 +15,7 @@ class HomePresenter: HomeViewToPresenterProtocol {
     var router: HomePresenterToRouterProtocol?
     
     func selectPokemon() {
-        print("AQUII")
+        router?.pokemons()
     }
 }
 
