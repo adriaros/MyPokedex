@@ -44,13 +44,6 @@
 		114E0AE727CD5CE100147365 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AE127CD5CE100147365 /* ProfileInteractor.swift */; };
 		114E0AE827CD5CE100147365 /* ProfileEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AE227CD5CE100147365 /* ProfileEntities.swift */; };
 		114E0AEA27CD5D1400147365 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114E0AE927CD5D1400147365 /* ProfileViewController.xib */; };
-		114E0AF227CD5D8700147365 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AEC27CD5D8700147365 /* DetailPresenter.swift */; };
-		114E0AF327CD5D8700147365 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AED27CD5D8700147365 /* DetailRouter.swift */; };
-		114E0AF427CD5D8700147365 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AEE27CD5D8700147365 /* DetailViewController.swift */; };
-		114E0AF527CD5D8700147365 /* DetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AEF27CD5D8700147365 /* DetailProtocols.swift */; };
-		114E0AF627CD5D8700147365 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AF027CD5D8700147365 /* DetailInteractor.swift */; };
-		114E0AF727CD5D8700147365 /* DetailEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E0AF127CD5D8700147365 /* DetailEntities.swift */; };
-		114E0AF927CD5DB000147365 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114E0AF827CD5DB000147365 /* DetailViewController.xib */; };
 		1192078427DCB9A7004D963A /* HomeItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192078227DCB9A7004D963A /* HomeItemTableViewCell.swift */; };
 		1192078527DCB9A7004D963A /* HomeItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1192078327DCB9A7004D963A /* HomeItemTableViewCell.xib */; };
 		1192078927DCBD35004D963A /* DSShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192078827DCBD35004D963A /* DSShape.swift */; };
@@ -116,13 +109,6 @@
 		114E0AE127CD5CE100147365 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		114E0AE227CD5CE100147365 /* ProfileEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEntities.swift; sourceTree = "<group>"; };
 		114E0AE927CD5D1400147365 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		114E0AEC27CD5D8700147365 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
-		114E0AED27CD5D8700147365 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
-		114E0AEE27CD5D8700147365 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		114E0AEF27CD5D8700147365 /* DetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProtocols.swift; sourceTree = "<group>"; };
-		114E0AF027CD5D8700147365 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
-		114E0AF127CD5D8700147365 /* DetailEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEntities.swift; sourceTree = "<group>"; };
-		114E0AF827CD5DB000147365 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		1192078227DCB9A7004D963A /* HomeItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemTableViewCell.swift; sourceTree = "<group>"; };
 		1192078327DCB9A7004D963A /* HomeItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeItemTableViewCell.xib; sourceTree = "<group>"; };
 		1192078827DCBD35004D963A /* DSShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSShape.swift; sourceTree = "<group>"; };
@@ -270,7 +256,6 @@
 				114E0ABE27CD598B00147365 /* Home */,
 				114E0ABF27CD59DE00147365 /* Favourites */,
 				114E0AC027CD59E800147365 /* Profile */,
-				114E0AEB27CD5D6500147365 /* Detail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -316,20 +301,6 @@
 				114E0AE927CD5D1400147365 /* ProfileViewController.xib */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		114E0AEB27CD5D6500147365 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				114E0AEE27CD5D8700147365 /* DetailViewController.swift */,
-				114E0AEC27CD5D8700147365 /* DetailPresenter.swift */,
-				114E0AF027CD5D8700147365 /* DetailInteractor.swift */,
-				114E0AED27CD5D8700147365 /* DetailRouter.swift */,
-				114E0AEF27CD5D8700147365 /* DetailProtocols.swift */,
-				114E0AF127CD5D8700147365 /* DetailEntities.swift */,
-				114E0AF827CD5DB000147365 /* DetailViewController.xib */,
-			);
-			path = Detail;
 			sourceTree = "<group>";
 		};
 		1192078127DCB98F004D963A /* Cells */ = {
@@ -515,7 +486,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				114E0ADC27CD5CB300147365 /* FavouritesViewController.xib in Resources */,
-				114E0AF927CD5DB000147365 /* DetailViewController.xib in Resources */,
 				1192078527DCB9A7004D963A /* HomeItemTableViewCell.xib in Resources */,
 				11A814F827CBDF08001E2485 /* LaunchScreen.storyboard in Resources */,
 				11A814F527CBDF08001E2485 /* Assets.xcassets in Resources */,
@@ -558,11 +528,9 @@
 				1117825327CBF730008F8B8F /* main.swift in Sources */,
 				114E0ACB27CD5A0800147365 /* HomeInteractor.swift in Sources */,
 				114E0AD627CD5C6300147365 /* FavouritesRouter.swift in Sources */,
-				114E0AF527CD5D8700147365 /* DetailProtocols.swift in Sources */,
 				114E0AD927CD5C6300147365 /* FavouritesInteractor.swift in Sources */,
 				114E0AD727CD5C6300147365 /* FavouritesViewController.swift in Sources */,
 				114E0AE827CD5CE100147365 /* ProfileEntities.swift in Sources */,
-				114E0AF627CD5D8700147365 /* DetailInteractor.swift in Sources */,
 				110601E327DA80F600A4023C /* HomeTableViewDataSource.swift in Sources */,
 				1192078927DCBD35004D963A /* DSShape.swift in Sources */,
 				1117825727CC0046008F8B8F /* FavouritesCoordinator.swift in Sources */,
@@ -571,12 +539,9 @@
 				110601E527DA811100A4023C /* HomeTableViewDelegate.swift in Sources */,
 				114E0ADA27CD5C6300147365 /* FavouritesEntities.swift in Sources */,
 				1117824B27CBF037008F8B8F /* MainCoordinator.swift in Sources */,
-				114E0AF327CD5D8700147365 /* DetailRouter.swift in Sources */,
 				11A814EC27CBDF07001E2485 /* AppDelegate.swift in Sources */,
 				1117824927CBEF05008F8B8F /* Coordinator.swift in Sources */,
 				1117825527CBFFEA008F8B8F /* HomeCoordinator.swift in Sources */,
-				114E0AF427CD5D8700147365 /* DetailViewController.swift in Sources */,
-				114E0AF227CD5D8700147365 /* DetailPresenter.swift in Sources */,
 				114E0AE627CD5CE100147365 /* ProfileProtocols.swift in Sources */,
 				11A8150127CBE2DC001E2485 /* ImageAssets.swift in Sources */,
 				114E0AD527CD5C6300147365 /* FavouritesPresenter.swift in Sources */,
@@ -585,7 +550,6 @@
 				11A814EE27CBDF07001E2485 /* SceneDelegate.swift in Sources */,
 				114E0AE527CD5CE100147365 /* ProfileViewController.swift in Sources */,
 				114E0AC927CD5A0800147365 /* HomeViewController.swift in Sources */,
-				114E0AF727CD5D8700147365 /* DetailEntities.swift in Sources */,
 				114E0AE727CD5CE100147365 /* ProfileInteractor.swift in Sources */,
 				114E0AC727CD5A0800147365 /* HomePresenter.swift in Sources */,
 				110E6A0427CEA00D00C7768E /* Factory.swift in Sources */,

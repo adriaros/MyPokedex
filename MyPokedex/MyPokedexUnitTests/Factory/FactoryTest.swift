@@ -44,18 +44,6 @@ class FactoryTest: XCTestCase {
         XCTAssertTrue(homeViewController.presenter?.router != nil)
     }
     
-    func test_factoryMakeDetail() throws {
-        // Given a coordinator
-
-        // When the detail view controller is made
-        let detailViewController = sut.makeDetail()
-        
-        // Then the detail module is created
-        XCTAssertTrue(detailViewController.presenter != nil)
-        XCTAssertTrue(detailViewController.presenter?.interactor != nil)
-        XCTAssertTrue(detailViewController.presenter?.router != nil)
-    }
-    
     func test_factoryMakeFavourites() throws {
         // Given a coordinator
 

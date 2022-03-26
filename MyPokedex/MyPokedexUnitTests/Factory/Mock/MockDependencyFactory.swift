@@ -12,7 +12,6 @@ class MockDependencyFactory: Factory {
     
     var tabBarController: TabBarController!
     var homeViewController: HomeViewController!
-    var detailViewController: DetailViewController!
     var favouritesViewController: FavouritesViewController!
     var profileViewController: ProfileViewController!
     
@@ -22,10 +21,6 @@ class MockDependencyFactory: Factory {
     
     func makeHome(coordinator: HomeCoordinator) -> HomeViewController {
         homeViewController
-    }
-    
-    func makeDetail() -> DetailViewController {
-        detailViewController
     }
     
     func makeFavourites() -> FavouritesViewController {

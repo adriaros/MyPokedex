@@ -24,7 +24,7 @@ protocol HomeViewToPresenterProtocol: AnyObject {
     var view: HomePresenterToViewProtocol? { get set }
     var interactor: HomePresenterToInteractorProtocol? { get set }
     var router: HomePresenterToRouterProtocol? { get set }
-    func setupView()
+    func selectPokemon()
 }
 
 protocol HomePresenterToRouterProtocol: AnyObject {

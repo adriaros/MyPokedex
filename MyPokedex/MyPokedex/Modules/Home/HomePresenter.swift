@@ -14,8 +14,8 @@ class HomePresenter: HomeViewToPresenterProtocol {
     var interactor: HomePresenterToInteractorProtocol?
     var router: HomePresenterToRouterProtocol?
     
-    func setupView() {
-        
+    func selectPokemon() {
+        print("AQUII")
     }
 }
 

@@ -10,7 +10,6 @@ import Foundation
 protocol Factory {
     func makeTabBar() -> TabBarController
     func makeHome(coordinator: HomeCoordinator) -> HomeViewController
-    func makeDetail() -> DetailViewController
     func makeFavourites() -> FavouritesViewController
     func makeProfile() -> ProfileViewController
 }

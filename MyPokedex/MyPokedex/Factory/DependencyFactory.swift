@@ -17,10 +17,6 @@ class DependencyFactory: Factory {
         HomeRouter.create(coordinator: coordinator) as! HomeViewController
     }
     
-    func makeDetail() -> DetailViewController {
-        DetailRouter.create() as! DetailViewController
-    }
-    
     func makeFavourites() -> FavouritesViewController {
         FavouritesRouter.create() as! FavouritesViewController
     }
