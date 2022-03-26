@@ -28,11 +28,11 @@ class HomeCoordinator: Coordinator {
         navigationController = UINavigationController(rootViewController: homeViewController)
     }
     
-    func pokemons() {
-        let pokemonsViewController = container.makePokemons(coordinator: self)
-        pokemonsViewController.navigationItem.leftBarButtonItem = leftBarButtonItem
-        pokemonsViewController.navigationItem.title = "Pokémons"
-        navigationController?.pushViewController(pokemonsViewController, animated: true)
+    func pokemonList() {
+        let pokemonListViewController = container.makePokemonList(coordinator: self)
+        pokemonListViewController.navigationItem.leftBarButtonItem = leftBarButtonItem
+        pokemonListViewController.navigationItem.title = "Pokémons"
+        navigationController?.pushViewController(pokemonListViewController, animated: true)
     }
     
     @IBAction func back(_ sender: Any) {

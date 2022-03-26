@@ -30,7 +30,7 @@ class HomeRouter: HomePresenterToRouterProtocol {
         return view
     }
     
-    func pokemons() {
-        coordinator?.pokemons()
+    func pokemonList() {
+        coordinator?.pokemonList()
     }
 }

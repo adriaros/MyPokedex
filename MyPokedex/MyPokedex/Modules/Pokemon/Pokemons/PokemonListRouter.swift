@@ -1,5 +1,5 @@
 //
-//  PokemonsRouter.swift
+//  PokemonListRouter.swift
 //  MyPokedex
 //
 //  Created by Adrià Ros on 26/3/22.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-class PokemonsRouter: PokemonsPresenterToRouterProtocol {
+class PokemonListRouter: PokemonListPresenterToRouterProtocol {
     
     var coordinator: HomeCoordinator?
     
     class func create(coordinator: HomeCoordinator?) -> UIViewController {
         
-        let view = PokemonsViewController()
-        let presenter = PokemonsPresenter()
-        let interactor = PokemonsInteractor()
-        let router = PokemonsRouter()
+        let view = PokemonListViewController()
+        let presenter = PokemonListPresenter()
+        let interactor = PokemonListInteractor()
+        let router = PokemonListRouter()
         
         view.presenter = presenter
         presenter.view = view

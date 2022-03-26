@@ -66,22 +66,22 @@ class HomeTest: XCTestCase {
         XCTAssertEqual(locations.containerImageView.image, ImageAsset.Home.locations.image)
     }
     
-    func test_didSelectPokemons() throws {
+    func test_didSelectPokemonList() throws {
         // Given a testing scenario
         buildTestingScenario()
         vc.loadViewIfNeeded()
         
-        // When the user taps on the pokemons row
+        // When the user taps on the PokemonList row
         vc.tableView(vc.tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
         
-        // Then the user is pushed to the pokemons view
-        XCTAssertTrue(router.pokemonsCalled)
+        // Then the user is pushed to the pokemon list view
+        XCTAssertTrue(router.pokemonListCalled)
     }
 }
 
 class MockHomeRouter: HomePresenterToRouterProtocol {
     
-    var pokemonsCalled = false
+    var pokemonListCalled = false
     
     static func create(coordinator: HomeCoordinator?) -> UIViewController {
         let view = HomeViewController()
@@ -98,7 +98,7 @@ class MockHomeRouter: HomePresenterToRouterProtocol {
         return view
     }
     
-    func pokemons() {
-        pokemonsCalled = true
+    func pokemonList() {
+        pokemonListCalled = true
     }
 }

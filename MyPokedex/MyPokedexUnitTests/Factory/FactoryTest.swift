@@ -70,16 +70,16 @@ class FactoryTest: XCTestCase {
         XCTAssertTrue(profileViewController.presenter?.router != nil)
     }
     
-    func test_makePokemons() throws {
+    func test_makePokemonList() throws {
         // Given a coordintor
         let homeCoordinator = HomeCoordinator(container: sut)
 
-        // When the pokemons view controller is made
-        let pokemonsViewController = sut.makePokemons(coordinator: homeCoordinator)
+        // When the PokemonList view controller is made
+        let PokemonListViewController = sut.makePokemonList(coordinator: homeCoordinator)
         
-        // Then the pokemons module is created
-        XCTAssertTrue(pokemonsViewController.presenter != nil)
-        XCTAssertTrue(pokemonsViewController.presenter?.interactor != nil)
-        XCTAssertTrue(pokemonsViewController.presenter?.router != nil)
+        // Then the PokemonList module is created
+        XCTAssertTrue(PokemonListViewController.presenter != nil)
+        XCTAssertTrue(PokemonListViewController.presenter?.interactor != nil)
+        XCTAssertTrue(PokemonListViewController.presenter?.router != nil)
     }
 }

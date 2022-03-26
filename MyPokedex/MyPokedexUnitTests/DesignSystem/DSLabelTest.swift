@@ -51,4 +51,20 @@ class DSLabelTest: XCTestCase {
         XCTAssertEqual(sut.numberOfLines, 1)
         XCTAssertTrue(sut.adjustsFontSizeToFitWidth)
     }
+    
+    func test_number() throws {
+        // Given the style
+        let style: DSLabelStyle = .number("text", .black, .left, true, 1)
+        
+        // When the style is set
+        sut.style = style
+        
+        // Then the style is configured correctly
+        XCTAssertEqual(sut.text, "text")
+        XCTAssertEqual(sut.textColor, .black)
+        XCTAssertEqual(sut.font, UIFont(name: "Noteworthy Light", size: 12))
+        XCTAssertEqual(sut.textAlignment, .left)
+        XCTAssertEqual(sut.numberOfLines, 1)
+        XCTAssertTrue(sut.adjustsFontSizeToFitWidth)
+    }
 }

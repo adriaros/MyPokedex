@@ -14,7 +14,7 @@ class MockDependencyFactory: Factory {
     var homeViewController: HomeViewController!
     var favouritesViewController: FavouritesViewController!
     var profileViewController: ProfileViewController!
-    var pokemonsViewController: PokemonsViewController!
+    var PokemonListViewController: PokemonListViewController!
     
     func makeTabBar() -> TabBarController {
         tabBarController
@@ -32,7 +32,7 @@ class MockDependencyFactory: Factory {
         profileViewController
     }
     
-    func makePokemons(coordinator: HomeCoordinator?) -> PokemonsViewController {
-        pokemonsViewController
+    func makePokemonList(coordinator: HomeCoordinator?) -> PokemonListViewController {
+        PokemonListViewController
     }
 }

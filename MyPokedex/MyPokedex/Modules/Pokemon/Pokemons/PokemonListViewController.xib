@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PokemonListViewController" customModule="MyPokedex" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="wNE-OF-uAe" id="XRJ-44-MFX"/>
+                <outlet property="view" destination="iN0-l3-epB" id="fAy-cr-ocn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="yqA-Da-3gf">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wNE-OF-uAe">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="wNE-OF-uAe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="IJo-8V-a2P"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="wNE-OF-uAe" secondAttribute="bottom" id="JKe-8d-ejp"/>
+                <constraint firstItem="yqA-Da-3gf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="NTF-sO-Gms"/>
+                <constraint firstItem="yqA-Da-3gf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="W21-9R-X3G"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wNE-OF-uAe" secondAttribute="trailing" id="Wwu-FE-yMs"/>
+                <constraint firstItem="yqA-Da-3gf" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="ZEh-i0-PhH"/>
+                <constraint firstItem="wNE-OF-uAe" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ZT3-kO-1s7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="yqA-Da-3gf" secondAttribute="bottom" id="mst-8e-1oh"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="111"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="home_pokemon" width="1233.5" height="897"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -10,6 +10,7 @@ import UIKit
 enum DSLabelStyle: Equatable {
     case title(_ text: String?, _ color: UIColor, _ alignment: NSTextAlignment = .left, _ adjustsFontSizeToFitWidth: Bool = true, _ numberOfLines: Int = 0)
     case paragraph(_ text: String?, _ color: UIColor, _ alignment: NSTextAlignment = .left, _ adjustsFontSizeToFitWidth: Bool = true, _ numberOfLines: Int = 0)
+    case number(_ text: String?, _ color: UIColor, _ alignment: NSTextAlignment = .left, _ adjustsFontSizeToFitWidth: Bool = true, _ numberOfLines: Int = 0)
     case none
 }
 
@@ -23,6 +24,9 @@ class DSLabel: UILabel {
                 
             case let .paragraph(text, color, alignment, adjustsFontSizeToFitWidth, numberOfLines):
                 configure(text: text, color: color, font: "Noteworthy Light", size: 16, alignment: alignment, adjustsFontSizeToFitWidth: adjustsFontSizeToFitWidth, numberOfLines: numberOfLines)
+                
+            case let .number(text, color, alignment, adjustsFontSizeToFitWidth, numberOfLines):
+                configure(text: text, color: color, font: "Noteworthy Light", size: 12, alignment: alignment, adjustsFontSizeToFitWidth: adjustsFontSizeToFitWidth, numberOfLines: numberOfLines)
                 
             case .none:
                 break

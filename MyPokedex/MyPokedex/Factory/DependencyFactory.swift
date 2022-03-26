@@ -25,7 +25,7 @@ class DependencyFactory: Factory {
         ProfileRouter.create() as! ProfileViewController
     }
     
-    func makePokemons(coordinator: HomeCoordinator?) -> PokemonsViewController {
-        PokemonsRouter.create(coordinator: coordinator) as! PokemonsViewController
+    func makePokemonList(coordinator: HomeCoordinator?) -> PokemonListViewController {
+        PokemonListRouter.create(coordinator: coordinator) as! PokemonListViewController
     }
 }
