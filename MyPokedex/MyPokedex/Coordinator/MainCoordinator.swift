@@ -34,21 +34,21 @@ class MainCoordinator: Coordinator {
         childCoordinators = [homeCoordinator, favouritesCoordinator, profileCoordinator]
         
         guard let home = childCoordinators[0].navigationController else {
-            return
+            fatalError("Fatal error. Home navigation controller does not exist. Tab Bar controller can not be constructed")
         }
         
         home.tabBarItem = UITabBarItem(title: "Home", image: ImageAsset.TabBar.base.image, selectedImage: ImageAsset.TabBar.selected.image)
         home.tabBarItem.tag = 0
         
         guard let favourites = childCoordinators[1].navigationController else {
-            return
+            fatalError("Fatal error. Favourites navigation controller does not exist. Tab Bar controller can not be constructed")
         }
         
         favourites.tabBarItem = UITabBarItem(title: "Favourites", image: ImageAsset.TabBar.base.image, selectedImage: ImageAsset.TabBar.selected.image)
         favourites.tabBarItem.tag = 1
         
         guard let profile = childCoordinators[2].navigationController else {
-            return
+            fatalError("Fatal error. Profile navigation controller does not exist. Tab Bar controller can not be constructed")
         }
         
         profile.tabBarItem = UITabBarItem(title: "Profile", image: ImageAsset.TabBar.base.image, selectedImage: ImageAsset.TabBar.selected.image)

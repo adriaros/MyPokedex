@@ -14,15 +14,10 @@ class HomeTest: XCTestCase {
     var vc: HomeViewController!
     var presenter: HomePresenter!
     var interactor: HomeInteractor!
-    var router: HomeRouter!
-    
-    var coordinator: HomeCoordinator!
-    var container: MockDependencyFactory!
+    var router: MockHomeRouter!
     
     override func setUpWithError() throws {
         window = UIWindow()
-        container = MockDependencyFactory()
-        coordinator = HomeCoordinator(container: container)
     }
 
     override func tearDownWithError() throws {
@@ -31,15 +26,13 @@ class HomeTest: XCTestCase {
         presenter = nil
         interactor = nil
         router = nil
-        container = nil
-        coordinator = nil
     }
     
     private func buildTestingScenario() {
-        vc = HomeRouter.create(coordinator: coordinator) as? HomeViewController
+        vc = MockHomeRouter.create(coordinator: nil) as? HomeViewController
         presenter = vc.presenter as? HomePresenter
         interactor = presenter.interactor as? HomeInteractor
-        router = presenter.router as? HomeRouter
+        router = presenter.router as? MockHomeRouter
         
         window.addSubview(vc.view)
         window.makeKeyAndVisible()
@@ -71,5 +64,41 @@ class HomeTest: XCTestCase {
         XCTAssertEqual(locations.titleLabel.text, "Locations")
         XCTAssertEqual(locations.descriptionLabel.text, "In progress...")
         XCTAssertEqual(locations.containerImageView.image, ImageAsset.Home.locations.image)
+    }
+    
+    func test_didSelectPokemons() throws {
+        // Given a testing scenario
+        buildTestingScenario()
+        vc.loadViewIfNeeded()
+        
+        // When the user taps on the pokemons row
+        vc.tableView(vc.tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
+        
+        // Then the user is pushed to the pokemons view
+        XCTAssertTrue(router.pokemonsCalled)
+    }
+}
+
+class MockHomeRouter: HomePresenterToRouterProtocol {
+    
+    var pokemonsCalled = false
+    
+    static func create(coordinator: HomeCoordinator?) -> UIViewController {
+        let view = HomeViewController()
+        let presenter = HomePresenter()
+        let interactor = HomeInteractor()
+        let router = MockHomeRouter()
+        
+        view.presenter = presenter
+        presenter.view = view
+        presenter.router = router
+        presenter.interactor = interactor
+        interactor.presenter = presenter
+        
+        return view
+    }
+    
+    func pokemons() {
+        pokemonsCalled = true
     }
 }

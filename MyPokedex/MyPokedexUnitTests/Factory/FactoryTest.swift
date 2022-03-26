@@ -20,7 +20,7 @@ class FactoryTest: XCTestCase {
         sut = nil
     }
 
-    func test_factoryMakeTabBar() throws {
+    func test_makeTabBar() throws {
         // Given a expected tab bar controller
         var tabBarController: UITabBarController!
         
@@ -31,7 +31,7 @@ class FactoryTest: XCTestCase {
         XCTAssertEqual(tabBarController.tabBar.backgroundColor, UIColor.white.withAlphaComponent(0.8))
     }
     
-    func test_factoryMakeHome() throws {
+    func test_makeHome() throws {
         // Given a home coordinator
         let homeCoordinator = HomeCoordinator(container: sut)
 
@@ -44,11 +44,12 @@ class FactoryTest: XCTestCase {
         XCTAssertTrue(homeViewController.presenter?.router != nil)
     }
     
-    func test_factoryMakeFavourites() throws {
-        // Given a coordinator
+    func test_makeFavourites() throws {
+        // Given a expected view controller
+        var favouritesViewController: FavouritesViewController!
 
         // When the favourites view controller is made
-        let favouritesViewController = sut.makeFavourites()
+        favouritesViewController = sut.makeFavourites()
         
         // Then the favourites module is created
         XCTAssertTrue(favouritesViewController.presenter != nil)
@@ -56,15 +57,29 @@ class FactoryTest: XCTestCase {
         XCTAssertTrue(favouritesViewController.presenter?.router != nil)
     }
     
-    func test_factoryMakeProfile() throws {
-        // Given a coordinator
+    func test_makeProfile() throws {
+        // Given a expected view controller
+        var profileViewController: ProfileViewController!
 
         // When the profile view controller is made
-        let profileViewController = sut.makeProfile()
+        profileViewController = sut.makeProfile()
         
         // Then the profile module is created
         XCTAssertTrue(profileViewController.presenter != nil)
         XCTAssertTrue(profileViewController.presenter?.interactor != nil)
         XCTAssertTrue(profileViewController.presenter?.router != nil)
+    }
+    
+    func test_makePokemons() throws {
+        // Given a coordintor
+        let homeCoordinator = HomeCoordinator(container: sut)
+
+        // When the pokemons view controller is made
+        let pokemonsViewController = sut.makePokemons(coordinator: homeCoordinator)
+        
+        // Then the pokemons module is created
+        XCTAssertTrue(pokemonsViewController.presenter != nil)
+        XCTAssertTrue(pokemonsViewController.presenter?.interactor != nil)
+        XCTAssertTrue(pokemonsViewController.presenter?.router != nil)
     }
 }
