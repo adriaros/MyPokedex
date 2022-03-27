@@ -9,7 +9,7 @@ import Foundation
 
 class NetworkManager: NetworkProvider {
     
-    func request(provider: NetworkRequestProvider, _ completion: @escaping (HTTPStatusCode, Data?) -> Void) {
+    func request(provider: NetworkRequestProvider, _ completion: @escaping (HTTPStatusCode, ApiPokemonListResponseModel?) -> Void) {
         
         var request = URLRequest(url: provider.url)
         request.httpMethod = provider.method.rawValue
@@ -28,12 +28,8 @@ class NetworkManager: NetworkProvider {
                 return
             }
             
-            guard let data = data else {
-                completion(statusCode, nil)
-                return
-            }
-
-            completion(statusCode, data)
+            let decodedData: ApiPokemonListResponseModel? = JSONDecoder().decode(data: data)
+            completion(statusCode, decodedData)
         }
 
         task.resume()

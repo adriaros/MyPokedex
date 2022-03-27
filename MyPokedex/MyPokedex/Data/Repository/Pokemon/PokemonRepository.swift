@@ -21,7 +21,7 @@ class PokemonRepository: PokemonCloudRepository {
         
         network.request(provider: request) { _, data in
             if let data = data {
-                print(String(data: data, encoding: .utf8)!)
+                print("AQUIIII: ", data)
             }
         }
     }
