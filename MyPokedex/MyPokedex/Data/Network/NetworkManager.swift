@@ -9,9 +9,9 @@ import Foundation
 
 class NetworkManager: NetworkProvider {
     
-    func request(provider: NetworkRequestProvider, _ completion: @escaping (HTTPStatusCode, ApiPokemonListResponseModel?) -> Void) {
+    func request(provider: NetworkRequestProvider, _ completion: @escaping (HTTPStatusCode, Data?) -> Void) {
         
-        var request = URLRequest(url: provider.url)
+        var request = URLRequest(url: URL(string: provider.url)!)
         request.httpMethod = provider.method.rawValue
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -28,8 +28,7 @@ class NetworkManager: NetworkProvider {
                 return
             }
             
-            let decodedData: ApiPokemonListResponseModel? = JSONDecoder().decode(data: data)
-            completion(statusCode, decodedData)
+            completion(statusCode, data)
         }
 
         task.resume()

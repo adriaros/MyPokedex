@@ -9,7 +9,7 @@ import Foundation
 
 protocol NetworkRequestProvider {
     
-    var url: URL { get set }
+    var url: String { get set }
     var method: HTTPMethod { get set }
 }
 
@@ -53,6 +53,6 @@ enum HTTPStatusCode: Equatable {
 
 struct NetworkRequest: NetworkRequestProvider {
     
-    var url: URL
+    var url: String = ""
     var method: HTTPMethod = .get
 }

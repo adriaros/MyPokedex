@@ -16,12 +16,16 @@ class PokemonRepository: PokemonCloudRepository {
     }
     
     func get() {
-        var request = NetworkRequest(url: URL(string: "https://pokeapi.co/api/v2/pokemon")!)
+        var request = NetworkRequest()
+        request.url = "https://pokeapi.co/api/v2/pokemon?limit=151"
         request.method = .get
         
         network.request(provider: request) { _, data in
-            if let data = data {
-                print("AQUIIII: ", data)
+            
+            let decodedData: ApiPokemonListResponseModel? = JSONDecoder().decode(data: data)
+            
+            if let decodedData = decodedData {
+                print("AQUIIII: ", decodedData)
             }
         }
     }

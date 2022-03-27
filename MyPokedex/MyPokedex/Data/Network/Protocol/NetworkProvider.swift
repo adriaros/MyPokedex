@@ -8,5 +8,5 @@
 import Foundation
 
 protocol NetworkProvider {
-    func request(provider: NetworkRequestProvider, _ completion: @escaping (HTTPStatusCode, ApiPokemonListResponseModel?) -> Void)
+    func request(provider: NetworkRequestProvider, _ completion: @escaping (HTTPStatusCode, Data?) -> Void)
 }
