@@ -11,6 +11,7 @@ protocol NetworkRequestProvider {
     
     var url: String { get set }
     var method: HTTPMethod { get set }
+    var queryItems: [URLQueryItem]? { get set }
 }
 
 enum HTTPMethod: String {
@@ -55,4 +56,5 @@ struct NetworkRequest: NetworkRequestProvider {
     
     var url: String = ""
     var method: HTTPMethod = .get
+    var queryItems: [URLQueryItem]?
 }

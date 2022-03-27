@@ -16,6 +16,6 @@ class GetPokemonListUseCase: PokemonListUseCase {
     }
     
     func getPokemonList() {
-        provider.get()
+        provider.getOriginalList()
     }
 }

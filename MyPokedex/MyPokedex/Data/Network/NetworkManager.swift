@@ -11,7 +11,18 @@ class NetworkManager: NetworkProvider {
     
     func request(provider: NetworkRequestProvider, _ completion: @escaping (HTTPStatusCode, Data?) -> Void) {
         
-        var request = URLRequest(url: URL(string: provider.url)!)
+        var components = URLComponents(string: provider.url)
+        
+        if let queryItems = provider.queryItems {
+            components?.queryItems = queryItems
+        }
+        
+        guard let url = components?.url else {
+            completion(.unknown, nil)
+            return
+        }
+        
+        var request = URLRequest(url: url)
         request.httpMethod = provider.method.rawValue
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in

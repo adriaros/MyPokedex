@@ -11,14 +11,22 @@ class PokemonRepository: PokemonCloudRepository {
     
     let network: NetworkProvider
     
+    var url: String {
+        "\(PokemonApiEndpoints.scheme.rawValue)\(PokemonApiEndpoints.host.rawValue)"
+    }
+    
     init(network: NetworkProvider) {
         self.network = network
     }
     
-    func get() {
+    func getOriginalList() {
         var request = NetworkRequest()
-        request.url = "https://pokeapi.co/api/v2/pokemon?limit=151"
         request.method = .get
+        request.url = "\(url)\(PokemonApiEndpoints.get.list.rawValue)"
+        
+        request.queryItems = [
+            PokemonApiQueries.originalList
+        ]
         
         network.request(provider: request) { _, data in
             

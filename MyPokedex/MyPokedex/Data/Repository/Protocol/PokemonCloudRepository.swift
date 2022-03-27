@@ -8,5 +8,5 @@
 import Foundation
 
 protocol PokemonCloudRepository {
-    func get()
+    func getOriginalList()
 }
