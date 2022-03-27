@@ -21,3 +21,38 @@ enum HTTPMethod: String {
     case delete = "DELETE"
 }
 
+enum HTTPStatusCode: Equatable {
+    
+    case success
+    case forbidden
+    case unauthorized
+    case notFound
+    case badRequest
+    case serverError
+    case unknown
+    
+    init(statusCode: Int) {
+        switch statusCode {
+        case 200, 201:
+            self = .success
+        case 400:
+            self = .badRequest
+        case 401:
+            self = .unauthorized
+        case 403:
+            self = .forbidden
+        case 404:
+            self = .notFound
+        case 500:
+            self = .serverError
+        default:
+            self = .unknown
+        }
+    }
+}
+
+struct NetworkRequest: NetworkRequestProvider {
+    
+    var url: URL
+    var method: HTTPMethod = .get
+}

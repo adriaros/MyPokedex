@@ -18,6 +18,11 @@ class PokemonRepository: PokemonCloudRepository {
     func get() {
         var request = NetworkRequest(url: URL(string: "https://pokeapi.co/api/v2/pokemon")!)
         request.method = .get
-        network.request(provider: request)
+        
+        network.request(provider: request) { _, data in
+            if let data = data {
+                print(String(data: data, encoding: .utf8)!)
+            }
+        }
     }
 }
