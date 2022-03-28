@@ -16,8 +16,11 @@ class PokemonListTest: XCTestCase {
     var interactor: PokemonListInteractor!
     var router: MockPokemonListRouter!
     
+    var dataProvider: MockGetPokemonListUseCase!
+    
     override func setUpWithError() throws {
         window = UIWindow()
+        dataProvider = MockGetPokemonListUseCase()
     }
 
     override func tearDownWithError() throws {
@@ -26,10 +29,11 @@ class PokemonListTest: XCTestCase {
         presenter = nil
         interactor = nil
         router = nil
+        dataProvider = nil
     }
     
     private func buildTestingScenario() {
-        vc = MockPokemonListRouter.create(dataProvider: nil) as? PokemonListViewController
+        vc = MockPokemonListRouter.create(dataProvider: dataProvider) as? PokemonListViewController
         presenter = vc.presenter as? PokemonListPresenter
         interactor = presenter.interactor as? PokemonListInteractor
         router = presenter.router as? MockPokemonListRouter
