@@ -83,6 +83,13 @@
 		11AF1B3B27DE20B800BFD641 /* DSLabelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AF1B3A27DE20B800BFD641 /* DSLabelTest.swift */; };
 		11E6EFAA27F22F7500E4F19F /* GetPokemonListUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6EFA927F22F7500E4F19F /* GetPokemonListUseCaseTest.swift */; };
 		11E6EFAC27F22F8100E4F19F /* MockGetPokemonListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6EFAB27F22F8100E4F19F /* MockGetPokemonListUseCase.swift */; };
+		11E6EFB127F2313D00E4F19F /* PokemonRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6EFB027F2313D00E4F19F /* PokemonRepositoryTest.swift */; };
+		11E6EFB327F2314B00E4F19F /* MockPokemonCloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6EFB227F2314B00E4F19F /* MockPokemonCloudRepository.swift */; };
+		11E6EFB527F2326000E4F19F /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6EFB427F2326000E4F19F /* NetworkRequest.swift */; };
+		11E6EFB827F232CE00E4F19F /* QueryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6EFB727F232CE00E4F19F /* QueryItem.swift */; };
+		11E6EFBA27F232F700E4F19F /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6EFB927F232F700E4F19F /* HTTPMethod.swift */; };
+		11E6EFBC27F2331800E4F19F /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6EFBB27F2331800E4F19F /* HTTPStatusCode.swift */; };
+		11E6EFBE27F2336600E4F19F /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6EFBD27F2336600E4F19F /* MockNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +182,13 @@
 		11AF1B3A27DE20B800BFD641 /* DSLabelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSLabelTest.swift; sourceTree = "<group>"; };
 		11E6EFA927F22F7500E4F19F /* GetPokemonListUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPokemonListUseCaseTest.swift; sourceTree = "<group>"; };
 		11E6EFAB27F22F8100E4F19F /* MockGetPokemonListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetPokemonListUseCase.swift; sourceTree = "<group>"; };
+		11E6EFB027F2313D00E4F19F /* PokemonRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRepositoryTest.swift; sourceTree = "<group>"; };
+		11E6EFB227F2314B00E4F19F /* MockPokemonCloudRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPokemonCloudRepository.swift; sourceTree = "<group>"; };
+		11E6EFB427F2326000E4F19F /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		11E6EFB727F232CE00E4F19F /* QueryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryItem.swift; sourceTree = "<group>"; };
+		11E6EFB927F232F700E4F19F /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		11E6EFBB27F2331800E4F19F /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
+		11E6EFBD27F2336600E4F19F /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -368,6 +382,7 @@
 				112F35A427F07AB30090E4F1 /* Decoder */,
 				112F35A027F0757A0090E4F1 /* Entities */,
 				112F358627EFBCB40090E4F1 /* Protocol */,
+				11E6EFB427F2326000E4F19F /* NetworkRequest.swift */,
 				112F358727EFBDDA0090E4F1 /* NetworkManager.swift */,
 			);
 			path = Network;
@@ -376,7 +391,6 @@
 		112F358527EFBBD50090E4F1 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				112F358E27EFCA0A0090E4F1 /* Protocol */,
 				112F358D27EFCA030090E4F1 /* Pokemon */,
 			);
 			path = Repository;
@@ -394,6 +408,7 @@
 		112F358D27EFCA030090E4F1 /* Pokemon */ = {
 			isa = PBXGroup;
 			children = (
+				112F358E27EFCA0A0090E4F1 /* Protocol */,
 				112F359127EFCA330090E4F1 /* PokemonRepository.swift */,
 				112F35A727F085E30090E4F1 /* PokemonApiEndpoints.swift */,
 			);
@@ -444,6 +459,7 @@
 		112F35A027F0757A0090E4F1 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				11E6EFB627F2328C00E4F19F /* Network */,
 				112F35A127F075890090E4F1 /* Pokemon */,
 			);
 			path = Entities;
@@ -619,6 +635,8 @@
 		11E6EFA427F22EAB00E4F19F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				11E6EFAD27F2311000E4F19F /* Network */,
+				11E6EFAE27F2311700E4F19F /* Repository */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -654,6 +672,41 @@
 				11E6EFAB27F22F8100E4F19F /* MockGetPokemonListUseCase.swift */,
 			);
 			path = PokemonListUseCase;
+			sourceTree = "<group>";
+		};
+		11E6EFAD27F2311000E4F19F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				11E6EFBD27F2336600E4F19F /* MockNetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		11E6EFAE27F2311700E4F19F /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				11E6EFAF27F2312600E4F19F /* Pokemon */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		11E6EFAF27F2312600E4F19F /* Pokemon */ = {
+			isa = PBXGroup;
+			children = (
+				11E6EFB027F2313D00E4F19F /* PokemonRepositoryTest.swift */,
+				11E6EFB227F2314B00E4F19F /* MockPokemonCloudRepository.swift */,
+			);
+			path = Pokemon;
+			sourceTree = "<group>";
+		};
+		11E6EFB627F2328C00E4F19F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				11E6EFB727F232CE00E4F19F /* QueryItem.swift */,
+				11E6EFB927F232F700E4F19F /* HTTPMethod.swift */,
+				11E6EFBB27F2331800E4F19F /* HTTPStatusCode.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -771,11 +824,14 @@
 				1106020427DAACFF00A4023C /* MainCoordinatorTest.swift in Sources */,
 				110601FE27DA896500A4023C /* MockDependencyFactory.swift in Sources */,
 				11AF1B3B27DE20B800BFD641 /* DSLabelTest.swift in Sources */,
+				11E6EFB327F2314B00E4F19F /* MockPokemonCloudRepository.swift in Sources */,
 				11AF1B3427DE19BA00BFD641 /* HomeItemTableViewCellTest.swift in Sources */,
+				11E6EFBE27F2336600E4F19F /* MockNetworkManager.swift in Sources */,
 				11E6EFAC27F22F8100E4F19F /* MockGetPokemonListUseCase.swift in Sources */,
 				1106020027DAA43B00A4023C /* FavouritesCoordinatorTest.swift in Sources */,
 				110601FB27DA892400A4023C /* HomeCoordinatorTest.swift in Sources */,
 				11AF1B3927DE1F8B00BFD641 /* DSShapeTest.swift in Sources */,
+				11E6EFB127F2313D00E4F19F /* PokemonRepositoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -802,10 +858,12 @@
 				112F359827EFCE550090E4F1 /* GetPokemonListUseCase.swift in Sources */,
 				114E0AD727CD5C6300147365 /* FavouritesViewController.swift in Sources */,
 				112F359227EFCA330090E4F1 /* PokemonRepository.swift in Sources */,
+				11E6EFB527F2326000E4F19F /* NetworkRequest.swift in Sources */,
 				114E0AE827CD5CE100147365 /* ProfileEntities.swift in Sources */,
 				112F356827EF7AD00090E4F1 /* PokemonListRouter.swift in Sources */,
 				112F356C27EF7AD00090E4F1 /* PokemonListEntities.swift in Sources */,
 				112F356B27EF7AD00090E4F1 /* PokemonListInteractor.swift in Sources */,
+				11E6EFBC27F2331800E4F19F /* HTTPStatusCode.swift in Sources */,
 				110601E327DA80F600A4023C /* HomeTableViewDataSource.swift in Sources */,
 				1192078927DCBD35004D963A /* DSShape.swift in Sources */,
 				1117825727CC0046008F8B8F /* FavouritesCoordinator.swift in Sources */,
@@ -820,6 +878,7 @@
 				11A814EC27CBDF07001E2485 /* AppDelegate.swift in Sources */,
 				112F35A627F07AC70090E4F1 /* JSONDecoder-Decodable.swift in Sources */,
 				1117824927CBEF05008F8B8F /* Coordinator.swift in Sources */,
+				11E6EFBA27F232F700E4F19F /* HTTPMethod.swift in Sources */,
 				112F356727EF7AD00090E4F1 /* PokemonListPresenter.swift in Sources */,
 				1117825527CBFFEA008F8B8F /* HomeCoordinator.swift in Sources */,
 				112F35A327F075AD0090E4F1 /* ApiPokemonListResponseModel.swift in Sources */,
@@ -829,6 +888,7 @@
 				114E0AD527CD5C6300147365 /* FavouritesPresenter.swift in Sources */,
 				112F358C27EFBFD40090E4F1 /* NetworkRequestProvider.swift in Sources */,
 				114E0ACC27CD5A0800147365 /* HomeEntities.swift in Sources */,
+				11E6EFB827F232CE00E4F19F /* QueryItem.swift in Sources */,
 				1117825927CC005F008F8B8F /* ProfileCoordinator.swift in Sources */,
 				11A814EE27CBDF07001E2485 /* SceneDelegate.swift in Sources */,
 				114E0AE527CD5CE100147365 /* ProfileViewController.swift in Sources */,

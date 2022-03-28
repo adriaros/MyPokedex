@@ -1,5 +1,5 @@
 //
-//  GetPokemonListUseCaseTest.swift
+//  PokemonRepositoryTest.swift
 //  MyPokedexUnitTests
 //
 //  Created by Adrià Ros on 28/3/22.
@@ -8,19 +8,19 @@
 import XCTest
 @testable import MyPokedex
 
-class GetPokemonListUseCaseTest: XCTestCase {
+class PokemonRepositoryTest: XCTestCase {
     
-    var sut: GetPokemonListUseCase!
-    var pokemonCloudRepository: MockPokemonCloudRepository!
+    var sut: PokemonRepository!
+    var networkManager: MockNetworkManager!
 
     override func setUpWithError() throws {
-        pokemonCloudRepository = MockPokemonCloudRepository()
-        sut = GetPokemonListUseCase(provider: pokemonCloudRepository)
+        networkManager = MockNetworkManager()
+        sut = PokemonRepository(network: networkManager)
     }
 
     override func tearDownWithError() throws {
         sut = nil
-        pokemonCloudRepository = nil
+        networkManager = nil
     }
 
     func testExample() throws {
