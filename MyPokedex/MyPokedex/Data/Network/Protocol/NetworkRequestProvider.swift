@@ -8,13 +8,22 @@
 import Foundation
 
 protocol NetworkRequestProvider {
-    
     var url: String { get set }
     var method: HTTPMethod { get set }
-    var queryItems: [URLQueryItem]? { get set }
+    var queryItems: [QueryItem]? { get set }
 }
 
-enum HTTPMethod: String {
+protocol QueryItemProvider {
+    var name: String { get set }
+    var value: String { get set }
+}
+
+struct QueryItem: QueryItemProvider {
+    var name: String
+    var value: String
+}
+
+enum HTTPMethod: String, Equatable {
     case get = "GET"
     case post = "POST"
     case put = "PUT"
@@ -53,8 +62,7 @@ enum HTTPStatusCode: Equatable {
 }
 
 struct NetworkRequest: NetworkRequestProvider {
-    
     var url: String = ""
     var method: HTTPMethod = .get
-    var queryItems: [URLQueryItem]?
+    var queryItems: [QueryItem]?
 }

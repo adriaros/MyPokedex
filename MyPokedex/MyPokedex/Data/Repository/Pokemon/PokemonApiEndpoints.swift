@@ -18,5 +18,5 @@ enum PokemonApiEndpoints: String {
 }
 
 struct PokemonApiQueries {
-    static let originalList: URLQueryItem = URLQueryItem(name: "limit", value: "151")
+    static let originalList: QueryItem = QueryItem(name: "limit", value: "151")
 }

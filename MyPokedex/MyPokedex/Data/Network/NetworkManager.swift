@@ -14,12 +14,11 @@ class NetworkManager: NetworkProvider {
         var components = URLComponents(string: provider.url)
         
         if let queryItems = provider.queryItems {
-            components?.queryItems = queryItems
+            components?.queryItems = queryItems.map({ URLQueryItem(name: $0.name, value: $0.value) })
         }
         
         guard let url = components?.url else {
-            completion(.unknown, nil)
-            return
+            fatalError("Fatal error. Unable to get the URL from URLComponents \(String(describing: components))")
         }
         
         var request = URLRequest(url: url)
