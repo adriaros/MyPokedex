@@ -23,11 +23,23 @@ class GetPokemonListUseCaseTest: XCTestCase {
         pokemonCloudRepository = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func test_getOriginalList() throws {
+        // Given a expectation
+        var expectation: XCTestExpectation? = expectation(description: #function)
+        var result: [PokemonListItemModel]?
+        
+        // Given a mock list of pokemon
+        pokemonCloudRepository.mockOriginalList = [MockPokemonListItemModel.item]
+        
+        // When the method is executed
+        sut.get(originalList: { list in
+            result = list
+            expectation?.fulfill()
+            expectation = nil
+        })
+        
+        // Then the list is obtained
+        waitForExpectations(timeout: 1, handler: nil)
+        XCTAssertEqual(result, [MockPokemonListItemModel.item])
     }
 }

@@ -15,7 +15,9 @@ class GetPokemonListUseCase: PokemonListUseCase {
         self.provider = provider
     }
     
-    func getPokemonList() {
-        provider.getOriginalList()
+    func get(originalList completion: @escaping ([PokemonListItemModel]?) -> Void) {
+        provider.get(originalList: { items in
+            completion(items)
+        })
     }
 }

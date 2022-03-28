@@ -14,6 +14,8 @@ class PokemonListInteractor: PokemonListPresenterToInteractorProtocol {
     var presenter: PokemonListInteractorToPresenterProtocol?
     
     func loadData() {
-//        dataProvider?.getPokemonList()
+        dataProvider?.get(originalList: { items in
+            print(items)
+        })
     }
 }

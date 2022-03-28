@@ -19,7 +19,7 @@ class PokemonRepository: PokemonCloudRepository {
         self.network = network
     }
     
-    func getOriginalList() {
+    func get(originalList completion: @escaping ([PokemonListItemModel]?) -> Void) {
         var request = NetworkRequest()
         request.method = .get
         request.url = "\(url)\(PokemonApiEndpoints.get.list.rawValue)"
@@ -29,12 +29,17 @@ class PokemonRepository: PokemonCloudRepository {
         ]
         
         network.request(provider: request) { _, data in
-            
-            let decodedData: ApiPokemonListResponseModel? = JSONDecoder().decode(data: data)
-            
-            if let decodedData = decodedData {
-                print("AQUIIII: ", decodedData)
+            guard let decodedData: ApiPokemonListResponseModel? = JSONDecoder().decode(data: data) else {
+                completion(nil)
+                return
             }
+            
+            guard let results = decodedData?.results else {
+                completion(nil)
+                return
+            }
+            
+            completion(results.map({ PokemonListItemModel($0) }))
         }
     }
 }

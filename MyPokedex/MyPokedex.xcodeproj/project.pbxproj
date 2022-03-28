@@ -90,6 +90,8 @@
 		11E6EFBA27F232F700E4F19F /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6EFB927F232F700E4F19F /* HTTPMethod.swift */; };
 		11E6EFBC27F2331800E4F19F /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6EFBB27F2331800E4F19F /* HTTPStatusCode.swift */; };
 		11E6EFBE27F2336600E4F19F /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6EFBD27F2336600E4F19F /* MockNetworkManager.swift */; };
+		11E6EFC227F234EB00E4F19F /* PokemonListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6EFC127F234EB00E4F19F /* PokemonListItemModel.swift */; };
+		11E6EFC627F237D900E4F19F /* MockPokemonListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6EFC527F237D900E4F19F /* MockPokemonListItemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -189,6 +191,8 @@
 		11E6EFB927F232F700E4F19F /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		11E6EFBB27F2331800E4F19F /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		11E6EFBD27F2336600E4F19F /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		11E6EFC127F234EB00E4F19F /* PokemonListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListItemModel.swift; sourceTree = "<group>"; };
+		11E6EFC527F237D900E4F19F /* MockPokemonListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPokemonListItemModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -426,6 +430,7 @@
 		112F359427EFCE140090E4F1 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				11E6EFBF27F2349C00E4F19F /* Entities */,
 				112F359527EFCE1A0090E4F1 /* UseCases */,
 			);
 			path = Domain;
@@ -644,6 +649,7 @@
 		11E6EFA527F22EB000E4F19F /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				11E6EFC427F237C600E4F19F /* Entities */,
 				11E6EFA627F22F1D00E4F19F /* UseCases */,
 			);
 			path = Domain;
@@ -707,6 +713,30 @@
 				11E6EFBB27F2331800E4F19F /* HTTPStatusCode.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		11E6EFBF27F2349C00E4F19F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				11E6EFC027F234A500E4F19F /* Pokemon */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		11E6EFC027F234A500E4F19F /* Pokemon */ = {
+			isa = PBXGroup;
+			children = (
+				11E6EFC127F234EB00E4F19F /* PokemonListItemModel.swift */,
+			);
+			path = Pokemon;
+			sourceTree = "<group>";
+		};
+		11E6EFC427F237C600E4F19F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				11E6EFC527F237D900E4F19F /* MockPokemonListItemModel.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -821,6 +851,7 @@
 				1106020227DAA44900A4023C /* ProfileCoordinatorTest.swift in Sources */,
 				112F357F27EFAB4E0090E4F1 /* PokemonListItemTableViewCellTest.swift in Sources */,
 				11E6EFAA27F22F7500E4F19F /* GetPokemonListUseCaseTest.swift in Sources */,
+				11E6EFC627F237D900E4F19F /* MockPokemonListItemModel.swift in Sources */,
 				1106020427DAACFF00A4023C /* MainCoordinatorTest.swift in Sources */,
 				110601FE27DA896500A4023C /* MockDependencyFactory.swift in Sources */,
 				11AF1B3B27DE20B800BFD641 /* DSLabelTest.swift in Sources */,
@@ -893,6 +924,7 @@
 				11A814EE27CBDF07001E2485 /* SceneDelegate.swift in Sources */,
 				114E0AE527CD5CE100147365 /* ProfileViewController.swift in Sources */,
 				112F356927EF7AD00090E4F1 /* PokemonListViewController.swift in Sources */,
+				11E6EFC227F234EB00E4F19F /* PokemonListItemModel.swift in Sources */,
 				114E0AC927CD5A0800147365 /* HomeViewController.swift in Sources */,
 				114E0AE727CD5CE100147365 /* ProfileInteractor.swift in Sources */,
 				114E0AC727CD5A0800147365 /* HomePresenter.swift in Sources */,

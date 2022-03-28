@@ -8,5 +8,5 @@
 import Foundation
 
 protocol PokemonListUseCase {
-    func getPokemonList()
+    func get(originalList completion: @escaping ([PokemonListItemModel]?) -> Void)
 }

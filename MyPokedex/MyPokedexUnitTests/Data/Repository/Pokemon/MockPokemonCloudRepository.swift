@@ -10,7 +10,9 @@ import Foundation
 
 class MockPokemonCloudRepository: PokemonCloudRepository {
     
-    func getOriginalList() {
-        
+    var mockOriginalList: [PokemonListItemModel]?
+    
+    func get(originalList completion: @escaping ([PokemonListItemModel]?) -> Void) {
+        completion(mockOriginalList)
     }
 }

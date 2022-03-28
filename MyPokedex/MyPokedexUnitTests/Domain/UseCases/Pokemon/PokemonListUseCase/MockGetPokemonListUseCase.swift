@@ -9,8 +9,8 @@ import Foundation
 @testable import MyPokedex
 
 class MockGetPokemonListUseCase: PokemonListUseCase {
-    
-    func getPokemonList() {
+
+    func get(originalList completion: @escaping ([PokemonListItemModel]?) -> Void) {
         
     }
 }
