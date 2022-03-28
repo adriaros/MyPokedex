@@ -204,15 +204,17 @@
 		110601EB27DA833300A4023C /* MyPokedexUnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				11E6EFA427F22EAB00E4F19F /* Data */,
+				11E6EFA527F22EB000E4F19F /* Domain */,
 				11AF1B3727DE1F5E00BFD641 /* DesignSystem */,
 				110601F427DA839A00A4023C /* Factory */,
-				110601F327DA834500A4023C /* Coordinators */,
+				110601F327DA834500A4023C /* Coordinator */,
 				11AF1B3027DE199F00BFD641 /* Modules */,
 			);
 			path = MyPokedexUnitTests;
 			sourceTree = "<group>";
 		};
-		110601F327DA834500A4023C /* Coordinators */ = {
+		110601F327DA834500A4023C /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 				1106020327DAACFF00A4023C /* MainCoordinatorTest.swift */,
@@ -220,7 +222,7 @@
 				110601FF27DAA43B00A4023C /* FavouritesCoordinatorTest.swift */,
 				1106020127DAA44900A4023C /* ProfileCoordinatorTest.swift */,
 			);
-			path = Coordinators;
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		110601F427DA839A00A4023C /* Factory */ = {
@@ -608,6 +610,20 @@
 				11AF1B3A27DE20B800BFD641 /* DSLabelTest.swift */,
 			);
 			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		11E6EFA427F22EAB00E4F19F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		11E6EFA527F22EB000E4F19F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
