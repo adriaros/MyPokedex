@@ -18,11 +18,13 @@ class PokemonListPresenter: PokemonListViewToPresenterProtocol {
         didSet {
             guaranteeMainThread {
                 self.view?.tableView.reloadData()
+                self.view?.hideActivityIndicator()
             }
         }
     }
     
     func setupView() {
+        view?.showActivityIndicator()
         interactor?.loadData()
     }
 }

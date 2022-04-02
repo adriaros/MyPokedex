@@ -11,6 +11,8 @@ import UIKit
 protocol PokemonListPresenterToViewProtocol: AnyObject {
     var presenter: PokemonListViewToPresenterProtocol? { get set }
     var tableView: UITableView! { get set }
+    func showActivityIndicator()
+    func hideActivityIndicator()
 }
 
 protocol PokemonListInteractorToPresenterProtocol: AnyObject {

@@ -11,9 +11,10 @@ import UIKit
 class PokemonListViewController: UIViewController {
     
     var presenter: PokemonListViewToPresenterProtocol?
-    
+    var activityIndicator: ActivityIndicatorView?
+
     @IBOutlet weak var tableView: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
@@ -30,4 +31,11 @@ class PokemonListViewController: UIViewController {
 
 extension PokemonListViewController: PokemonListPresenterToViewProtocol {
 
+    func showActivityIndicator() {
+        activityIndicator?.start(parent: view)
+    }
+    
+    func hideActivityIndicator() {
+        activityIndicator?.stop()
+    }
 }
