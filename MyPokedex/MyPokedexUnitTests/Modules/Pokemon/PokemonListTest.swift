@@ -43,18 +43,17 @@ class PokemonListTest: XCTestCase {
     }
 
     func test_viewDidLoad() throws {
-        // Given a testing scenario
+        // Given a testing scenario with one item as a result
+        dataProvider.originalList = [MockPokemonListItemModel.item]
         buildTestingScenario()
         
         // When the view did load
         vc.loadViewIfNeeded()
         
-        // Then the view has loaded the table items correctly
-        
-        // Pokémon cell
+        // Then the view has loaded the table item correctly
         let cell = vc.tableView(vc.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as! PokemonListItemTableViewCell
-        XCTAssertEqual(cell.itemNumberLabel.text, "#1")
-        XCTAssertEqual(cell.itemNameLabel.text, "Bulbasaur")
+        XCTAssertEqual(cell.itemNumberLabel.text, MockPokemonListItemModel.item.displayNumber)
+        XCTAssertEqual(cell.itemNameLabel.text, MockPokemonListItemModel.item.displayName)
     }
 }
 

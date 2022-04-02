@@ -14,6 +14,7 @@ protocol PokemonListPresenterToViewProtocol: AnyObject {
 }
 
 protocol PokemonListInteractorToPresenterProtocol: AnyObject {
+    func didLoad(data: [PokemonListItemModel]?)
 }
 
 protocol PokemonListPresenterToInteractorProtocol: AnyObject {
@@ -25,6 +26,7 @@ protocol PokemonListViewToPresenterProtocol: AnyObject {
     var view: PokemonListPresenterToViewProtocol? { get set }
     var interactor: PokemonListPresenterToInteractorProtocol? { get set }
     var router: PokemonListPresenterToRouterProtocol? { get set }
+    var items: [PokemonListItemModel]? { get set }
     func setupView()
 }
 

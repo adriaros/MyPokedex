@@ -14,6 +14,14 @@ class PokemonListPresenter: PokemonListViewToPresenterProtocol {
     var interactor: PokemonListPresenterToInteractorProtocol?
     var router: PokemonListPresenterToRouterProtocol?
     
+    var items: [PokemonListItemModel]? {
+        didSet {
+            guaranteeMainThread {
+                self.view?.tableView.reloadData()
+            }
+        }
+    }
+    
     func setupView() {
         interactor?.loadData()
     }
@@ -21,4 +29,15 @@ class PokemonListPresenter: PokemonListViewToPresenterProtocol {
 
 extension PokemonListPresenter: PokemonListInteractorToPresenterProtocol {
     
+    func didLoad(data: [PokemonListItemModel]?) {
+        items = data
+    }
+}
+
+func guaranteeMainThread(_ work: @escaping () -> Void) {
+    if Thread.isMainThread {
+        work()
+    } else {
+        DispatchQueue.main.async(execute: work)
+    }
 }

@@ -11,15 +11,32 @@ struct PokemonListItemModel: Equatable {
     
     let name: String?
     let url: String?
+    
+    var number = ""
     var imageUrl: String?
     
     let imageBaseUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
     let imageMimeType = ".png"
     
+    var displayName: String {
+        name?.capitalized ?? "N/A"
+    }
+    
+    var displayNumber: String {
+        "#\(number)"
+    }
+    
     init(_ data: ApiPokemonListResultModel?) {
+        
         name = data?.name
         url = data?.url
-        imageUrl = "\(imageBaseUrl)\(data?.url?.westernArabicNumeralsOnly.dropFirst() ?? "1")\(imageMimeType)"
+        
+        guard let numberFromUrl = data?.url?.westernArabicNumeralsOnly.dropFirst() else {
+            return
+        }
+        
+        number = String(numberFromUrl)
+        imageUrl = "\(imageBaseUrl)\(numberFromUrl)\(imageMimeType)"
     }
 }
 
