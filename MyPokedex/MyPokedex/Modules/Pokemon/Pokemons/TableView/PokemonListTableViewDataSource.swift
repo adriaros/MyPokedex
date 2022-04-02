@@ -20,7 +20,7 @@ extension PokemonListViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        cell.configure(number: item.displayNumber, name: item.displayName, image: nil)
+        cell.configure(number: item.displayNumber, name: item.displayName, image: indexPath.row == 20 ? nil : item.imageUrl)
         return cell
     }
 }

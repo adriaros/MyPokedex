@@ -20,26 +20,26 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cVo-fC-fJi" customClass="DSShape" customModule="MyPokedex" customModuleProvider="target">
                         <rect key="frame" x="20" y="12" width="362" height="63"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPa-ZX-soB" customClass="DSLabel" customModule="MyPokedex" customModuleProvider="target">
-                                <rect key="frame" x="8" y="8" width="20.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPa-ZX-soB" customClass="DSLabel" customModule="MyPokedex" customModuleProvider="target">
+                                <rect key="frame" x="8" y="8" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charmander" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIe-sa-i4M" customClass="DSLabel" customModule="MyPokedex" customModuleProvider="target">
-                                <rect key="frame" x="20" y="21.5" width="203.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIe-sa-i4M" customClass="DSLabel" customModule="MyPokedex" customModuleProvider="target">
+                                <rect key="frame" x="20" y="31.5" width="225.5" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tLy-RA-YqN">
-                                <rect key="frame" x="231.5" y="0.0" width="130.5" height="63"/>
+                                <rect key="frame" x="253.5" y="0.0" width="108.5" height="63"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pIe-sa-i4M" firstAttribute="leading" secondItem="cVo-fC-fJi" secondAttribute="leading" constant="20" id="7jR-t5-eTb"/>
-                            <constraint firstItem="tLy-RA-YqN" firstAttribute="width" secondItem="cVo-fC-fJi" secondAttribute="width" multiplier="0.36" id="9tB-OP-Mui"/>
+                            <constraint firstItem="tLy-RA-YqN" firstAttribute="width" secondItem="cVo-fC-fJi" secondAttribute="width" multiplier="0.3" id="9tB-OP-Mui"/>
                             <constraint firstItem="pIe-sa-i4M" firstAttribute="centerY" secondItem="cVo-fC-fJi" secondAttribute="centerY" id="GYn-yQ-7hp"/>
                             <constraint firstItem="hPa-ZX-soB" firstAttribute="top" secondItem="cVo-fC-fJi" secondAttribute="top" constant="8" id="KUi-9m-2v9"/>
                             <constraint firstAttribute="trailing" secondItem="tLy-RA-YqN" secondAttribute="trailing" id="Kg2-Ae-Qng"/>
@@ -60,7 +60,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="containerShape" destination="cVo-fC-fJi" id="7ax-Hk-EuG"/>
-                <outlet property="itemImage" destination="tLy-RA-YqN" id="AUL-9L-KB5"/>
+                <outlet property="itemImageView" destination="tLy-RA-YqN" id="ve1-uP-LCH"/>
                 <outlet property="itemNameLabel" destination="pIe-sa-i4M" id="vsw-ax-9h4"/>
                 <outlet property="itemNumberLabel" destination="hPa-ZX-soB" id="HbC-oe-hww"/>
             </connections>

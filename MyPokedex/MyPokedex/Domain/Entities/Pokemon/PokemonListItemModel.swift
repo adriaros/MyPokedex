@@ -13,7 +13,7 @@ struct PokemonListItemModel: Equatable {
     let url: String?
     
     var number = ""
-    var imageUrl: String?
+    var imageUrl: URL?
     
     let imageBaseUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
     let imageMimeType = ".png"
@@ -36,7 +36,7 @@ struct PokemonListItemModel: Equatable {
         }
         
         number = String(numberFromUrl)
-        imageUrl = "\(imageBaseUrl)\(numberFromUrl)\(imageMimeType)"
+        imageUrl = URL(string: "\(imageBaseUrl)\(numberFromUrl)\(imageMimeType)") 
     }
 }
 

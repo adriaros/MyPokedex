@@ -38,4 +38,13 @@ enum ImageAsset {
         case locations = "home_locations"
         case games = "home_games"
     }
+    
+    enum PokemonList: String {
+        
+        var image: UIImage? {
+            return UIImage(named: self.rawValue)?.withRenderingMode(.alwaysOriginal)
+        }
+        
+        case fallback = "tabbar_open_pokeball_color"
+    }
 }

@@ -12,7 +12,7 @@ class PokemonListItemTableViewCell: UITableViewCell {
     @IBOutlet weak var containerShape: DSShape!
     @IBOutlet weak var itemNumberLabel: DSLabel!
     @IBOutlet weak var itemNameLabel: DSLabel!
-    @IBOutlet weak var itemImage: UIImageView!
+    @IBOutlet weak var itemImageView: UIImageView!
     
     static var cellType: String {
         String(describing: self)
@@ -30,8 +30,9 @@ class PokemonListItemTableViewCell: UITableViewCell {
         containerShape.alpha = 0.7
     }
     
-    func configure(number: String?, name: String?, image: UIImage?) {
+    func configure(number: String?, name: String?, image: URL?) {
         itemNumberLabel.style = .number(number, .black.withAlphaComponent(0.8), .left, true, 1)
         itemNameLabel.style = .title(name, .black, .left, true, 1)
+        itemImageView.load(url: image, fallback: ImageAsset.PokemonList.fallback.image)
     }
 }
