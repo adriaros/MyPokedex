@@ -15,12 +15,13 @@ extension PokemonListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PokemonListItemTableViewCell.cellType, for: indexPath) as! PokemonListItemTableViewCell
+        cell.imageProvider = imageProvider
         
         guard let item = presenter?.items?[indexPath.row] else {
             return UITableViewCell()
         }
         
-        cell.configure(number: item.displayNumber, name: item.displayName, image: indexPath.row == 20 ? nil : item.imageUrl)
+        cell.configure(number: item.displayNumber, name: item.displayName, image: item.imageUrl)
         return cell
     }
 }

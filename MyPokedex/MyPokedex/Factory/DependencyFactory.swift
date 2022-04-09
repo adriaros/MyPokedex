@@ -13,8 +13,16 @@ class DependencyFactory: Factory {
         NetworkManager()
     }()
     
+    lazy var cache: ImageCache = {
+       CacheManager()
+    }()
+    
     lazy var pokemonRepository: PokemonCloudRepository = {
         PokemonRepository(network: network)
+    }()
+    
+    lazy var imageRepository: ImageCloudRepository & ImageCacheRepository = {
+        ImageRepository(network: network, cache: cache)
     }()
     
     func makeTabBar() -> TabBarController {
@@ -34,7 +42,7 @@ class DependencyFactory: Factory {
     }
     
     func makePokemonList() -> PokemonListViewController {
-        let pokemonListUseCase = GetPokemonListUseCase(provider: pokemonRepository)
+        let pokemonListUseCase = GetPokemonListUseCase(dataProvider: pokemonRepository, imageProvider: imageRepository)
         return PokemonListRouter.create(dataProvider: pokemonListUseCase) as! PokemonListViewController
     }
 }

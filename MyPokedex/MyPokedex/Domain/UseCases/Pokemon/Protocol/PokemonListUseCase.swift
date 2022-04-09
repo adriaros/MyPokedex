@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
 protocol PokemonListUseCase {
     func get(originalList completion: @escaping ([PokemonListItemModel]?) -> Void)
+    func load(imageFrom url: URL?, completion: @escaping (_ data: UIImage?) -> Void)
 }

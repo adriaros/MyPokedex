@@ -6,13 +6,19 @@
 //
 
 import Foundation
+import UIKit
 @testable import MyPokedex
 
 class MockGetPokemonListUseCase: PokemonListUseCase {
     
     var originalList: [PokemonListItemModel]?
+    var image: UIImage?
 
     func get(originalList completion: @escaping ([PokemonListItemModel]?) -> Void) {
         completion(originalList)
+    }
+    
+    func load(imageFrom url: URL?, completion: @escaping (_ data: UIImage?) -> Void) {
+        completion(image)
     }
 }

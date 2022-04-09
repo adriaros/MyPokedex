@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PokemonRepository: PokemonCloudRepository {
+class PokemonRepository {
     
     let network: NetworkProvider
     
@@ -18,6 +18,9 @@ class PokemonRepository: PokemonCloudRepository {
     init(network: NetworkProvider) {
         self.network = network
     }
+}
+
+extension PokemonRepository: PokemonCloudRepository {
     
     func get(originalList completion: @escaping ([PokemonListItemModel]?) -> Void) {
         var request = NetworkRequest()

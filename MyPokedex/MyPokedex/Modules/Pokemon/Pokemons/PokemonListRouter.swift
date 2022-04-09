@@ -24,6 +24,7 @@ class PokemonListRouter: PokemonListPresenterToRouterProtocol {
         interactor.presenter = presenter
         
         view.activityIndicator = ActivityIndicatorView(style: .large)
+        view.imageProvider = dataProvider
         interactor.dataProvider = dataProvider
         
         return view

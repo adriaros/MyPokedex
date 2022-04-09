@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class NetworkManager: NetworkProvider {
     
@@ -24,23 +25,52 @@ class NetworkManager: NetworkProvider {
         var request = URLRequest(url: url)
         request.httpMethod = provider.method.rawValue
         
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        URLSession.shared.dataTask(with: request) { data, response, error in
             
-            guard let response = response as? HTTPURLResponse else {
-                completion(.unknown, nil)
-                return
+            guaranteeMainThread {
+                guard let response = response as? HTTPURLResponse else {
+                    completion(.unknown, nil)
+                    return
+                }
+                
+                let statusCode = HTTPStatusCode(statusCode: response.statusCode)
+                
+                guard statusCode == .success else {
+                    completion(statusCode, nil)
+                    return
+                }
+                
+                completion(statusCode, data)
             }
             
-            let statusCode = HTTPStatusCode(statusCode: response.statusCode)
-            
-            guard statusCode == .success else {
-                completion(statusCode, nil)
-                return
-            }
-            
-            completion(statusCode, data)
+        }.resume()
+    }
+    
+    func download(imageFrom url: URL?, completion: @escaping (_ data: UIImage?) -> Void) {
+        
+        guard let url = url else {
+            completion(nil)
+            return
         }
 
-        task.resume()
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guaranteeMainThread {
+                guard let data = data else {
+                    completion(nil)
+                    return
+                }
+                
+                completion(UIImage(data: data))
+            }
+
+        }.resume()
+    }
+}
+
+func guaranteeMainThread(_ work: @escaping () -> Void) {
+    if Thread.isMainThread {
+        work()
+    } else {
+        DispatchQueue.main.async(execute: work)
     }
 }

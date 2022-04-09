@@ -45,6 +45,7 @@ class PokemonListTest: XCTestCase {
     func test_viewDidLoad() throws {
         // Given a testing scenario with one item as a result
         dataProvider.originalList = [MockPokemonListItemModel.item]
+        dataProvider.image = ImageAsset.PokemonList.fallback.image
         buildTestingScenario()
         
         // When the view did load
@@ -54,6 +55,7 @@ class PokemonListTest: XCTestCase {
         let cell = vc.tableView(vc.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as! PokemonListItemTableViewCell
         XCTAssertEqual(cell.itemNumberLabel.text, MockPokemonListItemModel.item.displayNumber)
         XCTAssertEqual(cell.itemNameLabel.text, MockPokemonListItemModel.item.displayName)
+        XCTAssertEqual(cell.itemImageView.image, ImageAsset.PokemonList.fallback.image)
     }
 }
 
@@ -71,6 +73,7 @@ class MockPokemonListRouter: PokemonListPresenterToRouterProtocol {
         presenter.interactor = interactor
         interactor.presenter = presenter
         
+        view.imageProvider = dataProvider
         interactor.dataProvider = dataProvider
         
         return view
