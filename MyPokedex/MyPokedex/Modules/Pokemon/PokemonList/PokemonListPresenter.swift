@@ -27,7 +27,7 @@ class PokemonListPresenter: PokemonListViewToPresenterProtocol {
     }
     
     func itemSelected(at row: Int) {
-        router?.pushToDetail()
+        router?.pushToDetail(item: items?[row])
     }
 }
 

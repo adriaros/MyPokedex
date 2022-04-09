@@ -36,10 +36,10 @@ class HomeCoordinator: Coordinator {
         navigationController?.pushViewController(pokemonListViewController, animated: true)
     }
     
-    func pokemonDetail() {
-        let pokemonDetailViewController = container.makePokemonDetail()
+    func pokemonDetail(item: PokemonListItemModel) {
+        let pokemonDetailViewController = container.makePokemonDetail(item: item)
         pokemonDetailViewController.navigationItem.leftBarButtonItem = leftBarButtonItem
-        pokemonDetailViewController.navigationItem.title = "Detail"
+        pokemonDetailViewController.navigationItem.title = "\(item.displayNumber) \(item.displayName)"
         pokemonDetailViewController.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(pokemonDetailViewController, animated: true)
     }

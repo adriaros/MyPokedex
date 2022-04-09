@@ -69,13 +69,13 @@ class PokemonListTest: XCTestCase {
         vc.tableView(vc.tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
         
         // Then the detail view is pushed
-        XCTAssertTrue(router.pushToDetailCalled)
+        XCTAssertEqual(router.pushToItemDetail, MockPokemonListItemModel.item)
     }
 }
 
 class MockPokemonListRouter: PokemonListPresenterToRouterProtocol {
     
-    var pushToDetailCalled = false
+    var pushToItemDetail: PokemonListItemModel?
     
     static func create(coordinator: HomeCoordinator?, dataProvider: PokemonListUseCase?) -> UIViewController {
         let view = PokemonListViewController()
@@ -95,7 +95,7 @@ class MockPokemonListRouter: PokemonListPresenterToRouterProtocol {
         return view
     }
     
-    func pushToDetail() {
-        pushToDetailCalled = true
+    func pushToDetail(item: PokemonListItemModel?) {
+        pushToItemDetail = item
     }
 }

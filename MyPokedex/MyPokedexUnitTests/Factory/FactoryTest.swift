@@ -89,9 +89,12 @@ class FactoryTest: XCTestCase {
     func test_makePokemonDetail() throws {
         // Given a expected view controller
         var pokemonDetailViewController: PokemonDetailViewController!
+        
+        // Given the item
+        let pokemonListItem = PokemonListItemModel(MockPokemonListItemModel.data)
 
         // When the PokemonList view controller is made
-        pokemonDetailViewController = sut.makePokemonDetail()
+        pokemonDetailViewController = sut.makePokemonDetail(item: pokemonListItem)
         
         // Then the PokemonList module is created
         XCTAssertTrue(pokemonDetailViewController.presenter != nil)

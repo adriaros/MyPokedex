@@ -37,7 +37,7 @@ class MockDependencyFactory: Factory {
         pokemonListViewController
     }
     
-    func makePokemonDetail() -> PokemonDetailViewController {
+    func makePokemonDetail(item: PokemonListItemModel) -> PokemonDetailViewController {
         pokemonDetailViewController
     }
 }

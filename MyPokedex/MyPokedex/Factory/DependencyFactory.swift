@@ -46,7 +46,7 @@ class DependencyFactory: Factory {
         return PokemonListRouter.create(coordinator: coordinator, dataProvider: pokemonListUseCase) as! PokemonListViewController
     }
     
-    func makePokemonDetail() -> PokemonDetailViewController {
-        return PokemonDetailRouter.create() as! PokemonDetailViewController
+    func makePokemonDetail(item: PokemonListItemModel) -> PokemonDetailViewController {
+        return PokemonDetailRouter.create(item: item) as! PokemonDetailViewController
     }
 }
