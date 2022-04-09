@@ -25,6 +25,10 @@ class PokemonListPresenter: PokemonListViewToPresenterProtocol {
         view?.showActivityIndicator()
         interactor?.loadData()
     }
+    
+    func itemSelected(at row: Int) {
+        router?.pushToDetail()
+    }
 }
 
 extension PokemonListPresenter: PokemonListInteractorToPresenterProtocol {

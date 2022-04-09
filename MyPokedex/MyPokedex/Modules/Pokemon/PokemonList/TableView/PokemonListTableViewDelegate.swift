@@ -9,6 +9,10 @@ import UIKit
 
 extension PokemonListViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.itemSelected(at: indexPath.row)
+    }
+    
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
         UIView.animate(withDuration: 0.3) {
             tableView.cellForRow(at: indexPath)?.transform = CGAffineTransform(scaleX: 1.05, y: 1.05)

@@ -29,10 +29,19 @@ class HomeCoordinator: Coordinator {
     }
     
     func pokemonList() {
-        let pokemonListViewController = container.makePokemonList()
+        let pokemonListViewController = container.makePokemonList(coordinator: self)
         pokemonListViewController.navigationItem.leftBarButtonItem = leftBarButtonItem
         pokemonListViewController.navigationItem.title = "Pokémons"
+        pokemonListViewController.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(pokemonListViewController, animated: true)
+    }
+    
+    func pokemonDetail() {
+        let pokemonDetailViewController = container.makePokemonDetail()
+        pokemonDetailViewController.navigationItem.leftBarButtonItem = leftBarButtonItem
+        pokemonDetailViewController.navigationItem.title = "Detail"
+        pokemonDetailViewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(pokemonDetailViewController, animated: true)
     }
     
     @IBAction func back(_ sender: Any) {

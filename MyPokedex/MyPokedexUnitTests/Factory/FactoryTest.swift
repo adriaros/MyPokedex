@@ -71,15 +71,31 @@ class FactoryTest: XCTestCase {
     }
     
     func test_makePokemonList() throws {
+        // Given a home coordinator
+        let homeCoordinator = HomeCoordinator(container: sut)
+        
         // Given a expected view controller
         var pokemonListViewController: PokemonListViewController!
 
         // When the PokemonList view controller is made
-        pokemonListViewController = sut.makePokemonList()
+        pokemonListViewController = sut.makePokemonList(coordinator: homeCoordinator)
         
         // Then the PokemonList module is created
         XCTAssertTrue(pokemonListViewController.presenter != nil)
         XCTAssertTrue(pokemonListViewController.presenter?.interactor != nil)
         XCTAssertTrue(pokemonListViewController.presenter?.router != nil)
+    }
+    
+    func test_makePokemonDetail() throws {
+        // Given a expected view controller
+        var pokemonDetailViewController: PokemonDetailViewController!
+
+        // When the PokemonList view controller is made
+        pokemonDetailViewController = sut.makePokemonDetail()
+        
+        // Then the PokemonList module is created
+        XCTAssertTrue(pokemonDetailViewController.presenter != nil)
+        XCTAssertTrue(pokemonDetailViewController.presenter?.interactor != nil)
+        XCTAssertTrue(pokemonDetailViewController.presenter?.router != nil)
     }
 }

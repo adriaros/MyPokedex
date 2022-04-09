@@ -33,7 +33,7 @@ class PokemonListTest: XCTestCase {
     }
     
     private func buildTestingScenario() {
-        vc = MockPokemonListRouter.create(dataProvider: dataProvider) as? PokemonListViewController
+        vc = MockPokemonListRouter.create(coordinator: nil, dataProvider: dataProvider) as? PokemonListViewController
         presenter = vc.presenter as? PokemonListPresenter
         interactor = presenter.interactor as? PokemonListInteractor
         router = presenter.router as? MockPokemonListRouter
@@ -57,11 +57,27 @@ class PokemonListTest: XCTestCase {
         XCTAssertEqual(cell.itemNameLabel.text, MockPokemonListItemModel.item.displayName)
         XCTAssertEqual(cell.itemImageView.image, ImageAsset.PokemonList.fallback.image)
     }
+    
+    func test_didSelectRowAt() throws {
+        // Given a testing scenario with one item as a result
+        dataProvider.originalList = [MockPokemonListItemModel.item]
+        dataProvider.image = ImageAsset.PokemonList.fallback.image
+        buildTestingScenario()
+        vc.loadViewIfNeeded()
+        
+        // When the item is selected
+        vc.tableView(vc.tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
+        
+        // Then the detail view is pushed
+        XCTAssertTrue(router.pushToDetailCalled)
+    }
 }
 
 class MockPokemonListRouter: PokemonListPresenterToRouterProtocol {
     
-    static func create(dataProvider: PokemonListUseCase?) -> UIViewController {
+    var pushToDetailCalled = false
+    
+    static func create(coordinator: HomeCoordinator?, dataProvider: PokemonListUseCase?) -> UIViewController {
         let view = PokemonListViewController()
         let presenter = PokemonListPresenter()
         let interactor = PokemonListInteractor()
@@ -77,5 +93,9 @@ class MockPokemonListRouter: PokemonListPresenterToRouterProtocol {
         interactor.dataProvider = dataProvider
         
         return view
+    }
+    
+    func pushToDetail() {
+        pushToDetailCalled = true
     }
 }

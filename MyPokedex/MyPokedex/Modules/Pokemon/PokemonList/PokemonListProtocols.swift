@@ -30,8 +30,10 @@ protocol PokemonListViewToPresenterProtocol: AnyObject {
     var router: PokemonListPresenterToRouterProtocol? { get set }
     var items: [PokemonListItemModel]? { get set }
     func setupView()
+    func itemSelected(at row: Int)
 }
 
 protocol PokemonListPresenterToRouterProtocol: AnyObject {
-    static func create(dataProvider: PokemonListUseCase?) -> UIViewController
+    static func create(coordinator: HomeCoordinator?, dataProvider: PokemonListUseCase?) -> UIViewController
+    func pushToDetail()
 }
