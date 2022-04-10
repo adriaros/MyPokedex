@@ -14,6 +14,7 @@ enum PokemonApiEndpoints: String {
     
     enum get: String {
         case list = "pokemon"
+        case pokemon = "pokemon/%@"
     }
 }
 

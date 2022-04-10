@@ -19,9 +19,14 @@ class MockPokemonApiResponses {
         getter.originalList(bundle).response
     }
     
+    var getPokemon: Data? {
+        getter.pokemon(bundle).response
+    }
+    
     enum getter {
         
         case originalList(Bundle)
+        case pokemon(Bundle)
         
         var response: Data? {
             
@@ -30,6 +35,8 @@ class MockPokemonApiResponses {
             switch self {
             case let .originalList(bundle):
                 path = bundle.path(forResource: "GET_pokemon_originalList", ofType: "json")
+            case let .pokemon(bundle):
+                path = bundle.path(forResource: "GET_pokemon", ofType: "json")
             }
             
             do {

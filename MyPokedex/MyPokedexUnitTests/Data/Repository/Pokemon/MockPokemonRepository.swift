@@ -11,8 +11,13 @@ import Foundation
 class MockPokemonRepository: PokemonCloudRepository {
     
     var mockOriginalList: [PokemonListItemModel]?
+    var mockPokemon: PokemonModel?
     
     func get(originalList completion: @escaping ([PokemonListItemModel]?) -> Void) {
         completion(mockOriginalList)
+    }
+    
+    func get(pokemon: String, completion: @escaping (PokemonModel?) -> Void) {
+        completion(mockPokemon)
     }
 }

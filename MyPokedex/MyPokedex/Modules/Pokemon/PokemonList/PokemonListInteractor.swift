@@ -10,8 +10,8 @@ import UIKit
 
 class PokemonListInteractor: PokemonListPresenterToInteractorProtocol {
     
-    var dataProvider: PokemonListUseCase?
     var presenter: PokemonListInteractorToPresenterProtocol?
+    var dataProvider: PokemonListUseCase?
     
     func loadData() {
         dataProvider?.get(originalList: { items in

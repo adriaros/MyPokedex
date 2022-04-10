@@ -45,4 +45,19 @@ extension PokemonRepository: PokemonCloudRepository {
             completion(results.map({ PokemonListItemModel($0) }))
         }
     }
+    
+    func get(pokemon: String, completion: @escaping (PokemonModel?) -> Void) {
+        var request = NetworkRequest()
+        request.method = .get
+        request.url = String(format: "\(url)\(PokemonApiEndpoints.get.pokemon.rawValue)", pokemon)
+
+        network.request(provider: request) { _, data in
+            guard let decodedData: ApiPokemonResponseModel? = JSONDecoder().decode(data: data) else {
+                completion(nil)
+                return
+            }
+            
+            completion(PokemonModel(decodedData))
+        }
+    }
 }
