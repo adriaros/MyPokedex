@@ -15,7 +15,7 @@ struct PokemonListItemModel: Equatable {
     var number = ""
     var imageUrl: URL?
     
-    let imageBaseUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
+    let imageBaseUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"
     let imageMimeType = ".png"
     
     var displayName: String {
