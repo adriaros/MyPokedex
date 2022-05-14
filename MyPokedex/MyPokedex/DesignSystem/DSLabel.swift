@@ -8,6 +8,7 @@
 import UIKit
 
 enum DSLabelStyle: Equatable {
+    case header(_ text: String?, _ color: UIColor, _ alignment: NSTextAlignment = .left, _ adjustsFontSizeToFitWidth: Bool = true, _ numberOfLines: Int = 0)
     case title(_ text: String?, _ color: UIColor, _ alignment: NSTextAlignment = .left, _ adjustsFontSizeToFitWidth: Bool = true, _ numberOfLines: Int = 0)
     case paragraph(_ text: String?, _ color: UIColor, _ alignment: NSTextAlignment = .left, _ adjustsFontSizeToFitWidth: Bool = true, _ numberOfLines: Int = 0)
     case number(_ text: String?, _ color: UIColor, _ alignment: NSTextAlignment = .left, _ adjustsFontSizeToFitWidth: Bool = true, _ numberOfLines: Int = 0)
@@ -19,6 +20,9 @@ class DSLabel: UILabel {
     var style: DSLabelStyle = .none {
         didSet {
             switch style {
+            case let .header(text, color, alignment, adjustsFontSizeToFitWidth, numberOfLines):
+                configure(text: text, color: color, font: "Noteworthy Bold", size: 24, alignment: alignment, adjustsFontSizeToFitWidth: adjustsFontSizeToFitWidth, numberOfLines: numberOfLines)
+                
             case let .title(text, color, alignment, adjustsFontSizeToFitWidth, numberOfLines):
                 configure(text: text, color: color, font: "Noteworthy Bold", size: 20, alignment: alignment, adjustsFontSizeToFitWidth: adjustsFontSizeToFitWidth, numberOfLines: numberOfLines)
                 

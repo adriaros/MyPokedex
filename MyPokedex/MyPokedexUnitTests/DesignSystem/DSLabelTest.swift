@@ -19,6 +19,22 @@ class DSLabelTest: XCTestCase {
     override func tearDownWithError() throws {
         sut = nil
     }
+    
+    func test_header() throws {
+        // Given the style
+        let style: DSLabelStyle = .header("header", .black, .left, true, 1)
+        
+        // When the style is set
+        sut.style = style
+        
+        // Then the style is configured correctly
+        XCTAssertEqual(sut.text, "header")
+        XCTAssertEqual(sut.textColor, .black)
+        XCTAssertEqual(sut.font, UIFont(name: "Noteworthy Bold", size: 24))
+        XCTAssertEqual(sut.textAlignment, .left)
+        XCTAssertEqual(sut.numberOfLines, 1)
+        XCTAssertTrue(sut.adjustsFontSizeToFitWidth)
+    }
 
     func test_title() throws {
         // Given the style

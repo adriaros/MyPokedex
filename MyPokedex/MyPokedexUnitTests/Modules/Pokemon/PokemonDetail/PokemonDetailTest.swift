@@ -65,6 +65,9 @@ class PokemonDetailTest: XCTestCase {
         // Then the view has loaded the table items correctly
         let imageCell = view.tableView(view.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as! PokemonDetailImageTableViewCell
         XCTAssertEqual(imageCell.pokemonImageView.image, ImageAsset.PokemonDetail.fallback.image)
+        
+        let dataCell = view.tableView(view.tableView, cellForRowAt: IndexPath(row: 1, section: 0)) as! PokemonDetailDataTableViewCell
+        XCTAssertEqual(dataCell.pokemonNameLabel.text, pokemon.displayName)
     }
 }
 

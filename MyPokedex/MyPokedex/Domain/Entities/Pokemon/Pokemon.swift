@@ -21,6 +21,26 @@ struct Pokemon: Equatable {
     let imageMimeType = ".png"
     var imageUrl: URL?
     
+    var displayName: String {
+        (name ?? "").capitalized
+    }
+    
+    var displayWeight: String {
+        guard let weight = weight else {
+            return ""
+        }
+
+        return "\(Double(Double(weight) / 10)) kg"
+    }
+    
+    var displayHeight: String {
+        guard let decimetres = height else {
+            return ""
+        }
+
+        return "\(Double(Double(decimetres) / 10)) m"
+    }
+    
     init(_ data: ApiPokemonResponseModel?) {
         id = data?.id
         name = data?.name

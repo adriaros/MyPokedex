@@ -23,6 +23,7 @@ class PokemonDetailViewController: UIViewController {
     
     func configureTableView() {
         tableView.register(UINib(nibName: PokemonDetailImageTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: PokemonDetailImageTableViewCell.cellType)
+        tableView.register(UINib(nibName: PokemonDetailDataTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: PokemonDetailDataTableViewCell.cellType)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 100
