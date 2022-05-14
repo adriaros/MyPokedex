@@ -11,10 +11,10 @@ import UIKit
 
 class MockPokemonListLoaderUseCase: PokemonListLoaderUseCase {
     
-    var originalList: [PokemonListItemModel]?
+    var originalList: [PokemonListItem]?
     var image: UIImage?
 
-    func get(originalList completion: @escaping ([PokemonListItemModel]?) -> Void) {
+    func get(originalList completion: @escaping ([PokemonListItem]?) -> Void) {
         completion(originalList)
     }
     

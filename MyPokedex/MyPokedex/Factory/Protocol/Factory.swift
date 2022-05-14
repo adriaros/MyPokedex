@@ -23,7 +23,7 @@ protocol Factory {
     func makePokemonList(coordinator: HomeCoordinator) -> PokemonListViewController
     
     /// Make the pokemon detail module
-    func makePokemonDetail(item: PokemonListItemModel) -> PokemonDetailViewController
+    func makePokemonDetail(item: PokemonListItem) -> PokemonDetailViewController
 
     // MARK: - Favourites modules
     

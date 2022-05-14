@@ -44,7 +44,7 @@ class PokemonListTest: XCTestCase {
 
     func test_viewDidLoad() throws {
         // Given a testing scenario with one item as a result
-        dataProvider.originalList = [MockPokemonListItemModel.item]
+        dataProvider.originalList = [MockPokemonListItem.item]
         dataProvider.image = ImageAsset.PokemonList.fallback.image
         buildTestingScenario()
         
@@ -53,14 +53,14 @@ class PokemonListTest: XCTestCase {
         
         // Then the view has loaded the table item correctly
         let cell = vc.tableView(vc.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as! PokemonListItemTableViewCell
-        XCTAssertEqual(cell.itemNumberLabel.text, MockPokemonListItemModel.item.displayNumber)
-        XCTAssertEqual(cell.itemNameLabel.text, MockPokemonListItemModel.item.displayName)
+        XCTAssertEqual(cell.itemNumberLabel.text, MockPokemonListItem.item.displayNumber)
+        XCTAssertEqual(cell.itemNameLabel.text, MockPokemonListItem.item.displayName)
         XCTAssertEqual(cell.itemImageView.image, ImageAsset.PokemonList.fallback.image)
     }
     
     func test_didSelectRowAt() throws {
         // Given a testing scenario with one item as a result
-        dataProvider.originalList = [MockPokemonListItemModel.item]
+        dataProvider.originalList = [MockPokemonListItem.item]
         dataProvider.image = ImageAsset.PokemonList.fallback.image
         buildTestingScenario()
         vc.loadViewIfNeeded()
@@ -69,13 +69,13 @@ class PokemonListTest: XCTestCase {
         vc.tableView(vc.tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
         
         // Then the detail view is pushed
-        XCTAssertEqual(router.pushToItemDetail, MockPokemonListItemModel.item)
+        XCTAssertEqual(router.pushToItemDetail, MockPokemonListItem.item)
     }
 }
 
 class MockPokemonListRouter: PokemonListPresenterToRouterProtocol {
     
-    var pushToItemDetail: PokemonListItemModel?
+    var pushToItemDetail: PokemonListItem?
     
     static func create(coordinator: HomeCoordinator?, dataProvider: PokemonListLoaderUseCase?) -> UIViewController {
         let view = PokemonListViewController()
@@ -95,7 +95,7 @@ class MockPokemonListRouter: PokemonListPresenterToRouterProtocol {
         return view
     }
     
-    func pushToDetail(item: PokemonListItemModel?) {
+    func pushToDetail(item: PokemonListItem?) {
         pushToItemDetail = item
     }
 }

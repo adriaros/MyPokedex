@@ -23,5 +23,5 @@ struct MockPokemonSprites {
                                                       backShiny: backShiny,
                                                       backFemale: nil,
                                                       backShinyFemale: nil)
-    static let item = PokemonSpritesModel(data)
+    static let item = PokemonSprites(data)
 }

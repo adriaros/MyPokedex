@@ -10,7 +10,7 @@ import UIKit
 
 class PokemonDetailRouter: PokemonDetailPresenterToRouterProtocol {
     
-    class func create(item: PokemonListItemModel) -> UIViewController {
+    class func create(item: PokemonListItem) -> UIViewController {
         
         let view = PokemonDetailViewController()
         let presenter = PokemonDetailPresenter()

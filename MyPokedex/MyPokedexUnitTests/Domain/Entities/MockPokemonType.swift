@@ -14,5 +14,5 @@ struct MockPokemonType {
     
     static let typeData = ApiPokemonResponseModel.PKType.PKSType(name: name)
     static let data = ApiPokemonResponseModel.PKType(type: typeData)
-    static let item = PokemonTypeModel(data)
+    static let item = PokemonType(data)
 }

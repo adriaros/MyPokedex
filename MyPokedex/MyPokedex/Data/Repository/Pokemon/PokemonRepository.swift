@@ -22,7 +22,7 @@ class PokemonRepository {
 
 extension PokemonRepository: PokemonCloudRepository {
     
-    func get(originalList completion: @escaping ([PokemonListItemModel]?) -> Void) {
+    func get(originalList completion: @escaping ([PokemonListItem]?) -> Void) {
         var request = NetworkRequest()
         request.method = .get
         request.url = "\(url)\(PokemonApiEndpoints.get.list.rawValue)"
@@ -42,11 +42,11 @@ extension PokemonRepository: PokemonCloudRepository {
                 return
             }
             
-            completion(results.map({ PokemonListItemModel($0) }))
+            completion(results.map({ PokemonListItem($0) }))
         }
     }
     
-    func get(pokemon: String, completion: @escaping (PokemonModel?) -> Void) {
+    func get(pokemon: String, completion: @escaping (Pokemon?) -> Void) {
         var request = NetworkRequest()
         request.method = .get
         request.url = String(format: "\(url)\(PokemonApiEndpoints.get.pokemon.rawValue)", pokemon)
@@ -57,7 +57,7 @@ extension PokemonRepository: PokemonCloudRepository {
                 return
             }
             
-            completion(PokemonModel(decodedData))
+            completion(Pokemon(decodedData))
         }
     }
 }

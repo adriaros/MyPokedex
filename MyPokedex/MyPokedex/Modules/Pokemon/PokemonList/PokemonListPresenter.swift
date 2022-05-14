@@ -14,7 +14,7 @@ class PokemonListPresenter: PokemonListViewToPresenterProtocol {
     var interactor: PokemonListPresenterToInteractorProtocol?
     var router: PokemonListPresenterToRouterProtocol?
     
-    var items: [PokemonListItemModel]? {
+    var items: [PokemonListItem]? {
         didSet {
             view?.tableView.reloadData()
             view?.hideActivityIndicator()
@@ -33,7 +33,7 @@ class PokemonListPresenter: PokemonListViewToPresenterProtocol {
 
 extension PokemonListPresenter: PokemonListInteractorToPresenterProtocol {
     
-    func didLoad(data: [PokemonListItemModel]?) {
+    func didLoad(data: [PokemonListItem]?) {
         items = data
     }
 }

@@ -28,7 +28,7 @@ class PokemonRepositoryTest: XCTestCase {
     func test_getOriginalList() throws {
         // Given a expectation
         var expectation: XCTestExpectation? = expectation(description: #function)
-        var result: [PokemonListItemModel]?
+        var result: [PokemonListItem]?
         
         // Given a expected api response
         networkManager.mockData = networkResponses.getOriginalList
@@ -50,7 +50,7 @@ class PokemonRepositoryTest: XCTestCase {
     func test_getPokemon() throws {
         // Given a expectation
         var expectation: XCTestExpectation? = expectation(description: #function)
-        var result: PokemonModel?
+        var result: Pokemon?
         
         // Given a expected api response
         networkManager.mockData = networkResponses.getPokemon

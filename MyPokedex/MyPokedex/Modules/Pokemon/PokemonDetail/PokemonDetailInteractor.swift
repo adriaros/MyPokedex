@@ -11,9 +11,8 @@ import UIKit
 class PokemonDetailInteractor: PokemonDetailPresenterToInteractorProtocol {
     
     var presenter: PokemonDetailInteractorToPresenterProtocol?
-    var item: PokemonListItemModel?
+    var item: PokemonListItem?
     
     func loadData() {
-        
     }
 }

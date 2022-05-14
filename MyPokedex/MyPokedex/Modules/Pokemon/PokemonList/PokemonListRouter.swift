@@ -33,7 +33,7 @@ class PokemonListRouter: PokemonListPresenterToRouterProtocol {
         return view
     }
     
-    func pushToDetail(item: PokemonListItemModel?) {
+    func pushToDetail(item: PokemonListItem?) {
         guard let item = item else {
             return
         }

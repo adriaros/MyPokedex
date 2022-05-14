@@ -1,5 +1,5 @@
 //
-//  PokemonTypeModel.swift
+//  PokemonType.swift
 //  MyPokedex
 //
 //  Created by Adrià Ros on 10/4/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PokemonTypeModel: Equatable {
+struct PokemonType: Equatable {
     
     let name: String?
     

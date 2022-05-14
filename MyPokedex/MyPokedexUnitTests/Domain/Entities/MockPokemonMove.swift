@@ -14,5 +14,5 @@ struct MockPokemonMove {
     
     static let moveData = ApiPokemonResponseModel.PKMove.PKSMove(name: name)
     static let data = ApiPokemonResponseModel.PKMove(move: moveData)
-    static let item = PokemonMoveModel(data)
+    static let item = PokemonMove(data)
 }

@@ -18,7 +18,7 @@ class PokemonListLoader: PokemonListLoaderUseCase {
         self.imageProvider = imageProvider
     }
     
-    func get(originalList completion: @escaping ([PokemonListItemModel]?) -> Void) {
+    func get(originalList completion: @escaping ([PokemonListItem]?) -> Void) {
         dataProvider.get(originalList: { items in
             completion(items)
         })

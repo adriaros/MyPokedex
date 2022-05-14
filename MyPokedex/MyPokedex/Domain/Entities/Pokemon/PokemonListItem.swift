@@ -1,5 +1,5 @@
 //
-//  PokemonListItemModel.swift
+//  PokemonListItem.swift
 //  MyPokedex
 //
 //  Created by Adrià Ros on 28/3/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PokemonListItemModel: Equatable {
+struct PokemonListItem: Equatable {
     
     let name: String?
     let url: String?

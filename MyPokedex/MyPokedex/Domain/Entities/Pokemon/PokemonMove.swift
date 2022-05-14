@@ -1,5 +1,5 @@
 //
-//  PokemonMoveModel.swift
+//  PokemonMove.swift
 //  MyPokedex
 //
 //  Created by Adrià Ros on 10/4/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PokemonMoveModel: Equatable {
+struct PokemonMove: Equatable {
     
     let name: String?
     

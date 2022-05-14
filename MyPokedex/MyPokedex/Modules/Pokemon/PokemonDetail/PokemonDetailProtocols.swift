@@ -17,6 +17,7 @@ protocol PokemonDetailInteractorToPresenterProtocol: AnyObject {
 
 protocol PokemonDetailPresenterToInteractorProtocol: AnyObject {
     var presenter: PokemonDetailInteractorToPresenterProtocol? { get set }
+    func loadData()
 }
 
 protocol PokemonDetailViewToPresenterProtocol: AnyObject {
@@ -27,5 +28,5 @@ protocol PokemonDetailViewToPresenterProtocol: AnyObject {
 }
 
 protocol PokemonDetailPresenterToRouterProtocol: AnyObject {
-    static func create(item: PokemonListItemModel) -> UIViewController
+    static func create(item: PokemonListItem) -> UIViewController
 }

@@ -15,6 +15,7 @@ class PokemonDetailPresenter: PokemonDetailViewToPresenterProtocol {
     var router: PokemonDetailPresenterToRouterProtocol?
     
     func setupView() {
+        interactor?.loadData()
     }
 }
 

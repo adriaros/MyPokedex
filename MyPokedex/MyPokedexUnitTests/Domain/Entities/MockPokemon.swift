@@ -23,5 +23,5 @@ struct MockPokemon {
                                               types: [MockPokemonType.data],
                                               sprites: MockPokemonSprites.data)
     
-    static let item = PokemonModel(data)
+    static let item = Pokemon(data)
 }

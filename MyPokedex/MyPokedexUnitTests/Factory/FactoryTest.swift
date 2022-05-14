@@ -91,7 +91,7 @@ class FactoryTest: XCTestCase {
         var pokemonDetailViewController: PokemonDetailViewController!
         
         // Given the item
-        let pokemonListItem = PokemonListItemModel(MockPokemonListItemModel.data)
+        let pokemonListItem = PokemonListItem(MockPokemonListItem.data)
 
         // When the PokemonList view controller is made
         pokemonDetailViewController = sut.makePokemonDetail(item: pokemonListItem)

@@ -29,10 +29,10 @@ class GetPokemonListUseCaseTest: XCTestCase {
     func test_getOriginalList() throws {
         // Given a expectation
         var expectation: XCTestExpectation? = expectation(description: #function)
-        var result: [PokemonListItemModel]?
+        var result: [PokemonListItem]?
         
         // Given a mock list of pokemon
-        pokemonRepository.mockOriginalList = [MockPokemonListItemModel.item]
+        pokemonRepository.mockOriginalList = [MockPokemonListItem.item]
         
         // When the method is executed
         sut.get(originalList: { list in
@@ -43,7 +43,7 @@ class GetPokemonListUseCaseTest: XCTestCase {
         
         // Then the list is obtained
         waitForExpectations(timeout: 1, handler: nil)
-        XCTAssertEqual(result, [MockPokemonListItemModel.item])
+        XCTAssertEqual(result, [MockPokemonListItem.item])
     }
     
     func test_loadImageFromCache() throws {

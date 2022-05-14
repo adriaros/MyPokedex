@@ -36,7 +36,7 @@ class HomeCoordinator: Coordinator {
         navigationController?.pushViewController(pokemonListViewController, animated: true)
     }
     
-    func pokemonDetail(item: PokemonListItemModel) {
+    func pokemonDetail(item: PokemonListItem) {
         let pokemonDetailViewController = container.makePokemonDetail(item: item)
         pokemonDetailViewController.navigationItem.leftBarButtonItem = leftBarButtonItem
         pokemonDetailViewController.navigationItem.title = "\(item.displayNumber) \(item.displayName)"

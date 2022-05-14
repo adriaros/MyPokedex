@@ -8,6 +8,6 @@
 import Foundation
 
 protocol PokemonCloudRepository {
-    func get(originalList completion: @escaping ([PokemonListItemModel]?) -> Void)
-    func get(pokemon: String, completion: @escaping (PokemonModel?) -> Void)
+    func get(originalList completion: @escaping ([PokemonListItem]?) -> Void)
+    func get(pokemon: String, completion: @escaping (Pokemon?) -> Void)
 }
