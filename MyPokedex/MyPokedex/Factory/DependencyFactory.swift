@@ -25,6 +25,10 @@ class DependencyFactory: Factory {
         ImageRepository(network: network, cache: cache)
     }()
     
+    lazy var imageProvider: ImageProviderUseCase = {
+        ImageProvider(provider: imageRepository)
+    }()
+    
     func makeTabBar() -> TabBarController {
         TabBarController()
     }
@@ -42,12 +46,10 @@ class DependencyFactory: Factory {
     }
     
     func makePokemonList(coordinator: HomeCoordinator) -> PokemonListViewController {
-        let imageProvider = ImageProvider(provider: imageRepository)
-        return PokemonListRouter.create(coordinator: coordinator, dataProvider: pokemonRepository, imageProvider: imageProvider) as! PokemonListViewController
+        PokemonListRouter.create(coordinator: coordinator, dataProvider: pokemonRepository, imageProvider: imageProvider) as! PokemonListViewController
     }
     
     func makePokemonDetail(item: PokemonListItem) -> PokemonDetailViewController {
-        let dataProvider = PokemonLoader(dataProvider: pokemonRepository, imageProvider: imageRepository)
-        return PokemonDetailRouter.create(item: item, dataProvider: dataProvider) as! PokemonDetailViewController
+        PokemonDetailRouter.create(item: item, dataProvider: pokemonRepository, imageProvider: imageProvider) as! PokemonDetailViewController
     }
 }

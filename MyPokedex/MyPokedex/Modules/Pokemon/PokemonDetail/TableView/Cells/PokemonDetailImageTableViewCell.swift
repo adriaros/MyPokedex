@@ -9,7 +9,7 @@ import UIKit
 
 class PokemonDetailImageTableViewCell: UITableViewCell {
 
-    var imageProvider: PokemonLoaderUseCase?
+    var imageProvider: ImageProviderUseCase?
     
     @IBOutlet weak var pokemonImageView: UIImageView!
     

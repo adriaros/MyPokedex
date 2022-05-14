@@ -16,7 +16,8 @@ class PokemonDetailTest: XCTestCase {
     var interactor: PokemonDetailInteractor!
     var router: MockPokemonDetailRouter!
     
-    var dataProvider: MockPokemonLoaderUseCase!
+    var dataProvider: MockPokemonRepository!
+    var imageProvider: MockImageProviderUseCase!
     
     var item: PokemonListItem {
         MockPokemonListItem.item
@@ -28,7 +29,8 @@ class PokemonDetailTest: XCTestCase {
     
     override func setUpWithError() throws {
         window = UIWindow()
-        dataProvider = MockPokemonLoaderUseCase()
+        dataProvider = MockPokemonRepository()
+        imageProvider = MockImageProviderUseCase()
     }
 
     override func tearDownWithError() throws {
@@ -38,10 +40,11 @@ class PokemonDetailTest: XCTestCase {
         interactor = nil
         router = nil
         dataProvider = nil
+        imageProvider = nil
     }
     
     private func buildTestingScenario() {
-        view = MockPokemonDetailRouter.create(item: item, dataProvider: dataProvider) as? PokemonDetailViewController
+        view = MockPokemonDetailRouter.create(item: item, dataProvider: dataProvider, imageProvider: imageProvider) as? PokemonDetailViewController
         presenter = view.presenter as? PokemonDetailPresenter
         interactor = presenter.interactor as? PokemonDetailInteractor
         router = presenter.router as? MockPokemonDetailRouter
@@ -52,8 +55,8 @@ class PokemonDetailTest: XCTestCase {
 
     func test_viewDidLoad() throws {
         // Given a testing scenario with one item as a result
-        dataProvider.pokemon = pokemon
-        dataProvider.image = ImageAsset.PokemonDetail.fallback.image
+        dataProvider.mockPokemon = pokemon
+        imageProvider.image = ImageAsset.PokemonDetail.fallback.image
         buildTestingScenario()
         
         // When the view did load
@@ -67,7 +70,7 @@ class PokemonDetailTest: XCTestCase {
 
 class MockPokemonDetailRouter: PokemonDetailPresenterToRouterProtocol {
     
-    static func create(item: PokemonListItem, dataProvider: PokemonLoaderUseCase?) -> UIViewController {
+    static func create(item: PokemonListItem, dataProvider: PokemonCloudRepository, imageProvider: ImageProviderUseCase) -> UIViewController {
         let view = PokemonDetailViewController()
         let presenter = PokemonDetailPresenter()
         let interactor = PokemonDetailInteractor()
@@ -79,7 +82,8 @@ class MockPokemonDetailRouter: PokemonDetailPresenterToRouterProtocol {
         presenter.interactor = interactor
         interactor.presenter = presenter
         
-        view.imageProvider = dataProvider
+        view.imageProvider = imageProvider
+        interactor.item = item
         interactor.dataProvider = dataProvider
         
         return view

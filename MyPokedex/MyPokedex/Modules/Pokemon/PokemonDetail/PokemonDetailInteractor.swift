@@ -12,10 +12,14 @@ class PokemonDetailInteractor: PokemonDetailPresenterToInteractorProtocol {
     
     var presenter: PokemonDetailInteractorToPresenterProtocol?
     var item: PokemonListItem?
-    var dataProvider: PokemonLoaderUseCase?
+    var dataProvider: PokemonCloudRepository?
     
     func loadData() {
-        dataProvider?.getPokemonWith(number: item?.number, completion: { data in
+        guard let number = item?.number else {
+            return
+        }
+        
+        dataProvider?.get(pokemon: number, completion: { data in
             guard let pokemon = data else {
                 return
             }

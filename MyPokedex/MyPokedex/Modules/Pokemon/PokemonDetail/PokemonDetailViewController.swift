@@ -11,7 +11,7 @@ import UIKit
 class PokemonDetailViewController: UIViewController {
     
     var presenter: PokemonDetailViewToPresenterProtocol?
-    var imageProvider: PokemonLoaderUseCase?
+    var imageProvider: ImageProviderUseCase?
     
     @IBOutlet weak var tableView: UITableView!
     
