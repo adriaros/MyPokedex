@@ -107,6 +107,7 @@
 		11BAD22427F8AB5F006ADCB1 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BAD22327F8AB5F006ADCB1 /* ActivityIndicator.swift */; };
 		11CE5ECE282FFB2E00D7E56F /* PokemonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE5ECD282FFB2E00D7E56F /* PokemonLoader.swift */; };
 		11CE5ED0282FFB3D00D7E56F /* PokemonLoaderUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE5ECF282FFB3D00D7E56F /* PokemonLoaderUseCase.swift */; };
+		11CE5ED6282FFEED00D7E56F /* PokemonLoaderUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE5ED5282FFEED00D7E56F /* PokemonLoaderUseCaseTest.swift */; };
 		11DCD39327F3880700594657 /* MockPokemonApiResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DCD39227F3880700594657 /* MockPokemonApiResponses.swift */; };
 		11DCD39527F3893800594657 /* GET_pokemon_originalList.json in Resources */ = {isa = PBXBuildFile; fileRef = 11DCD39427F3893800594657 /* GET_pokemon_originalList.json */; };
 		11E6EFAA27F22F7500E4F19F /* PokemonListLoaderUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6EFA927F22F7500E4F19F /* PokemonListLoaderUseCaseTest.swift */; };
@@ -236,6 +237,7 @@
 		11BAD22327F8AB5F006ADCB1 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		11CE5ECD282FFB2E00D7E56F /* PokemonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonLoader.swift; sourceTree = "<group>"; };
 		11CE5ECF282FFB3D00D7E56F /* PokemonLoaderUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonLoaderUseCase.swift; sourceTree = "<group>"; };
+		11CE5ED5282FFEED00D7E56F /* PokemonLoaderUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonLoaderUseCaseTest.swift; sourceTree = "<group>"; };
 		11DCD39227F3880700594657 /* MockPokemonApiResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPokemonApiResponses.swift; sourceTree = "<group>"; };
 		11DCD39427F3893800594657 /* GET_pokemon_originalList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GET_pokemon_originalList.json; sourceTree = "<group>"; };
 		11E6EFA927F22F7500E4F19F /* PokemonListLoaderUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListLoaderUseCaseTest.swift; sourceTree = "<group>"; };
@@ -820,6 +822,14 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		11CE5ED4282FFEDF00D7E56F /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				11CE5ED5282FFEED00D7E56F /* PokemonLoaderUseCaseTest.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
 		11DCD39027F387DE00594657 /* MockApiResponses */ = {
 			isa = PBXGroup;
 			children = (
@@ -876,18 +886,19 @@
 		11E6EFA727F22F2500E4F19F /* Pokemon */ = {
 			isa = PBXGroup;
 			children = (
-				11E6EFA827F22F4800E4F19F /* PokemonListLoaderUseCase */,
+				11E6EFA827F22F4800E4F19F /* List */,
+				11CE5ED4282FFEDF00D7E56F /* Item */,
 			);
 			path = Pokemon;
 			sourceTree = "<group>";
 		};
-		11E6EFA827F22F4800E4F19F /* PokemonListLoaderUseCase */ = {
+		11E6EFA827F22F4800E4F19F /* List */ = {
 			isa = PBXGroup;
 			children = (
 				11E6EFA927F22F7500E4F19F /* PokemonListLoaderUseCaseTest.swift */,
 				11E6EFAB27F22F8100E4F19F /* MockPokemonListLoaderUseCase.swift */,
 			);
-			path = PokemonListLoaderUseCase;
+			path = List;
 			sourceTree = "<group>";
 		};
 		11E6EFAD27F2311000E4F19F /* Network */ = {
@@ -1082,6 +1093,7 @@
 				110601FE27DA896500A4023C /* MockDependencyFactory.swift in Sources */,
 				1140FC9928037A2100D54D33 /* MockPokemonType.swift in Sources */,
 				11AF1B3B27DE20B800BFD641 /* DSLabelTest.swift in Sources */,
+				11CE5ED6282FFEED00D7E56F /* PokemonLoaderUseCaseTest.swift in Sources */,
 				11E6EFB327F2314B00E4F19F /* MockPokemonRepository.swift in Sources */,
 				119C1AFF2801881D008F2A89 /* MockCacheManager.swift in Sources */,
 				1140FC952803788F00D54D33 /* MockPokemon.swift in Sources */,
