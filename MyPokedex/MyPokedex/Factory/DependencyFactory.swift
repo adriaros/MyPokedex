@@ -47,6 +47,7 @@ class DependencyFactory: Factory {
     }
     
     func makePokemonDetail(item: PokemonListItem) -> PokemonDetailViewController {
-        return PokemonDetailRouter.create(item: item) as! PokemonDetailViewController
+        let dataProvider = PokemonLoader(dataProvider: pokemonRepository, imageProvider: imageRepository)
+        return PokemonDetailRouter.create(item: item, dataProvider: dataProvider) as! PokemonDetailViewController
     }
 }

@@ -10,9 +10,11 @@ import UIKit
 
 protocol PokemonDetailPresenterToViewProtocol: AnyObject {
     var presenter: PokemonDetailViewToPresenterProtocol? { get set }
+    var tableView: UITableView! { get set }
 }
 
 protocol PokemonDetailInteractorToPresenterProtocol: AnyObject {
+    func didLoadData(_ data: Pokemon)
 }
 
 protocol PokemonDetailPresenterToInteractorProtocol: AnyObject {
@@ -24,9 +26,10 @@ protocol PokemonDetailViewToPresenterProtocol: AnyObject {
     var view: PokemonDetailPresenterToViewProtocol? { get set }
     var interactor: PokemonDetailPresenterToInteractorProtocol? { get set }
     var router: PokemonDetailPresenterToRouterProtocol? { get set }
+    var pokemon: Pokemon? { get }
     func setupView()
 }
 
 protocol PokemonDetailPresenterToRouterProtocol: AnyObject {
-    static func create(item: PokemonListItem) -> UIViewController
+    static func create(item: PokemonListItem, dataProvider: PokemonLoaderUseCase?) -> UIViewController
 }

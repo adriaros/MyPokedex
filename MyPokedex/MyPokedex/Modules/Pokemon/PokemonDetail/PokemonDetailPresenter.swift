@@ -14,6 +14,12 @@ class PokemonDetailPresenter: PokemonDetailViewToPresenterProtocol {
     var interactor: PokemonDetailPresenterToInteractorProtocol?
     var router: PokemonDetailPresenterToRouterProtocol?
     
+    var pokemon: Pokemon? {
+        didSet {
+            view?.tableView.reloadData()
+        }
+    }
+    
     func setupView() {
         interactor?.loadData()
     }
@@ -21,4 +27,7 @@ class PokemonDetailPresenter: PokemonDetailViewToPresenterProtocol {
 
 extension PokemonDetailPresenter: PokemonDetailInteractorToPresenterProtocol {
     
+    func didLoadData(_ data: Pokemon) {
+        pokemon = data
+    }
 }

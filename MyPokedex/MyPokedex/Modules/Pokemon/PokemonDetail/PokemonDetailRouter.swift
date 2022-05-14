@@ -10,7 +10,7 @@ import UIKit
 
 class PokemonDetailRouter: PokemonDetailPresenterToRouterProtocol {
     
-    class func create(item: PokemonListItem) -> UIViewController {
+    class func create(item: PokemonListItem, dataProvider: PokemonLoaderUseCase?) -> UIViewController {
         
         let view = PokemonDetailViewController()
         let presenter = PokemonDetailPresenter()
@@ -23,7 +23,9 @@ class PokemonDetailRouter: PokemonDetailPresenterToRouterProtocol {
         presenter.interactor = interactor
         interactor.presenter = presenter
         
+        view.imageProvider = dataProvider
         interactor.item = item
+        interactor.dataProvider = dataProvider
         
         return view
     }

@@ -11,10 +11,21 @@ import UIKit
 class PokemonDetailViewController: UIViewController {
     
     var presenter: PokemonDetailViewToPresenterProtocol?
+    var imageProvider: PokemonLoaderUseCase?
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTableView()
         presenter?.setupView()
+    }
+    
+    func configureTableView() {
+        tableView.register(UINib(nibName: PokemonDetailImageTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: PokemonDetailImageTableViewCell.cellType)
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.estimatedRowHeight = 100
     }
 }
 

@@ -47,4 +47,13 @@ enum ImageAsset {
         
         case fallback = "tabbar_open_pokeball_color"
     }
+    
+    enum PokemonDetail: String {
+        
+        var image: UIImage? {
+            return UIImage(named: self.rawValue)?.withRenderingMode(.alwaysOriginal)
+        }
+        
+        case fallback = "tabbar_open_pokeball_color"
+    }
 }

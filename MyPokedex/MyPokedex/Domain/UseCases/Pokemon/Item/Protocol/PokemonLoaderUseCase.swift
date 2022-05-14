@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
 protocol PokemonLoaderUseCase {
     func getPokemonWith(number: String?, completion: @escaping (Pokemon?) -> Void)
+    func load(imageFrom url: URL?, completion: @escaping (_ data: UIImage?) -> Void)
 }

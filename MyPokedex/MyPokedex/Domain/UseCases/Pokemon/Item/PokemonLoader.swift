@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class PokemonLoader: PokemonLoaderUseCase {
     
@@ -26,5 +27,22 @@ class PokemonLoader: PokemonLoaderUseCase {
         dataProvider.get(pokemon: number) { pokemon in
             completion(pokemon)
         }
+    }
+    
+    func load(imageFrom url: URL?, completion: @escaping (_ data: UIImage?) -> Void) {
+        guard let cachedImage = imageProvider.load(image: url) else {
+            imageProvider.download(imageFrom: url) { data in
+                guard let data = data else {
+                    completion(nil)
+                    return
+                }
+                
+                self.imageProvider.store(image: data, url: url)
+                completion(data)
+            }
+            return
+        }
+        
+        completion(cachedImage)
     }
 }
