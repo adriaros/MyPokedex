@@ -11,7 +11,7 @@ import UIKit
 class PokemonListInteractor: PokemonListPresenterToInteractorProtocol {
     
     var presenter: PokemonListInteractorToPresenterProtocol?
-    var dataProvider: PokemonListUseCase?
+    var dataProvider: PokemonListLoaderUseCase?
     
     func loadData() {
         dataProvider?.get(originalList: { items in

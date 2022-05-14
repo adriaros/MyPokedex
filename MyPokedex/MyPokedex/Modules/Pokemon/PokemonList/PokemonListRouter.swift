@@ -12,7 +12,7 @@ class PokemonListRouter: PokemonListPresenterToRouterProtocol {
     
     var coordinator: HomeCoordinator?
     
-    class func create(coordinator: HomeCoordinator?, dataProvider: PokemonListUseCase?) -> UIViewController {
+    class func create(coordinator: HomeCoordinator?, dataProvider: PokemonListLoaderUseCase?) -> UIViewController {
         
         let view = PokemonListViewController()
         let presenter = PokemonListPresenter()

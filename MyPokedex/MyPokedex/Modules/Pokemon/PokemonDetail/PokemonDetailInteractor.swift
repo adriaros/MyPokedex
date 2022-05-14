@@ -12,4 +12,8 @@ class PokemonDetailInteractor: PokemonDetailPresenterToInteractorProtocol {
     
     var presenter: PokemonDetailInteractorToPresenterProtocol?
     var item: PokemonListItemModel?
+    
+    func loadData() {
+        
+    }
 }

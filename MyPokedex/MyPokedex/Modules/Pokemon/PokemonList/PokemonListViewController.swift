@@ -12,7 +12,7 @@ class PokemonListViewController: UIViewController {
     
     var presenter: PokemonListViewToPresenterProtocol?
     var activityIndicator: ActivityIndicatorView?
-    var imageProvider: PokemonListUseCase?
+    var imageProvider: PokemonListLoaderUseCase?
 
     @IBOutlet weak var tableView: UITableView!
 

@@ -1,5 +1,5 @@
 //
-//  MockGetPokemonListUseCase.swift
+//  MockPokemonListLoaderUseCase.swift
 //  MyPokedexUnitTests
 //
 //  Created by Adrià Ros on 28/3/22.
@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 @testable import MyPokedex
 
-class MockGetPokemonListUseCase: PokemonListUseCase {
+class MockPokemonListLoaderUseCase: PokemonListLoaderUseCase {
     
     var originalList: [PokemonListItemModel]?
     var image: UIImage?

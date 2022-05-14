@@ -1,5 +1,5 @@
 //
-//  GetPokemonListUseCase.swift
+//  PokemonListLoader.swift
 //  MyPokedex
 //
 //  Created by Adrià Ros on 26/3/22.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class GetPokemonListUseCase: PokemonListUseCase {
+class PokemonListLoader: PokemonListLoaderUseCase {
     
     let dataProvider: PokemonCloudRepository
     let imageProvider: ImageCloudRepository & ImageCacheRepository

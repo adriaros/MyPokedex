@@ -9,7 +9,7 @@ import UIKit
 
 class PokemonListItemTableViewCell: UITableViewCell {
     
-    var imageProvider: PokemonListUseCase?
+    var imageProvider: PokemonListLoaderUseCase?
 
     @IBOutlet weak var containerShape: DSShape!
     @IBOutlet weak var itemNumberLabel: DSLabel!
@@ -33,6 +33,7 @@ class PokemonListItemTableViewCell: UITableViewCell {
     }
     
     func configure(number: String?, name: String?, image url: URL?) {
+        itemImageView.image = nil
         itemNumberLabel.style = .number(number, .black.withAlphaComponent(0.8), .left, true, 1)
         itemNameLabel.style = .title(name, .black, .left, true, 1)
         imageProvider?.load(imageFrom: url, completion: { data in

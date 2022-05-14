@@ -10,14 +10,14 @@ import XCTest
 
 class GetPokemonListUseCaseTest: XCTestCase {
     
-    var sut: GetPokemonListUseCase!
+    var sut: PokemonListLoaderUseCase!
     var pokemonRepository: MockPokemonRepository!
     var imageRepository: MockImageRepository!
 
     override func setUpWithError() throws {
         pokemonRepository = MockPokemonRepository()
         imageRepository = MockImageRepository()
-        sut = GetPokemonListUseCase(dataProvider: pokemonRepository, imageProvider: imageRepository)
+        sut = PokemonListLoader(dataProvider: pokemonRepository, imageProvider: imageRepository)
     }
 
     override func tearDownWithError() throws {
