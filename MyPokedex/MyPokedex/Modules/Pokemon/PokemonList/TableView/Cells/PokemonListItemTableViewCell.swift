@@ -9,7 +9,7 @@ import UIKit
 
 class PokemonListItemTableViewCell: UITableViewCell {
     
-    var imageProvider: PokemonListLoaderUseCase?
+    var imageProvider: ImageProviderUseCase?
 
     @IBOutlet weak var containerShape: DSShape!
     @IBOutlet weak var itemNumberLabel: DSLabel!

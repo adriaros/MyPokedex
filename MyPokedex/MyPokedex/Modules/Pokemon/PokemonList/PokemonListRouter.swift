@@ -12,7 +12,7 @@ class PokemonListRouter: PokemonListPresenterToRouterProtocol {
     
     var coordinator: HomeCoordinator?
     
-    class func create(coordinator: HomeCoordinator?, dataProvider: PokemonListLoaderUseCase?) -> UIViewController {
+    class func create(coordinator: HomeCoordinator?, dataProvider: PokemonCloudRepository, imageProvider: ImageProviderUseCase) -> UIViewController {
         
         let view = PokemonListViewController()
         let presenter = PokemonListPresenter()
@@ -26,7 +26,7 @@ class PokemonListRouter: PokemonListPresenterToRouterProtocol {
         interactor.presenter = presenter
         
         view.activityIndicator = ActivityIndicatorView(style: .large)
-        view.imageProvider = dataProvider
+        view.imageProvider = imageProvider
         interactor.dataProvider = dataProvider
         router.coordinator = coordinator
         
