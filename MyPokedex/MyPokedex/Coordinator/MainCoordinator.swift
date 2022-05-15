@@ -14,9 +14,9 @@ class MainCoordinator: Coordinator {
     var navigationController: UINavigationController?
     
     let tabBarController: TabBarController
-    let container: DependencyFactory
+    let container: ViewControllerFactory
     
-    init(tabBarController: TabBarController, container: DependencyFactory) {
+    init(tabBarController: TabBarController, container: ViewControllerFactory) {
         self.tabBarController = tabBarController
         self.container = container
     }

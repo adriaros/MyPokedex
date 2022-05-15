@@ -13,9 +13,9 @@ class FavouritesCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController?
     
-    let container: DependencyFactory
+    let container: ViewControllerFactory
     
-    init(container: DependencyFactory) {
+    init(container: ViewControllerFactory) {
         self.container = container
     }
     

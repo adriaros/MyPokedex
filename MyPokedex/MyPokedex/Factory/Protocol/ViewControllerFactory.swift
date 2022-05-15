@@ -1,16 +1,13 @@
 //
-//  DependencyFactory.swift
+//  ViewControllerFactory.swift
 //  MyPokedex
 //
-//  Created by Adrià Ros on 1/3/22.
+//  Created by Adrià Ros on 15/5/22.
 //
 
 import Foundation
 
-protocol DependencyFactory {
-    
-    // MARK: - Main modules
-    
+protocol ViewControllerFactory {
     /// Make the tab bar module
     func makeTabBar() -> TabBarController
     

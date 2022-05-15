@@ -28,6 +28,9 @@ class DependencyContainer: DependencyFactory {
     lazy var imageProvider: ImageProviderUseCase = {
         ImageProvider(provider: imageRepository)
     }()
+}
+
+extension DependencyContainer: ViewControllerFactory {
     
     func makeTabBar() -> TabBarController {
         TabBarController()

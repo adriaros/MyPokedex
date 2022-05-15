@@ -10,7 +10,7 @@ import XCTest
 
 class DependencyContainerTest: XCTestCase {
     
-    var sut: DependencyFactory!
+    var sut: (DependencyFactory & ViewControllerFactory)!
 
     override func setUpWithError() throws {
         sut = DependencyContainer()
