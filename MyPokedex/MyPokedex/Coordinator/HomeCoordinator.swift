@@ -17,9 +17,9 @@ class HomeCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController?
     
-    let container: Factory
+    let container: DependencyFactory
     
-    init(container: Factory) {
+    init(container: DependencyFactory) {
         self.container = container
     }
     

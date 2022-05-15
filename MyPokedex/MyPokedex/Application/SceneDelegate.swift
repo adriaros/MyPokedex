@@ -12,10 +12,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     var coordinator: Coordinator
     var rootViewController: TabBarController
-    var container: Factory
+    var container: DependencyFactory
     
     override init() {
-        container = DependencyFactory()
+        container = DependencyContainer()
         rootViewController = container.makeTabBar()
         coordinator = MainCoordinator(tabBarController: rootViewController, container: container)
     }

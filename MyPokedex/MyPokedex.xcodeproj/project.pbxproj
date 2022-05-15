@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		110601E327DA80F600A4023C /* HomeTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601E227DA80F600A4023C /* HomeTableViewDataSource.swift */; };
 		110601E527DA811100A4023C /* HomeTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601E427DA811100A4023C /* HomeTableViewDelegate.swift */; };
-		110601F627DA83B400A4023C /* FactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601F527DA83B400A4023C /* FactoryTest.swift */; };
+		110601F627DA83B400A4023C /* DependencyContainerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601F527DA83B400A4023C /* DependencyContainerTest.swift */; };
 		110601FB27DA892400A4023C /* HomeCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601FA27DA892400A4023C /* HomeCoordinatorTest.swift */; };
 		110601FE27DA896500A4023C /* MockDependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601FD27DA896500A4023C /* MockDependencyFactory.swift */; };
 		1106020027DAA43B00A4023C /* FavouritesCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601FF27DAA43B00A4023C /* FavouritesCoordinatorTest.swift */; };
 		1106020227DAA44900A4023C /* ProfileCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1106020127DAA44900A4023C /* ProfileCoordinatorTest.swift */; };
 		1106020427DAACFF00A4023C /* MainCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1106020327DAACFF00A4023C /* MainCoordinatorTest.swift */; };
-		110E6A0427CEA00D00C7768E /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E6A0327CEA00D00C7768E /* Factory.swift */; };
-		110E6A0627CEA03F00C7768E /* DependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E6A0527CEA03F00C7768E /* DependencyFactory.swift */; };
+		110E6A0427CEA00D00C7768E /* DependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E6A0327CEA00D00C7768E /* DependencyFactory.swift */; };
+		110E6A0627CEA03F00C7768E /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E6A0527CEA03F00C7768E /* DependencyContainer.swift */; };
 		1117824927CBEF05008F8B8F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117824827CBEF05008F8B8F /* Coordinator.swift */; };
 		1117824B27CBF037008F8B8F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117824A27CBF037008F8B8F /* MainCoordinator.swift */; };
 		1117825327CBF730008F8B8F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117825227CBF730008F8B8F /* main.swift */; };
@@ -143,14 +143,14 @@
 		110601E227DA80F600A4023C /* HomeTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDataSource.swift; sourceTree = "<group>"; };
 		110601E427DA811100A4023C /* HomeTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDelegate.swift; sourceTree = "<group>"; };
 		110601EA27DA833300A4023C /* MyPokedexUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPokedexUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		110601F527DA83B400A4023C /* FactoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryTest.swift; sourceTree = "<group>"; };
+		110601F527DA83B400A4023C /* DependencyContainerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainerTest.swift; sourceTree = "<group>"; };
 		110601FA27DA892400A4023C /* HomeCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorTest.swift; sourceTree = "<group>"; };
 		110601FD27DA896500A4023C /* MockDependencyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDependencyFactory.swift; sourceTree = "<group>"; };
 		110601FF27DAA43B00A4023C /* FavouritesCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesCoordinatorTest.swift; sourceTree = "<group>"; };
 		1106020127DAA44900A4023C /* ProfileCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorTest.swift; sourceTree = "<group>"; };
 		1106020327DAACFF00A4023C /* MainCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorTest.swift; sourceTree = "<group>"; };
-		110E6A0327CEA00D00C7768E /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
-		110E6A0527CEA03F00C7768E /* DependencyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyFactory.swift; sourceTree = "<group>"; };
+		110E6A0327CEA00D00C7768E /* DependencyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyFactory.swift; sourceTree = "<group>"; };
+		110E6A0527CEA03F00C7768E /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		1117824827CBEF05008F8B8F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1117824A27CBF037008F8B8F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		1117825227CBF730008F8B8F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -320,8 +320,7 @@
 		110601F427DA839A00A4023C /* Factory */ = {
 			isa = PBXGroup;
 			children = (
-				110601FC27DA895900A4023C /* Mock */,
-				110601F527DA83B400A4023C /* FactoryTest.swift */,
+				117D9886283108330088F956 /* DependencyContainer */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -345,8 +344,7 @@
 		110E6A0127CE9FED00C7768E /* Factory */ = {
 			isa = PBXGroup;
 			children = (
-				110E6A0227CE9FFD00C7768E /* Protocol */,
-				110E6A0527CEA03F00C7768E /* DependencyFactory.swift */,
+				117D9885283107E80088F956 /* Dependency */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -354,7 +352,7 @@
 		110E6A0227CE9FFD00C7768E /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				110E6A0327CEA00D00C7768E /* Factory.swift */,
+				110E6A0327CEA00D00C7768E /* DependencyFactory.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -637,6 +635,24 @@
 				11514C4327FB6DC8009844AF /* ImageCache.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		117D9885283107E80088F956 /* Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				110E6A0227CE9FFD00C7768E /* Protocol */,
+				110E6A0527CEA03F00C7768E /* DependencyContainer.swift */,
+			);
+			path = Dependency;
+			sourceTree = "<group>";
+		};
+		117D9886283108330088F956 /* DependencyContainer */ = {
+			isa = PBXGroup;
+			children = (
+				110601FC27DA895900A4023C /* Mock */,
+				110601F527DA83B400A4023C /* DependencyContainerTest.swift */,
+			);
+			path = DependencyContainer;
 			sourceTree = "<group>";
 		};
 		1192078127DCB98F004D963A /* Cells */ = {
@@ -1077,7 +1093,7 @@
 			files = (
 				11AF1B3627DE19CB00BFD641 /* HomeTest.swift in Sources */,
 				11CE5EF52830115900D7E56F /* PokemonListTest.swift in Sources */,
-				110601F627DA83B400A4023C /* FactoryTest.swift in Sources */,
+				110601F627DA83B400A4023C /* DependencyContainerTest.swift in Sources */,
 				119C1AF92801861A008F2A89 /* ImageRepositoryTest.swift in Sources */,
 				11CE5EF22830103C00D7E56F /* MockImageProviderUseCase.swift in Sources */,
 				11CE5EE728300C2A00D7E56F /* PokemonDetailImageTableViewCellTest.swift in Sources */,
@@ -1113,7 +1129,7 @@
 			files = (
 				11514C4427FB6DC8009844AF /* ImageCache.swift in Sources */,
 				114E0AE427CD5CE100147365 /* ProfileRouter.swift in Sources */,
-				110E6A0627CEA03F00C7768E /* DependencyFactory.swift in Sources */,
+				110E6A0627CEA03F00C7768E /* DependencyContainer.swift in Sources */,
 				11514C3B27FB66A5009844AF /* ImageCloudRepository.swift in Sources */,
 				11A814F027CBDF07001E2485 /* TabBarController.swift in Sources */,
 				112F35A827F085E30090E4F1 /* PokemonApiEndpoints.swift in Sources */,
@@ -1188,7 +1204,7 @@
 				114E0AE727CD5CE100147365 /* ProfileInteractor.swift in Sources */,
 				119C1B0A28018FCF008F2A89 /* PokemonDetailViewController.swift in Sources */,
 				114E0AC727CD5A0800147365 /* HomePresenter.swift in Sources */,
-				110E6A0427CEA00D00C7768E /* Factory.swift in Sources */,
+				110E6A0427CEA00D00C7768E /* DependencyFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  FactoryTest.swift
+//  DependencyContainerTest.swift
 //  MyPokedexUnitTests
 //
 //  Created by Adrià Ros on 10/3/22.
@@ -8,12 +8,12 @@
 import XCTest
 @testable import MyPokedex
 
-class FactoryTest: XCTestCase {
+class DependencyContainerTest: XCTestCase {
     
-    var sut: Factory!
+    var sut: DependencyFactory!
 
     override func setUpWithError() throws {
-        sut = DependencyFactory()
+        sut = DependencyContainer()
     }
 
     override func tearDownWithError() throws {

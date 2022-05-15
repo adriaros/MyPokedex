@@ -1,5 +1,5 @@
 //
-//  Factory.swift
+//  DependencyFactory.swift
 //  MyPokedex
 //
 //  Created by Adrià Ros on 1/3/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Factory {
+protocol DependencyFactory {
     
     // MARK: - Main modules
     

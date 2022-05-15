@@ -8,7 +8,7 @@
 import Foundation
 @testable import MyPokedex
 
-class MockDependencyFactory: Factory {
+class MockDependencyFactory: DependencyFactory {
     
     var tabBarController: TabBarController!
     var homeViewController: HomeViewController!

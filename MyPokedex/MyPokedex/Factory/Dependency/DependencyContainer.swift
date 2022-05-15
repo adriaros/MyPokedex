@@ -1,5 +1,5 @@
 //
-//  DependencyFactory.swift
+//  DependencyContainer.swift
 //  MyPokedex
 //
 //  Created by Adrià Ros on 1/3/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DependencyFactory: Factory {
+class DependencyContainer: DependencyFactory {
     
     lazy var network: NetworkProvider = {
         NetworkManager()

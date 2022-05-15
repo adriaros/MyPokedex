@@ -26,11 +26,11 @@ struct Pokemon: Equatable {
     }
     
     var displayWeight: String {
-        guard let weight = weight else {
+        guard let hectograms = weight else {
             return ""
         }
 
-        return "\(Double(Double(weight) / 10)) kg"
+        return "\(Double(Double(hectograms) / 10)) kg"
     }
     
     var displayHeight: String {
@@ -50,9 +50,8 @@ struct Pokemon: Equatable {
         types = data?.types?.map({ PokemonType($0) })
         sprites = PokemonSprites(data?.sprites)
         
-        guard let number = id else {
-            return
+        if let number = id {
+            imageUrl = URL(string: "\(imageBaseUrl)\(number)\(imageMimeType)")
         }
-        imageUrl = URL(string: "\(imageBaseUrl)\(number)\(imageMimeType)")
     }
 }
