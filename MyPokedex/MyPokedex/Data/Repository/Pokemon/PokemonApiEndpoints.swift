@@ -16,6 +16,11 @@ enum PokemonApiEndpoints: String {
         case list = "pokemon"
         case pokemon = "pokemon/%@"
     }
+    
+    enum image: String {
+        case base = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"
+        case mimeType = ".png"
+    }
 }
 
 struct PokemonApiQueries {
