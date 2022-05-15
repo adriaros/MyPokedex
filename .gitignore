@@ -1,18 +1,9 @@
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+#################### OSX Finder
+.DS_Store
 
-## User settings
-xcuserdata/
-
-## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
-*.xcscmblueprint
-*.xccheckout
-
-## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
-build/
-DerivedData/
-*.moved-aside
+#################### Xcode
+.DS_Store
+*/build/*
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -21,70 +12,33 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-
-## Obj-C/Swift specific
+xcuserdata
+*.moved-aside
+DerivedData
+.idea/
 *.hmap
+*.xccheckout
 
-## App packaging
-*.ipa
-*.dSYM.zip
-*.dSYM
+# xcconfig files will be ignored to do not allow pushing sensible data to the repository
+# If the config file does not exist, the repository will contain a not ignored sample to create automatically the file in a local way when the project runs
+*.xcconfig
+!MedoxDevConfigSample.xcconfig
 
-## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
+#################### Cocoapods
+Pods
+contents.xcworkspacedata
 
-# Swift Package Manager
-#
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
-# Packages/
-# Package.pins
-# Package.resolved
-# *.xcodeproj
-#
-# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
-# hence it is not needed unless you have added a package configuration file to your project
-# .swiftpm
+#################### Cocoapods
+Carthage
 
-.build/
+# fastlane specific
+Medox/fastlane/report.xml
 
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# Pods/
-#
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
+# deliver temporary files
+Medox/fastlane/Preview.html
 
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
+# snapshot generated screenshots
+Medox/fastlane/screenshots
 
-Carthage/Build/
-
-# Accio dependency management
-Dependencies/
-.accio/
-
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
-
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots/**/*.png
-fastlane/test_output
-
-# Code Injection
-#
-# After new code Injection tools there's a generated folder /iOSInjectionProject
-# https://github.com/johnno1962/injectionforxcode
-
-iOSInjectionProject/
+# scan temporary files
+Medox/fastlane/test_output

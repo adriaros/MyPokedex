@@ -8,6 +8,11 @@
 import Foundation
 import UIKit
 
+enum PokemonDetailTableViewDataSource: CaseIterable {
+    case image
+    case data
+}
+
 extension PokemonDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -19,21 +24,17 @@ extension PokemonDetailViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        let imageCell = tableView.dequeueReusableCell(withIdentifier: PokemonDetailImageTableViewCell.cellType, for: indexPath) as! PokemonDetailImageTableViewCell
-        let dataCell = tableView.dequeueReusableCell(withIdentifier: PokemonDetailDataTableViewCell.cellType, for: indexPath) as! PokemonDetailDataTableViewCell
-        
-        switch indexPath.row {
-        case 0:
-            imageCell.imageProvider = imageProvider
-            imageCell.configure(image: pokemon.imageUrl)
-            return imageCell
+        switch PokemonDetailTableViewDataSource.allCases[indexPath.row] {
+        case .image:
+            let cell = tableView.dequeueReusableCell(withIdentifier: PokemonDetailImageTableViewCell.cellType, for: indexPath) as! PokemonDetailImageTableViewCell
+            cell.imageProvider = imageProvider
+            cell.configure(image: pokemon.imageUrl)
+            return cell
             
-        case 1:
-            dataCell.configure(pokemon: pokemon)
-            return dataCell
-            
-        default:
-            return UITableViewCell()
+        case .data:
+            let cell = tableView.dequeueReusableCell(withIdentifier: PokemonDetailDataTableViewCell.cellType, for: indexPath) as! PokemonDetailDataTableViewCell
+            cell.configure(pokemon: pokemon)
+            return cell
         }
     }
 }
