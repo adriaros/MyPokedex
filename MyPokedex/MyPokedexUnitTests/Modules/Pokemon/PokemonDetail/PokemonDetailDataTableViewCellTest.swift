@@ -30,6 +30,8 @@ class PokemonDetailDataTableViewCellTest: XCTestCase {
         
         // Then the cell is configured
         XCTAssertEqual(sut.pokemonNameLabel.text, MockPokemon.item.displayName)
+        XCTAssertEqual(sut.pokemonTypesTitleLabel.text, "Type")
+        XCTAssertEqual(sut.pokemonTypesCollectionView.numberOfItems(inSection: 0), 1)
         XCTAssertEqual(sut.pokemonWeightTitleLabel.text, "Weight")
         XCTAssertEqual(sut.pokemonWeightValueLabel.text, MockPokemon.item.displayWeight)
         XCTAssertEqual(sut.pokemonHeightTitleLabel.text, "Height")

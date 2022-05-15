@@ -13,9 +13,7 @@ struct Pokemon: Equatable {
     let name: String?
     let weight: Int?
     let height: Int?
-    let moves: [PokemonMove]?
     let types: [PokemonType]?
-    let sprites: PokemonSprites?
     
     let imageBaseUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"
     let imageMimeType = ".png"
@@ -46,9 +44,7 @@ struct Pokemon: Equatable {
         name = data?.name
         weight = data?.weight
         height = data?.height
-        moves = data?.moves?.map({ PokemonMove($0) })
         types = data?.types?.map({ PokemonType($0) })
-        sprites = PokemonSprites(data?.sprites)
         
         if let number = id {
             imageUrl = URL(string: "\(imageBaseUrl)\(number)\(imageMimeType)")
