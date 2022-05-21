@@ -23,20 +23,20 @@ class GameRepository {
 
 extension GameRepository: GameCloudRepository {
     
-    func getVersionList() -> Observable<[PokemonListItem]> {
+    func getVersionList() -> Observable<[GameListItem]> {
         var request = NetworkRequest()
         
         request.method = .get
-        request.url = "\(url)\(PokemonApiEndpoints.get.list.rawValue)"
+        request.url = "\(url)\(GameApiEndpoints.get.list.rawValue)"
         
         request.queryItems = [
-            PokemonApiQueries.originalList
+            GameApiQueries.versionList
         ]
         
         return Observable.create { observer in
             self.network.request(provider: request)
                 .subscribe { data in
-                    guard let decodedData: ApiPokemonListResponseModel? = JSONDecoder().decode(data: data) else {
+                    guard let decodedData: ApiGameListResponseModel? = JSONDecoder().decode(data: data) else {
                         return
                     }
                     
@@ -44,7 +44,7 @@ extension GameRepository: GameCloudRepository {
                         return
                     }
                     
-                    observer.onNext(results.map({ PokemonListItem($0) }))
+                    observer.onNext(results.map({ GameListItem($0) }))
                     observer.onCompleted()
                     
                 } onError: { error in
