@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol GameCloudRepository {
-    
+    func getVersionList() -> Observable<[PokemonListItem]>
 }
