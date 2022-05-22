@@ -7,8 +7,24 @@
 //
 
 import UIKit
+import RxSwift
 
 class GameListInteractor: GameListPresenterToInteractorProtocol {
     
     var presenter: GameListInteractorToPresenterProtocol?
+    var dataProvider: GameCloudRepository?
+    let disposeBag = DisposeBag()
+    
+    func loadData() {
+        _ = dataProvider?.getVersionList()
+            .subscribe(onNext: { items in
+                print("AQUI: ", items as Any)
+            }, onError: { _ in
+            }, onCompleted: {
+                
+            }, onDisposed: {
+                
+            })
+            .disposed(by: disposeBag)
+    }
 }

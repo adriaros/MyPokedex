@@ -15,6 +15,7 @@ class GameListPresenter: GameListViewToPresenterProtocol {
     var router: GameListPresenterToRouterProtocol?
     
     func setupView() {
+        interactor?.loadData()
     }
 }
 

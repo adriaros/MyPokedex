@@ -10,7 +10,9 @@ import UIKit
 
 class GameListRouter: GameListPresenterToRouterProtocol {
     
-    class func createModule() -> UIViewController {
+    var coordinator: HomeCoordinator?
+    
+    class func createModule(coordinator: HomeCoordinator?, dataProvider: GameCloudRepository) -> UIViewController {
         
         let view = GameListViewController()
         let presenter = GameListPresenter()
@@ -22,6 +24,8 @@ class GameListRouter: GameListPresenterToRouterProtocol {
         presenter.router = router
         presenter.interactor = interactor
         interactor.presenter = presenter
+        
+        interactor.dataProvider = dataProvider
         
         return view
     }

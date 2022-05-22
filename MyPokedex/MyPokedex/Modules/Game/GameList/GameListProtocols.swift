@@ -17,6 +17,7 @@ protocol GameListInteractorToPresenterProtocol: AnyObject {
 
 protocol GameListPresenterToInteractorProtocol: AnyObject {
     var presenter: GameListInteractorToPresenterProtocol? { get set }
+    func loadData()
 }
 
 protocol GameListViewToPresenterProtocol: AnyObject {
@@ -27,5 +28,5 @@ protocol GameListViewToPresenterProtocol: AnyObject {
 }
 
 protocol GameListPresenterToRouterProtocol: AnyObject {
-    static func createModule() -> UIViewController
+    static func createModule(coordinator: HomeCoordinator?, dataProvider: GameCloudRepository) -> UIViewController
 }

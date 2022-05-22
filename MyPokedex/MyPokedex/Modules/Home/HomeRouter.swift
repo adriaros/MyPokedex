@@ -33,4 +33,8 @@ class HomeRouter: HomePresenterToRouterProtocol {
     func pokemonList() {
         coordinator?.pokemonList()
     }
+    
+    func gameList() {
+        coordinator?.gameList()
+    }
 }

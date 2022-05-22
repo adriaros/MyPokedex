@@ -1122,11 +1122,11 @@
 		11F6959B283AABA0004FDAA3 /* GameList */ = {
 			isa = PBXGroup;
 			children = (
-				11F6959C283AABB1004FDAA3 /* GameListPresenter.swift */,
-				11F6959D283AABB1004FDAA3 /* GameListRouter.swift */,
 				11F6959E283AABB1004FDAA3 /* GameListViewController.swift */,
-				11F6959F283AABB1004FDAA3 /* GameListProtocols.swift */,
+				11F6959C283AABB1004FDAA3 /* GameListPresenter.swift */,
 				11F695A0283AABB1004FDAA3 /* GameListInteractor.swift */,
+				11F6959D283AABB1004FDAA3 /* GameListRouter.swift */,
+				11F6959F283AABB1004FDAA3 /* GameListProtocols.swift */,
 				11F695A1283AABB1004FDAA3 /* GameListEntities.swift */,
 				11F695A8283AABE0004FDAA3 /* GameListViewController.xib */,
 			);

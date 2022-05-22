@@ -17,6 +17,10 @@ class HomePresenter: HomeViewToPresenterProtocol {
     func selectPokemon() {
         router?.pokemonList()
     }
+    
+    func selectGames() {
+        router?.gameList()
+    }
 }
 
 extension HomePresenter: HomeInteractorToPresenterProtocol {
