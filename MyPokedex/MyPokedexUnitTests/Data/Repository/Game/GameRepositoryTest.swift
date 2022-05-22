@@ -32,7 +32,7 @@ class GameRepositoryTest: XCTestCase {
         networkManager = nil
     }
 
-    func test_getOriginalList() throws {
+    func test_getVersionList() throws {
         // Given the data to be subscribed
         let dataSubject = PublishSubject<Data?>()
         networkManager.mockObservableData = dataSubject
