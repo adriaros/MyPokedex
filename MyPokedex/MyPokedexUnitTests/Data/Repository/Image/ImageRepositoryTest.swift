@@ -29,7 +29,7 @@ class ImageRepositoryTest: XCTestCase {
 
     func test_downloadImageFromURL() throws {
         // Given an expectation
-        var expectation: XCTestExpectation? = expectation(description: #function)
+        weak var expectation = self.expectation(description: #function)
         var result: UIImage?
         
         // Given a expected api response
