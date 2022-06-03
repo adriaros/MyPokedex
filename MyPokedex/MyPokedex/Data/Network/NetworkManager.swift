@@ -95,12 +95,14 @@ extension NetworkManager: NetworkRXProvider {
         
         return Observable.create { observer in
             URLSession.shared.dataTask(with: request) { data, response, error in
-                if let error = error {
-                    observer.onError(error)
-                } else {
-                    observer.onNext(data)
+                guaranteeMainThread {
+                    if let error = error {
+                        observer.onError(error)
+                    } else {
+                        observer.onNext(data)
+                    }
+                    observer.onCompleted()
                 }
-                observer.onCompleted()
             }.resume()
             
             return Disposables.create {

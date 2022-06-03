@@ -12,13 +12,18 @@ class GameListViewController: UIViewController {
     
     var presenter: GameListViewToPresenterProtocol?
     
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTableView()
         presenter?.setupView()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    func configureTableView() {
+        tableView.register(UINib(nibName: GameListItemTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: GameListItemTableViewCell.cellType)
+        tableView.dataSource = self
+        tableView.rowHeight = 80
     }
 }
 

@@ -10,9 +10,11 @@ import UIKit
 
 protocol GameListPresenterToViewProtocol: AnyObject {
     var presenter: GameListViewToPresenterProtocol? { get set }
+    var tableView: UITableView! { get set }
 }
 
 protocol GameListInteractorToPresenterProtocol: AnyObject {
+    func didLoad(data: [GameListItem]?)
 }
 
 protocol GameListPresenterToInteractorProtocol: AnyObject {
@@ -24,6 +26,7 @@ protocol GameListViewToPresenterProtocol: AnyObject {
     var view: GameListPresenterToViewProtocol? { get set }
     var interactor: GameListPresenterToInteractorProtocol? { get set }
     var router: GameListPresenterToRouterProtocol? { get set }
+    var items: [GameListItem]? { get set }
     func setupView()
 }
 

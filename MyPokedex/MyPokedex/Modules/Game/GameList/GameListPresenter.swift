@@ -14,6 +14,12 @@ class GameListPresenter: GameListViewToPresenterProtocol {
     var interactor: GameListPresenterToInteractorProtocol?
     var router: GameListPresenterToRouterProtocol?
     
+    var items: [GameListItem]? {
+        didSet {
+            view?.tableView.reloadData()
+        }
+    }
+    
     func setupView() {
         interactor?.loadData()
     }
@@ -21,4 +27,7 @@ class GameListPresenter: GameListViewToPresenterProtocol {
 
 extension GameListPresenter: GameListInteractorToPresenterProtocol {
     
+    func didLoad(data: [GameListItem]?) {
+        items = data
+    }
 }

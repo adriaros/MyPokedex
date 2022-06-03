@@ -18,12 +18,7 @@ class GameListInteractor: GameListPresenterToInteractorProtocol {
     func loadData() {
         _ = dataProvider?.getVersionList()
             .subscribe(onNext: { items in
-                print("AQUI: ", items as Any)
-            }, onError: { _ in
-            }, onCompleted: {
-                
-            }, onDisposed: {
-                
+                self.presenter?.didLoad(data: items)
             })
             .disposed(by: disposeBag)
     }
