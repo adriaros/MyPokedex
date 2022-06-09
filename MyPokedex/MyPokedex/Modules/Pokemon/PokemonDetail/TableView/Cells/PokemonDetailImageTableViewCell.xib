@@ -22,16 +22,31 @@
                             <constraint firstAttribute="height" constant="260" id="bQn-Hj-e3g"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfM-2u-9eF">
+                        <rect key="frame" x="270" y="236" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="k7v-HV-cGC"/>
+                            <constraint firstAttribute="height" constant="24" id="y3C-bc-KcU"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title=""/>
+                        <connections>
+                            <action selector="onFavourite:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vlC-k8-lyW"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="hfM-2u-9eF" secondAttribute="trailing" constant="26" id="3Wg-NE-M7g"/>
                     <constraint firstItem="9x1-h5-EkF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4oa-PU-fpO"/>
                     <constraint firstAttribute="bottom" secondItem="9x1-h5-EkF" secondAttribute="bottom" id="ELI-Pr-2sP"/>
                     <constraint firstItem="9x1-h5-EkF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="O6q-Js-Xt5"/>
                     <constraint firstAttribute="trailing" secondItem="9x1-h5-EkF" secondAttribute="trailing" id="QLA-8f-fUD"/>
+                    <constraint firstAttribute="bottom" secondItem="hfM-2u-9eF" secondAttribute="bottom" id="vd2-p3-scr"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="favouriteButton" destination="hfM-2u-9eF" id="opu-eJ-B7c"/>
                 <outlet property="pokemonImageView" destination="9x1-h5-EkF" id="Tud-sK-HiB"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="187.5"/>
