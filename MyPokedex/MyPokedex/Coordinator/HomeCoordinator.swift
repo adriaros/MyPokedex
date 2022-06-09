@@ -28,6 +28,14 @@ class HomeCoordinator: Coordinator {
         navigationController = UINavigationController(rootViewController: homeViewController)
     }
     
+    func gameList() {
+        let gameListViewController = container.makeGameList(coordinator: self)
+        gameListViewController.navigationItem.leftBarButtonItem = leftBarButtonItem
+        gameListViewController.navigationItem.title = "Games"
+        gameListViewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(gameListViewController, animated: true)
+    }
+    
     func pokemonList() {
         let pokemonListViewController = container.makePokemonList(coordinator: self)
         pokemonListViewController.navigationItem.leftBarButtonItem = leftBarButtonItem

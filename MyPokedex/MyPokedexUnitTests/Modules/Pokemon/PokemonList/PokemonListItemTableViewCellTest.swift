@@ -8,97 +8,33 @@
 import XCTest
 @testable import MyPokedex
 
-class PokemonListTest: XCTestCase {
+class PokemonListItemTableViewCellTest: XCTestCase {
+    
+    var sut:  PokemonListItemTableViewCell!
 
-    var window: UIWindow!
-    var vc: PokemonListViewController!
-    var presenter: PokemonListPresenter!
-    var interactor: PokemonListInteractor!
-    var router: MockPokemonListRouter!
-    
-    var dataProvider: MockPokemonRepository!
-    var imageProvider: MockImageProviderUseCase!
-    
     override func setUpWithError() throws {
-        window = UIWindow()
-        dataProvider = MockPokemonRepository()
-        imageProvider = MockImageProviderUseCase()
+        sut = Bundle(for: PokemonListItemTableViewCell.self).loadNibNamed(PokemonListItemTableViewCell.cellType, owner: nil)?.first as? PokemonListItemTableViewCell
+        sut.layoutSubviews()
     }
 
     override func tearDownWithError() throws {
-        window = nil
-        vc = nil
-        presenter = nil
-        interactor = nil
-        router = nil
-        dataProvider = nil
-        imageProvider = nil
-    }
-    
-    private func buildTestingScenario() {
-        vc = MockPokemonListRouter.create(coordinator: nil, dataProvider: dataProvider, imageProvider: imageProvider) as? PokemonListViewController
-        presenter = vc.presenter as? PokemonListPresenter
-        interactor = presenter.interactor as? PokemonListInteractor
-        router = presenter.router as? MockPokemonListRouter
-        
-        window.addSubview(vc.view)
-        window.makeKeyAndVisible()
+        sut = nil
     }
 
-    func test_viewDidLoad() throws {
-        // Given a testing scenario with one item as a result
-        dataProvider.mockOriginalList = [MockPokemonListItem.item]
-        imageProvider.image = ImageAsset.PokemonList.fallback.image
-        buildTestingScenario()
+    func test_configure() throws {
+        // Given a number and name
+        let number = "#1"
+        let name = "Bulbasaur"
         
-        // When the view did load
-        vc.loadViewIfNeeded()
+        // When the cell is configured
+        sut.configure(number: number, name: name, image: nil)
         
-        // Then the view has loaded the table item correctly
-        let cell = vc.tableView(vc.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as! PokemonListItemTableViewCell
-        XCTAssertEqual(cell.itemNumberLabel.text, MockPokemonListItem.item.displayNumber)
-        XCTAssertEqual(cell.itemNameLabel.text, MockPokemonListItem.item.displayName)
-        XCTAssertEqual(cell.itemImageView.image, ImageAsset.PokemonList.fallback.image)
-    }
-    
-    func test_didSelectRowAt() throws {
-        // Given a testing scenario with one item as a result
-        dataProvider.mockOriginalList = [MockPokemonListItem.item]
-        imageProvider.image = ImageAsset.PokemonList.fallback.image
-        buildTestingScenario()
-        vc.loadViewIfNeeded()
-        
-        // When the item is selected
-        vc.tableView(vc.tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
-        
-        // Then the detail view is pushed
-        XCTAssertEqual(router.pushToItemDetail, MockPokemonListItem.item)
+        // Then
+        XCTAssertEqual(sut.selectionStyle, .none)
+        XCTAssertEqual(sut.backgroundColor, .clear)
+        XCTAssertEqual(sut.containerShape.style, .rounded)
+        XCTAssertEqual(sut.itemNumberLabel.style, .number(number, .black.withAlphaComponent(0.8), .left, true, 1))
+        XCTAssertEqual(sut.itemNameLabel.style, .title(name, .black, .left, true, 1))
     }
 }
 
-class MockPokemonListRouter: PokemonListPresenterToRouterProtocol {
-    
-    var pushToItemDetail: PokemonListItem?
-    
-    static func create(coordinator: HomeCoordinator?, dataProvider: PokemonCloudRepository, imageProvider: ImageProviderUseCase) -> UIViewController {
-        let view = PokemonListViewController()
-        let presenter = PokemonListPresenter()
-        let interactor = PokemonListInteractor()
-        let router = MockPokemonListRouter()
-        
-        view.presenter = presenter
-        presenter.view = view
-        presenter.router = router
-        presenter.interactor = interactor
-        interactor.presenter = presenter
-        
-        view.imageProvider = imageProvider
-        interactor.dataProvider = dataProvider
-        
-        return view
-    }
-    
-    func pushToDetail(item: PokemonListItem?) {
-        pushToItemDetail = item
-    }
-}

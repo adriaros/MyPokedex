@@ -77,11 +77,24 @@ class HomeTest: XCTestCase {
         // Then the user is pushed to the pokemon list view
         XCTAssertTrue(router.pokemonListCalled)
     }
+    
+    func test_didSelectGameList() throws {
+        // Given a testing scenario
+        buildTestingScenario()
+        vc.loadViewIfNeeded()
+        
+        // When the user taps on the GameList row
+        vc.tableView(vc.tableView, didSelectRowAt: IndexPath(row: 1, section: 0))
+        
+        // Then the user is pushed to the game list view
+        XCTAssertTrue(router.gameListCalled)
+    }
 }
 
 class MockHomeRouter: HomePresenterToRouterProtocol {
     
     var pokemonListCalled = false
+    var gameListCalled = false
     
     static func create(coordinator: HomeCoordinator?) -> UIViewController {
         let view = HomeViewController()
@@ -100,5 +113,9 @@ class MockHomeRouter: HomePresenterToRouterProtocol {
     
     func pokemonList() {
         pokemonListCalled = true
+    }
+    
+    func gameList() {
+        gameListCalled = true
     }
 }

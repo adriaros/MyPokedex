@@ -27,7 +27,7 @@ class PokemonRepositoryTest: XCTestCase {
 
     func test_getOriginalList() throws {
         // Given a expectation
-        var expectation: XCTestExpectation? = expectation(description: #function)
+        weak var expectation = self.expectation(description: #function)
         var result: [PokemonListItem]?
         
         // Given a expected api response
@@ -49,7 +49,7 @@ class PokemonRepositoryTest: XCTestCase {
     
     func test_getPokemon() throws {
         // Given a expectation
-        var expectation: XCTestExpectation? = expectation(description: #function)
+        weak var expectation = self.expectation(description: #function)
         var result: Pokemon?
         
         // Given a expected api response

@@ -13,6 +13,8 @@ extension HomeViewController: UITableViewDelegate {
         switch HomeTableViewDataSource.allCases[indexPath.row] {
         case .pokemon:
             presenter?.selectPokemon()
+        case .games:
+            presenter?.selectGames()
         default:
             break
         }

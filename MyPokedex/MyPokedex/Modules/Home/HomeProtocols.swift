@@ -25,9 +25,11 @@ protocol HomeViewToPresenterProtocol: AnyObject {
     var interactor: HomePresenterToInteractorProtocol? { get set }
     var router: HomePresenterToRouterProtocol? { get set }
     func selectPokemon()
+    func selectGames()
 }
 
 protocol HomePresenterToRouterProtocol: AnyObject {
     static func create(coordinator: HomeCoordinator?) -> UIViewController
     func pokemonList()
+    func gameList()
 }

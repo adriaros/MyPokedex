@@ -9,10 +9,10 @@ import Foundation
 
 class DependencyContainer: DependencyFactory {
     
-    lazy var network: NetworkProvider = {
+    lazy var network: NetworkProvider & NetworkRXProvider = {
         NetworkManager()
     }()
-    
+
     lazy var cache: ImageCache = {
        CacheManager()
     }()
@@ -27,6 +27,10 @@ class DependencyContainer: DependencyFactory {
     
     lazy var imageProvider: ImageProviderUseCase = {
         ImageProvider(provider: imageRepository)
+    }()
+    
+    lazy var gameRepository: GameCloudRepository = {
+        GameRepository(network: network)
     }()
 }
 
@@ -54,5 +58,9 @@ extension DependencyContainer: ViewControllerFactory {
     
     func makePokemonDetail(item: PokemonListItem) -> PokemonDetailViewController {
         PokemonDetailRouter.create(item: item, dataProvider: pokemonRepository, imageProvider: imageProvider) as! PokemonDetailViewController
+    }
+    
+    func makeGameList(coordinator: HomeCoordinator) -> GameListViewController {
+        GameListRouter.createModule(coordinator: coordinator, dataProvider: gameRepository) as! GameListViewController
     }
 }

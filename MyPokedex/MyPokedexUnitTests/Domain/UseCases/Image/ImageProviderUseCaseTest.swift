@@ -25,7 +25,7 @@ class ImageLoaderUseCaseTest: XCTestCase {
     
     func test_loadImageFromCache() throws {
         // Given a expectation
-        var expectation: XCTestExpectation? = expectation(description: #function)
+        weak var expectation = self.expectation(description: #function)
         var result: UIImage?
         
         // Given an image stored in cache
@@ -45,7 +45,7 @@ class ImageLoaderUseCaseTest: XCTestCase {
     
     func test_loadImageFromCloud() throws {
         // Given a expectation
-        var expectation: XCTestExpectation? = expectation(description: #function)
+        weak var expectation = self.expectation(description: #function)
         var result: UIImage?
         
         // Given an image to download

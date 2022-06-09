@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 class NetworkManager: NetworkProvider {
     
@@ -72,5 +73,41 @@ func guaranteeMainThread(_ work: @escaping () -> Void) {
         work()
     } else {
         DispatchQueue.main.async(execute: work)
+    }
+}
+
+extension NetworkManager: NetworkRXProvider {
+    
+    func request(provider: NetworkRequestProvider) -> Observable<Data?> {
+        
+        var components = URLComponents(string: provider.url)
+        
+        if let queryItems = provider.queryItems {
+            components?.queryItems = queryItems.map({ URLQueryItem(name: $0.name, value: $0.value) })
+        }
+        
+        guard let url = components?.url else {
+            fatalError("Fatal error. Unable to get the URL from URLComponents \(String(describing: components))")
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = provider.method.rawValue
+        
+        return Observable.create { observer in
+            URLSession.shared.dataTask(with: request) { data, response, error in
+                guaranteeMainThread {
+                    if let error = error {
+                        observer.onError(error)
+                    } else {
+                        observer.onNext(data)
+                    }
+                    observer.onCompleted()
+                }
+            }.resume()
+            
+            return Disposables.create {
+                URLSession.shared.finishTasksAndInvalidate()
+            }
+        }
     }
 }

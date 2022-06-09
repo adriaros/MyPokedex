@@ -8,13 +8,21 @@
 import Foundation
 
 protocol ViewControllerFactory {
+    
     /// Make the tab bar module
     func makeTabBar() -> TabBarController
     
-    // MARK: - Home modules
+    // MARK: - Home module
     
     /// Make the home module
     func makeHome(coordinator: HomeCoordinator) -> HomeViewController
+    
+    // MARK: - Game modules
+    
+    /// Make the game list module
+    func makeGameList(coordinator: HomeCoordinator) -> GameListViewController
+    
+    // MARK: - Pokemon modules
     
     /// Make the pokemon list module
     func makePokemonList(coordinator: HomeCoordinator) -> PokemonListViewController
