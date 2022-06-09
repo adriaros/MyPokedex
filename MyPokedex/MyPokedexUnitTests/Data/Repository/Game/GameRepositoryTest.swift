@@ -54,6 +54,6 @@ class GameRepositoryTest: XCTestCase {
         
         // Then the data is obtained
         XCTAssertEqual(countResult.events, [.next(1, 34), .completed(1)])
-        XCTAssertEqual(firstGameResult.events, [.next(1, "red"), .completed(1)])
+        XCTAssertEqual(firstGameResult.events, [.next(1, "Red"), .completed(1)])
     }
 }
