@@ -8,5 +8,7 @@
 import Foundation
 
 protocol CoreDatabaseProvider {
-    
+    func createFavouriteWith(id: String?, name: String?, imageUrl: String?)
+    func fetchFavourites() -> [Favourite]
+    func deleteFavourite(id: String?)
 }
