@@ -7,12 +7,20 @@
 
 import UIKit
 
+protocol PokemonDetailImageTableViewCellDelegate: AnyObject {
+    func onFavourite()
+}
+
 class PokemonDetailImageTableViewCell: UITableViewCell {
 
     var imageProvider: ImageProviderUseCase?
     
     @IBOutlet weak var pokemonImageView: UIImageView!
     @IBOutlet weak var favouriteButton: UIButton!
+    
+    weak var delegate: PokemonDetailImageTableViewCellDelegate?
+    
+    private var isFavourite = false
     
     static var cellType: String {
         String(describing: self)
@@ -31,6 +39,8 @@ class PokemonDetailImageTableViewCell: UITableViewCell {
     }
     
     @IBAction func onFavourite(_ sender: Any) {
-        
+        isFavourite = !isFavourite
+        favouriteButton.setImage(UIImage(systemName: isFavourite ? "suit.heart.fill" : "suit.heart"), for: .normal)
+        delegate?.onFavourite()
     }
 }

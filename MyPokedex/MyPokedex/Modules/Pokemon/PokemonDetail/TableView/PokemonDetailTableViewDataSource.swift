@@ -27,6 +27,7 @@ extension PokemonDetailViewController: UITableViewDataSource {
         switch PokemonDetailTableViewDataSource.allCases[indexPath.row] {
         case .image:
             let cell = tableView.dequeueReusableCell(withIdentifier: PokemonDetailImageTableViewCell.cellType, for: indexPath) as! PokemonDetailImageTableViewCell
+            cell.delegate = self
             cell.imageProvider = imageProvider
             cell.configure(image: pokemon.imageUrl)
             return cell

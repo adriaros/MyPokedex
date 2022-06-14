@@ -23,6 +23,10 @@ class PokemonDetailPresenter: PokemonDetailViewToPresenterProtocol {
     func setupView() {
         interactor?.loadData()
     }
+    
+    func favourite() {
+        
+    }
 }
 
 extension PokemonDetailPresenter: PokemonDetailInteractorToPresenterProtocol {

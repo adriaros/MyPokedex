@@ -46,6 +46,28 @@ class CoreDatabase: CoreDatabaseProvider {
         return []
     }
     
+    func fetchFavourite(id: String?) -> Favourite? {
+        guard let id = id else {
+            return nil
+        }
+        
+        let request : NSFetchRequest<Favourite> = Favourite.fetchRequest()
+        request.fetchLimit = 1
+        
+        request.predicate = NSPredicate(
+            format: "id = %@", id
+        )
+        
+        do {
+            let result = try container.viewContext.fetch(request).first
+            return result
+        } catch {
+            print("error fetching favourites \(error)")
+        }
+        
+        return nil
+    }
+    
     func deleteFavourite(id: String?) {
         guard let id = id else {
             return
@@ -53,9 +75,14 @@ class CoreDatabase: CoreDatabaseProvider {
         
         let context = container.viewContext
         let request : NSFetchRequest<Favourite> = Favourite.fetchRequest()
+        request.fetchLimit = 1
+        
+        request.predicate = NSPredicate(
+            format: "id = %@", id
+        )
         
         do {
-            guard let result = try? container.viewContext.fetch(request).first(where: { $0.id == id }) else {
+            guard let result = try? container.viewContext.fetch(request).first else {
                 return
             }
             

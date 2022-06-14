@@ -17,8 +17,12 @@ class DependencyContainer: DependencyFactory {
        CacheManager()
     }()
     
-    lazy var coreData: CoreDatabaseProvider = {
+    lazy var coreDatabase: CoreDatabaseProvider = {
         CoreDatabase()
+    }()
+    
+    lazy var favouriteRepository: FavouriteDiskRepository = {
+        FavouriteRepository(database: coreDatabase)
     }()
     
     lazy var pokemonRepository: PokemonCloudRepository = {

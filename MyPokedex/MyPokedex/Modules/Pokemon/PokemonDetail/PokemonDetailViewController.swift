@@ -33,3 +33,10 @@ class PokemonDetailViewController: UIViewController {
 extension PokemonDetailViewController: PokemonDetailPresenterToViewProtocol {
 
 }
+
+extension PokemonDetailViewController: PokemonDetailImageTableViewCellDelegate {
+    
+    func onFavourite() {
+        presenter?.favourite()
+    }
+}

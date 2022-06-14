@@ -17,6 +17,8 @@
 		1106020427DAACFF00A4023C /* MainCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1106020327DAACFF00A4023C /* MainCoordinatorTest.swift */; };
 		110E6A0427CEA00D00C7768E /* DependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E6A0327CEA00D00C7768E /* DependencyFactory.swift */; };
 		110E6A0627CEA03F00C7768E /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E6A0527CEA03F00C7768E /* DependencyContainer.swift */; };
+		1114438A285894F4008493DC /* FavouriteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11144389285894F4008493DC /* FavouriteRepository.swift */; };
+		1114438D2858951B008493DC /* FavouriteDiskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1114438C2858951B008493DC /* FavouriteDiskRepository.swift */; };
 		1117824927CBEF05008F8B8F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117824827CBEF05008F8B8F /* Coordinator.swift */; };
 		1117824B27CBF037008F8B8F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117824A27CBF037008F8B8F /* MainCoordinator.swift */; };
 		1117825327CBF730008F8B8F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117825227CBF730008F8B8F /* main.swift */; };
@@ -183,6 +185,8 @@
 		1106020327DAACFF00A4023C /* MainCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorTest.swift; sourceTree = "<group>"; };
 		110E6A0327CEA00D00C7768E /* DependencyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyFactory.swift; sourceTree = "<group>"; };
 		110E6A0527CEA03F00C7768E /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		11144389285894F4008493DC /* FavouriteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRepository.swift; sourceTree = "<group>"; };
+		1114438C2858951B008493DC /* FavouriteDiskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteDiskRepository.swift; sourceTree = "<group>"; };
 		1117824827CBEF05008F8B8F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1117824A27CBF037008F8B8F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		1117825227CBF730008F8B8F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -437,6 +441,23 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		11144388285894DA008493DC /* Favourite */ = {
+			isa = PBXGroup;
+			children = (
+				1114438B285894F9008493DC /* Protocol */,
+				11144389285894F4008493DC /* FavouriteRepository.swift */,
+			);
+			path = Favourite;
+			sourceTree = "<group>";
+		};
+		1114438B285894F9008493DC /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1114438C2858951B008493DC /* FavouriteDiskRepository.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		1117824727CBEEF3008F8B8F /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,6 +583,7 @@
 		112F358527EFBBD50090E4F1 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				11144388285894DA008493DC /* Favourite */,
 				117D98912831200F0088F956 /* Game */,
 				11514C3627FB6244009844AF /* Image */,
 				112F358D27EFCA030090E4F1 /* Pokemon */,
@@ -1544,6 +1566,7 @@
 				114E0AE627CD5CE100147365 /* ProfileProtocols.swift in Sources */,
 				11CE5EED28300DA500D7E56F /* ImageProvider.swift in Sources */,
 				112F357527EF91870090E4F1 /* PokemonListTableViewDelegate.swift in Sources */,
+				1114438D2858951B008493DC /* FavouriteDiskRepository.swift in Sources */,
 				112DEE52284A272100544E0B /* GameListItemTableViewCell.swift in Sources */,
 				11A8150127CBE2DC001E2485 /* ImageAssets.swift in Sources */,
 				114E0AD527CD5C6300147365 /* FavouritesPresenter.swift in Sources */,
@@ -1562,6 +1585,7 @@
 				114E0AC927CD5A0800147365 /* HomeViewController.swift in Sources */,
 				1140FC8D2803738A00D54D33 /* PokemonType.swift in Sources */,
 				114E0AE727CD5CE100147365 /* ProfileInteractor.swift in Sources */,
+				1114438A285894F4008493DC /* FavouriteRepository.swift in Sources */,
 				11C066082839621000856EA7 /* GameListItem.swift in Sources */,
 				119C1B0A28018FCF008F2A89 /* PokemonDetailViewController.swift in Sources */,
 				114E0AC727CD5A0800147365 /* HomePresenter.swift in Sources */,

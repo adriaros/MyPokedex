@@ -14,6 +14,8 @@ class PokemonDetailInteractor: PokemonDetailPresenterToInteractorProtocol {
     var item: PokemonListItem?
     var dataProvider: PokemonCloudRepository?
     
+    private var isFavourite: Bool?
+    
     func loadData() {
         guard let number = item?.number else {
             return

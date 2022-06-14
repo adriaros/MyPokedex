@@ -28,6 +28,7 @@ protocol PokemonDetailViewToPresenterProtocol: AnyObject {
     var router: PokemonDetailPresenterToRouterProtocol? { get set }
     var pokemon: Pokemon? { get }
     func setupView()
+    func favourite()
 }
 
 protocol PokemonDetailPresenterToRouterProtocol: AnyObject {
