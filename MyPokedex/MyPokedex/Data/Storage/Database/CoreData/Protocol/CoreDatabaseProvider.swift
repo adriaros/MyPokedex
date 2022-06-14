@@ -12,4 +12,5 @@ protocol CoreDatabaseProvider {
     func fetchFavourites() -> [Favourite]
     func fetchFavourite(id: String?) -> Favourite?
     func deleteFavourite(id: String?)
+    func deleteAllFavourites()
 }

@@ -12,4 +12,5 @@ protocol FavouriteDiskRepository {
     func fetchAll() -> [Favourite]
     func fetch(id: String?) -> Favourite?
     func delete(id: String?)
+    func deleteAll()
 }

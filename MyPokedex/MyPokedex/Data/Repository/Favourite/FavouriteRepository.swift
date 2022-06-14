@@ -30,4 +30,8 @@ class FavouriteRepository: FavouriteDiskRepository {
     func delete(id: String?) {
         database.deleteFavourite(id: id)
     }
+    
+    func deleteAll() {
+        database.deleteAllFavourites()
+    }
 }

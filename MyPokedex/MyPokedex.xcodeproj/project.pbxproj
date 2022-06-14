@@ -19,6 +19,7 @@
 		110E6A0627CEA03F00C7768E /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E6A0527CEA03F00C7768E /* DependencyContainer.swift */; };
 		1114438A285894F4008493DC /* FavouriteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11144389285894F4008493DC /* FavouriteRepository.swift */; };
 		1114438D2858951B008493DC /* FavouriteDiskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1114438C2858951B008493DC /* FavouriteDiskRepository.swift */; };
+		1114439028589AF7008493DC /* FavouriteRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1114438F28589AF7008493DC /* FavouriteRepositoryTest.swift */; };
 		1117824927CBEF05008F8B8F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117824827CBEF05008F8B8F /* Coordinator.swift */; };
 		1117824B27CBF037008F8B8F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117824A27CBF037008F8B8F /* MainCoordinator.swift */; };
 		1117825327CBF730008F8B8F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117825227CBF730008F8B8F /* main.swift */; };
@@ -187,6 +188,7 @@
 		110E6A0527CEA03F00C7768E /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		11144389285894F4008493DC /* FavouriteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRepository.swift; sourceTree = "<group>"; };
 		1114438C2858951B008493DC /* FavouriteDiskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteDiskRepository.swift; sourceTree = "<group>"; };
+		1114438F28589AF7008493DC /* FavouriteRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRepositoryTest.swift; sourceTree = "<group>"; };
 		1117824827CBEF05008F8B8F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1117824A27CBF037008F8B8F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		1117825227CBF730008F8B8F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -456,6 +458,14 @@
 				1114438C2858951B008493DC /* FavouriteDiskRepository.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		1114438E28589AE1008493DC /* Favourite */ = {
+			isa = PBXGroup;
+			children = (
+				1114438F28589AF7008493DC /* FavouriteRepositoryTest.swift */,
+			);
+			path = Favourite;
 			sourceTree = "<group>";
 		};
 		1117824727CBEEF3008F8B8F /* Coordinator */ = {
@@ -1147,6 +1157,7 @@
 		11E6EFAE27F2311700E4F19F /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				1114438E28589AE1008493DC /* Favourite */,
 				119C1AF7280185FD008F2A89 /* Image */,
 				11E6EFAF27F2312600E4F19F /* Pokemon */,
 				11C0660D283963EA00856EA7 /* Game */,
@@ -1458,6 +1469,7 @@
 				119C1AFB280186CD008F2A89 /* MockImageRepository.swift in Sources */,
 				1106020227DAA44900A4023C /* ProfileCoordinatorTest.swift in Sources */,
 				11892FBB285207080023AC9C /* GameListTest.swift in Sources */,
+				1114439028589AF7008493DC /* FavouriteRepositoryTest.swift in Sources */,
 				11CE5EF72830116D00D7E56F /* PokemonListTest.swift in Sources */,
 				11E6EFC627F237D900E4F19F /* MockPokemonListItem.swift in Sources */,
 				11892FBF28520AC30023AC9C /* MockGameListItem.swift in Sources */,
