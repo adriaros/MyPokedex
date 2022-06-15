@@ -12,12 +12,12 @@ import UIKit
 class ImageRepositoryTest: XCTestCase {
     
     var sut: ImageRepository!
-    var network: MockNetworkManager!
-    var cache: MockCacheManager!
+    var network: FakeNetworkManager!
+    var cache: FakeCacheManager!
 
     override func setUpWithError() throws {
-        network = MockNetworkManager()
-        cache = MockCacheManager()
+        network = FakeNetworkManager()
+        cache = FakeCacheManager()
         sut = ImageRepository(network: network, cache: cache)
     }
 

@@ -1,5 +1,5 @@
 //
-//  MockCacheManager.swift
+//  FakeCacheManager.swift
 //  MyPokedexUnitTests
 //
 //  Created by Adrià Ros on 9/4/22.
@@ -9,12 +9,12 @@ import Foundation
 import UIKit
 @testable import MyPokedex
 
-class MockCacheManager {
+class FakeCacheManager {
     var imageSet: UIImage?
     var loadedImage: UIImage?
 }
 
-extension MockCacheManager: ImageCache {
+extension FakeCacheManager: ImageCache {
     
     func set(image: UIImage, url: URL) {
         imageSet = image

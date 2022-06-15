@@ -11,13 +11,13 @@ import XCTest
 class PokemonDetailImageTableViewCellTest: XCTestCase {
     
     var sut:  PokemonDetailImageTableViewCell!
-    var imageProvider: MockImageProviderUseCase!
+    var imageProvider: FakeImageProviderUseCase!
     var delegate: PokemonDetailImageTableViewCellTestableDelegate!
 
     override func setUpWithError() throws {
         delegate = PokemonDetailImageTableViewCellTestableDelegate()
         sut = Bundle(for: PokemonDetailImageTableViewCell.self).loadNibNamed(PokemonDetailImageTableViewCell.cellType, owner: nil)?.first as? PokemonDetailImageTableViewCell
-        imageProvider = MockImageProviderUseCase()
+        imageProvider = FakeImageProviderUseCase()
         sut.imageProvider = imageProvider
         sut.layoutSubviews()
     }

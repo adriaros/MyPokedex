@@ -16,9 +16,9 @@ class PokemonDetailTest: XCTestCase {
     var interactor: PokemonDetailInteractor!
     var router: MockPokemonDetailRouter!
     
-    var dataProvider: MockPokemonRepository!
-    var imageProvider: MockImageProviderUseCase!
-    var favouriteProvider: MockFavouriteRepository!
+    var dataProvider: FakePokemonRepository!
+    var imageProvider: FakeImageProviderUseCase!
+    var favouriteProvider: FakeFavouriteRepository!
     
     var item: PokemonListItem {
         MockPokemonListItem.item
@@ -30,9 +30,9 @@ class PokemonDetailTest: XCTestCase {
     
     override func setUpWithError() throws {
         window = UIWindow()
-        dataProvider = MockPokemonRepository()
-        imageProvider = MockImageProviderUseCase()
-        favouriteProvider = MockFavouriteRepository()
+        dataProvider = FakePokemonRepository()
+        imageProvider = FakeImageProviderUseCase()
+        favouriteProvider = FakeFavouriteRepository()
     }
 
     override func tearDownWithError() throws {

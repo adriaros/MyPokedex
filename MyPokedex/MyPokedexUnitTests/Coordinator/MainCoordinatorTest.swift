@@ -12,11 +12,11 @@ class MainCoordinatorTest: XCTestCase {
     
     var sut: MainCoordinator!
     var tabBarController: TabBarController!
-    var container: MockDependencyFactory!
+    var container: FakeDependencyFactory!
 
     override func setUpWithError() throws {
         tabBarController = TabBarController()
-        container = MockDependencyFactory()
+        container = FakeDependencyFactory()
     }
 
     override func tearDownWithError() throws {

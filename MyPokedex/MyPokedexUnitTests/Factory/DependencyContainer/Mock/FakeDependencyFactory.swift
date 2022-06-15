@@ -1,5 +1,5 @@
 //
-//  MockDependencyFactory.swift
+//  FakeDependencyFactory.swift
 //  MyPokedexUnitTests
 //
 //  Created by Adrià Ros on 10/3/22.
@@ -8,7 +8,7 @@
 import Foundation
 @testable import MyPokedex
 
-class MockDependencyFactory: DependencyFactory, ViewControllerFactory {
+class FakeDependencyFactory: DependencyFactory, ViewControllerFactory {
     
     var tabBarController: TabBarController!
     var homeViewController: HomeViewController!

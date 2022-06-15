@@ -11,10 +11,10 @@ import XCTest
 class ImageLoaderUseCaseTest: XCTestCase {
     
     var sut: ImageProviderUseCase!
-    var imageRepository: MockImageRepository!
+    var imageRepository: FakeImageRepository!
 
     override func setUpWithError() throws {
-        imageRepository = MockImageRepository()
+        imageRepository = FakeImageRepository()
         sut = ImageProvider(provider: imageRepository)
     }
 

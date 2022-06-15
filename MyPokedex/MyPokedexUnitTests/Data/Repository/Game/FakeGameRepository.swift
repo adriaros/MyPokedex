@@ -1,5 +1,5 @@
 //
-//  MockGameRepository.swift
+//  FakeGameRepository.swift
 //  MyPokedexUnitTests
 //
 //  Created by Adrià Ros on 9/6/22.
@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 @testable import MyPokedex
 
-class MockGameRepository: GameCloudRepository {
+class FakeGameRepository: GameCloudRepository {
     
     var mockVersionList: Observable<[GameListItem]>!
     

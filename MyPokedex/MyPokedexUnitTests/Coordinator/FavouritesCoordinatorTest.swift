@@ -11,10 +11,10 @@ import XCTest
 class FavouritesCoordinatorTest: XCTestCase {
     
     var sut: FavouritesCoordinator!
-    var container: MockDependencyFactory!
+    var container: FakeDependencyFactory!
 
     override func setUpWithError() throws {
-        container = MockDependencyFactory()
+        container = FakeDependencyFactory()
         sut = FavouritesCoordinator(container: container)
     }
 

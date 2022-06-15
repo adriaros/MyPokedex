@@ -11,10 +11,10 @@ import XCTest
 class HomeCoordinatorTest: XCTestCase {
     
     var sut: HomeCoordinator!
-    var container: MockDependencyFactory!
+    var container: FakeDependencyFactory!
 
     override func setUpWithError() throws {
-        container = MockDependencyFactory()
+        container = FakeDependencyFactory()
         sut = HomeCoordinator(container: container)
     }
 

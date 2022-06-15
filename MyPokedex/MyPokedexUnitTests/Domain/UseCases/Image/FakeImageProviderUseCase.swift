@@ -1,5 +1,5 @@
 //
-//  MockImageProviderUseCase.swift
+//  FakeImageProviderUseCase.swift
 //  MyPokedexUnitTests
 //
 //  Created by Adrià Ros on 14/5/22.
@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 @testable import MyPokedex
 
-class MockImageProviderUseCase: ImageProviderUseCase {
+class FakeImageProviderUseCase: ImageProviderUseCase {
     
     var image: UIImage?
     

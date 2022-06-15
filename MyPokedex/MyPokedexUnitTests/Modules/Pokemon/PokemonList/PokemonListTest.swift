@@ -16,13 +16,13 @@ class PokemonListTest: XCTestCase {
     var interactor: PokemonListInteractor!
     var router: MockPokemonListRouter!
     
-    var dataProvider: MockPokemonRepository!
-    var imageProvider: MockImageProviderUseCase!
+    var dataProvider: FakePokemonRepository!
+    var imageProvider: FakeImageProviderUseCase!
     
     override func setUpWithError() throws {
         window = UIWindow()
-        dataProvider = MockPokemonRepository()
-        imageProvider = MockImageProviderUseCase()
+        dataProvider = FakePokemonRepository()
+        imageProvider = FakeImageProviderUseCase()
     }
 
     override func tearDownWithError() throws {

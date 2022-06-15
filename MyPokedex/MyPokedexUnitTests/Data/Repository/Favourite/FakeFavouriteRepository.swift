@@ -1,5 +1,5 @@
 //
-//  MockFavouriteRepository.swift
+//  FakeFavouriteRepository.swift
 //  MyPokedexUnitTests
 //
 //  Created by Adrià Ros on 15/6/22.
@@ -8,7 +8,7 @@
 import Foundation
 @testable import MyPokedex
 
-class MockFavouriteRepository: FavouriteDiskRepository {
+class FakeFavouriteRepository: FavouriteDiskRepository {
     
     var createFavouriteWithId: String?
     var createFavouriteWithName: String?

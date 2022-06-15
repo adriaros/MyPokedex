@@ -13,14 +13,14 @@ import RxSwift
 class GameRepositoryTest: XCTestCase {
     
     var sut: GameRepository!
-    var networkManager: MockNetworkManager!
+    var networkManager: FakeNetworkManager!
     var networkResponses: MockGameApiResponses!
     
     private var scheduler: TestScheduler!
     private var disposeBag: DisposeBag!
     
     override func setUpWithError() throws {
-        networkManager = MockNetworkManager()
+        networkManager = FakeNetworkManager()
         sut = GameRepository(network: networkManager)
         networkResponses = MockGameApiResponses()
         scheduler = TestScheduler(initialClock: 0)

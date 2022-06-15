@@ -1,5 +1,5 @@
 //
-//  MockNetworkManager.swift
+//  FakeNetworkManager.swift
 //  MyPokedexUnitTests
 //
 //  Created by Adrià Ros on 28/3/22.
@@ -11,14 +11,14 @@ import RxSwift
 import RxTest
 @testable import MyPokedex
 
-class MockNetworkManager {
+class FakeNetworkManager {
     var mockHTTPStatusCode: HTTPStatusCode = .success
     var mockData: Data?
     var mockImage: UIImage?
     var mockObservableData: Observable<Data?>!
 }
 
-extension MockNetworkManager: NetworkProvider {
+extension FakeNetworkManager: NetworkProvider {
     
     func request(provider: NetworkRequestProvider, _ completion: @escaping (HTTPStatusCode, Data?) -> Void) {
         completion(mockHTTPStatusCode, mockData)
@@ -29,7 +29,7 @@ extension MockNetworkManager: NetworkProvider {
     }
 }
 
-extension MockNetworkManager: NetworkRXProvider {
+extension FakeNetworkManager: NetworkRXProvider {
     
     func request(provider: NetworkRequestProvider) -> Observable<Data?> {
         return mockObservableData

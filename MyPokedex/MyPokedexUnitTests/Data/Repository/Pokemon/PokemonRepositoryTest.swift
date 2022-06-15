@@ -11,11 +11,11 @@ import XCTest
 class PokemonRepositoryTest: XCTestCase {
     
     var sut: PokemonRepository!
-    var networkManager: MockNetworkManager!
+    var networkManager: FakeNetworkManager!
     var networkResponses: MockPokemonApiResponses!
 
     override func setUpWithError() throws {
-        networkManager = MockNetworkManager()
+        networkManager = FakeNetworkManager()
         sut = PokemonRepository(network: networkManager)
         networkResponses = MockPokemonApiResponses()
     }

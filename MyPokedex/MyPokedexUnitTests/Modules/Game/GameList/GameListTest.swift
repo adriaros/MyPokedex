@@ -18,14 +18,14 @@ class GameListTest: XCTestCase {
     var interactor: GameListInteractor!
     var router: MockGameListRouter!
     
-    var dataProvider: MockGameRepository!
+    var dataProvider: FakeGameRepository!
     
     private var scheduler: TestScheduler!
     private var disposeBag: DisposeBag!
         
     override func setUpWithError() throws {
         window = UIWindow()
-        dataProvider = MockGameRepository()
+        dataProvider = FakeGameRepository()
         scheduler = TestScheduler(initialClock: 0)
         disposeBag = DisposeBag()
     }
