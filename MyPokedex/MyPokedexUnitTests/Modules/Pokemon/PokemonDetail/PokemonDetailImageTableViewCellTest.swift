@@ -35,7 +35,7 @@ class PokemonDetailImageTableViewCellTest: XCTestCase {
         imageProvider.image = ImageAsset.PokemonDetail.fallback.image
         
         // When the cell is configured
-        sut.configure(image: url)
+        sut.configure(image: url, favourite: false)
         
         // Then the cell is configured
         XCTAssertEqual(sut.selectionStyle, .none)
@@ -52,7 +52,7 @@ class PokemonDetailImageTableViewCellTest: XCTestCase {
         
         // Give a configured cell
         sut.delegate = delegate
-        sut.configure(image: url)
+        sut.configure(image: url, favourite: false)
         
         // When the favourite button is tapped
         sut.onFavourite(sut.favouriteButton!)

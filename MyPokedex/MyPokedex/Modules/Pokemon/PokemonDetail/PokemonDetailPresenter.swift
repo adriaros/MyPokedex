@@ -14,6 +14,8 @@ class PokemonDetailPresenter: PokemonDetailViewToPresenterProtocol {
     var interactor: PokemonDetailPresenterToInteractorProtocol?
     var router: PokemonDetailPresenterToRouterProtocol?
     
+    var isFavourite = false
+    
     var pokemon: Pokemon? {
         didSet {
             view?.tableView.reloadData()
@@ -25,13 +27,14 @@ class PokemonDetailPresenter: PokemonDetailViewToPresenterProtocol {
     }
     
     func favourite() {
-        
+        interactor?.handleFavourite()
     }
 }
 
 extension PokemonDetailPresenter: PokemonDetailInteractorToPresenterProtocol {
     
-    func didLoadData(_ data: Pokemon) {
+    func didLoadData(_ data: Pokemon, favourite: Bool) {
+        isFavourite = favourite
         pokemon = data
     }
 }

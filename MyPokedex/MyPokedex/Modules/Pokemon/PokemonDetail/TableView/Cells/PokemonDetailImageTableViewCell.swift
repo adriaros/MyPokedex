@@ -29,10 +29,11 @@ class PokemonDetailImageTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
-        favouriteButton.setImage(UIImage(systemName: "suit.heart"), for: .normal)
     }
     
-    func configure(image url: URL?) {
+    func configure(image url: URL?, favourite: Bool) {
+        isFavourite = favourite
+        favouriteButton.setImage(UIImage(systemName: isFavourite ? "suit.heart.fill" : "suit.heart"), for: .normal)
         imageProvider?.load(imageFrom: url, completion: { data in
             self.pokemonImageView.image = data ?? ImageAsset.PokemonDetail.fallback.image
         })

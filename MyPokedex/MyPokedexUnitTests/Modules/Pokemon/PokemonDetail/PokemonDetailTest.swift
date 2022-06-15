@@ -18,6 +18,7 @@ class PokemonDetailTest: XCTestCase {
     
     var dataProvider: MockPokemonRepository!
     var imageProvider: MockImageProviderUseCase!
+    var favouriteProvider: MockFavouriteRepository!
     
     var item: PokemonListItem {
         MockPokemonListItem.item
@@ -31,6 +32,7 @@ class PokemonDetailTest: XCTestCase {
         window = UIWindow()
         dataProvider = MockPokemonRepository()
         imageProvider = MockImageProviderUseCase()
+        favouriteProvider = MockFavouriteRepository()
     }
 
     override func tearDownWithError() throws {
@@ -41,10 +43,11 @@ class PokemonDetailTest: XCTestCase {
         router = nil
         dataProvider = nil
         imageProvider = nil
+        favouriteProvider = nil
     }
     
     private func buildTestingScenario() {
-        view = MockPokemonDetailRouter.create(item: item, dataProvider: dataProvider, imageProvider: imageProvider) as? PokemonDetailViewController
+        view = MockPokemonDetailRouter.create(item: item, dataProvider: dataProvider, imageProvider: imageProvider, favouriteProvider: favouriteProvider) as? PokemonDetailViewController
         presenter = view.presenter as? PokemonDetailPresenter
         interactor = presenter.interactor as? PokemonDetailInteractor
         router = presenter.router as? MockPokemonDetailRouter
@@ -69,11 +72,29 @@ class PokemonDetailTest: XCTestCase {
         let dataCell = view.tableView(view.tableView, cellForRowAt: IndexPath(row: 1, section: 0)) as! PokemonDetailDataTableViewCell
         XCTAssertEqual(dataCell.pokemonNameLabel.text, pokemon.displayName)
     }
+    
+    func test_onFavourite() throws {
+        // Given a testing scenario with one item as a result
+        dataProvider.mockPokemon = pokemon
+        imageProvider.image = ImageAsset.PokemonDetail.fallback.image
+        buildTestingScenario()
+        
+        // Given a loaded scenario
+        view.loadViewIfNeeded()
+        
+        // When the user taps on the favourite button
+        presenter.favourite()
+        
+        // Then the pokemon has been stored as favourite
+        XCTAssertEqual(favouriteProvider.createFavouriteWithId, String(pokemon.id!))
+        XCTAssertEqual(favouriteProvider.createFavouriteWithName, pokemon.displayName)
+        XCTAssertEqual(favouriteProvider.createFavouriteWithImageUrl, pokemon.imageUrl?.absoluteString)
+    }
 }
 
 class MockPokemonDetailRouter: PokemonDetailPresenterToRouterProtocol {
     
-    static func create(item: PokemonListItem, dataProvider: PokemonCloudRepository, imageProvider: ImageProviderUseCase) -> UIViewController {
+    static func create(item: PokemonListItem, dataProvider: PokemonCloudRepository, imageProvider: ImageProviderUseCase, favouriteProvider: FavouriteDiskRepository) -> UIViewController {
         let view = PokemonDetailViewController()
         let presenter = PokemonDetailPresenter()
         let interactor = PokemonDetailInteractor()
@@ -88,6 +109,7 @@ class MockPokemonDetailRouter: PokemonDetailPresenterToRouterProtocol {
         view.imageProvider = imageProvider
         interactor.item = item
         interactor.dataProvider = dataProvider
+        interactor.favouriteProvider = favouriteProvider
         
         return view
     }

@@ -65,7 +65,7 @@ extension DependencyContainer: ViewControllerFactory {
     }
     
     func makePokemonDetail(item: PokemonListItem) -> PokemonDetailViewController {
-        PokemonDetailRouter.create(item: item, dataProvider: pokemonRepository, imageProvider: imageProvider) as! PokemonDetailViewController
+        PokemonDetailRouter.create(item: item, dataProvider: pokemonRepository, imageProvider: imageProvider, favouriteProvider: favouriteRepository) as! PokemonDetailViewController
     }
     
     func makeGameList(coordinator: HomeCoordinator) -> GameListViewController {

@@ -14,12 +14,13 @@ protocol PokemonDetailPresenterToViewProtocol: AnyObject {
 }
 
 protocol PokemonDetailInteractorToPresenterProtocol: AnyObject {
-    func didLoadData(_ data: Pokemon)
+    func didLoadData(_ data: Pokemon, favourite: Bool)
 }
 
 protocol PokemonDetailPresenterToInteractorProtocol: AnyObject {
     var presenter: PokemonDetailInteractorToPresenterProtocol? { get set }
     func loadData()
+    func handleFavourite()
 }
 
 protocol PokemonDetailViewToPresenterProtocol: AnyObject {
@@ -27,10 +28,11 @@ protocol PokemonDetailViewToPresenterProtocol: AnyObject {
     var interactor: PokemonDetailPresenterToInteractorProtocol? { get set }
     var router: PokemonDetailPresenterToRouterProtocol? { get set }
     var pokemon: Pokemon? { get }
+    var isFavourite: Bool { get }
     func setupView()
     func favourite()
 }
 
 protocol PokemonDetailPresenterToRouterProtocol: AnyObject {
-    static func create(item: PokemonListItem, dataProvider: PokemonCloudRepository, imageProvider: ImageProviderUseCase) -> UIViewController
+    static func create(item: PokemonListItem, dataProvider: PokemonCloudRepository, imageProvider: ImageProviderUseCase, favouriteProvider: FavouriteDiskRepository) -> UIViewController
 }

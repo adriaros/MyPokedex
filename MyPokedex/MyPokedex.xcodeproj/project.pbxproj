@@ -20,6 +20,7 @@
 		1114438A285894F4008493DC /* FavouriteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11144389285894F4008493DC /* FavouriteRepository.swift */; };
 		1114438D2858951B008493DC /* FavouriteDiskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1114438C2858951B008493DC /* FavouriteDiskRepository.swift */; };
 		1114439028589AF7008493DC /* FavouriteRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1114438F28589AF7008493DC /* FavouriteRepositoryTest.swift */; };
+		11144396285A1B90008493DC /* MockFavouriteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11144395285A1B90008493DC /* MockFavouriteRepository.swift */; };
 		1117824927CBEF05008F8B8F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117824827CBEF05008F8B8F /* Coordinator.swift */; };
 		1117824B27CBF037008F8B8F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117824A27CBF037008F8B8F /* MainCoordinator.swift */; };
 		1117825327CBF730008F8B8F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117825227CBF730008F8B8F /* main.swift */; };
@@ -189,6 +190,7 @@
 		11144389285894F4008493DC /* FavouriteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRepository.swift; sourceTree = "<group>"; };
 		1114438C2858951B008493DC /* FavouriteDiskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteDiskRepository.swift; sourceTree = "<group>"; };
 		1114438F28589AF7008493DC /* FavouriteRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRepositoryTest.swift; sourceTree = "<group>"; };
+		11144395285A1B90008493DC /* MockFavouriteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFavouriteRepository.swift; sourceTree = "<group>"; };
 		1117824827CBEF05008F8B8F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1117824A27CBF037008F8B8F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		1117825227CBF730008F8B8F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -464,6 +466,7 @@
 			isa = PBXGroup;
 			children = (
 				1114438F28589AF7008493DC /* FavouriteRepositoryTest.swift */,
+				11144395285A1B90008493DC /* MockFavouriteRepository.swift */,
 			);
 			path = Favourite;
 			sourceTree = "<group>";
@@ -1496,6 +1499,7 @@
 				11892FBD285208960023AC9C /* MockGameRepository.swift in Sources */,
 				11F69599283AA9A1004FDAA3 /* TestScheduler+Record.swift in Sources */,
 				11E6EFB127F2313D00E4F19F /* PokemonRepositoryTest.swift in Sources */,
+				11144396285A1B90008493DC /* MockFavouriteRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
