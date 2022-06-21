@@ -19,7 +19,7 @@ class FavouriteRepository: FavouriteDiskRepository {
         database.createFavouriteWith(id: id, name: name, imageUrl: imageUrl)
     }
     
-    func fetchAll() -> [Favourite] {
+    func fetchAll() -> [Favourite]? {
         database.fetchFavourites()
     }
     

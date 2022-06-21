@@ -14,10 +14,20 @@ class FavouritesPresenter: FavouritesViewToPresenterProtocol {
     var interactor: FavouritesPresenterToInteractorProtocol?
     var router: FavouritesPresenterToRouterProtocol?
     
+    var items: [Favourite]? {
+        didSet {
+            view?.tableView.reloadData()
+        }
+    }
+    
     func setupView() {
+        interactor?.loadData()
     }
 }
 
 extension FavouritesPresenter: FavouritesInteractorToPresenterProtocol {
     
+    func didLoad(data: [Favourite]?) {
+        items = data
+    }
 }

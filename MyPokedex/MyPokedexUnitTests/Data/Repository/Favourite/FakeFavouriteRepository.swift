@@ -13,6 +13,7 @@ class FakeFavouriteRepository: FavouriteDiskRepository {
     var createFavouriteWithId: String?
     var createFavouriteWithName: String?
     var createFavouriteWithImageUrl: String?
+    var allFavourites: [Favourite]?
     
     func create(id: String?, name: String?, imageUrl: String?) {
         createFavouriteWithId = id
@@ -20,8 +21,8 @@ class FakeFavouriteRepository: FavouriteDiskRepository {
         createFavouriteWithImageUrl = imageUrl
     }
     
-    func fetchAll() -> [Favourite] {
-        []
+    func fetchAll() -> [Favourite]? {
+        allFavourites
     }
     
     func fetch(id: String?) -> Favourite? {

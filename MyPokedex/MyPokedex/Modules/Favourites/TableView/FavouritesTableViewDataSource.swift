@@ -10,10 +10,18 @@ import UIKit
 extension FavouritesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        presenter?.items?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: PokemonListItemTableViewCell.cellType, for: indexPath) as! PokemonListItemTableViewCell
+        cell.imageProvider = imageProvider
+        
+        guard let item = presenter?.items?[indexPath.row] else {
+            return UITableViewCell()
+        }
+        
+        cell.configure(number: "#\(String(describing: item.id!))", name: item.name, image: URL(string: item.imageUrl ?? ""))
+        return cell
     }
 }

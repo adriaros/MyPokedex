@@ -24,7 +24,7 @@ class ViewControllerContainer: ViewControllerFactory {
     }
     
     func makeFavourites() -> FavouritesViewController {
-        FavouritesRouter.create() as! FavouritesViewController
+        FavouritesRouter.create(dataProvider: container.favouriteRepository, imageProvider: container.imageProvider) as! FavouritesViewController
     }
     
     func makeProfile() -> ProfileViewController {

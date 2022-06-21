@@ -11,6 +11,7 @@ import UIKit
 class FavouritesViewController: UIViewController {
     
     var presenter: FavouritesViewToPresenterProtocol?
+    var imageProvider: ImageProviderUseCase?
     
     @IBOutlet weak var tableView: UITableView!
     

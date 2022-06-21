@@ -10,7 +10,7 @@ import UIKit
 
 class FavouritesRouter: FavouritesPresenterToRouterProtocol {
     
-    class func create() -> UIViewController {
+    class func create(dataProvider: FavouriteDiskRepository, imageProvider: ImageProviderUseCase) -> UIViewController {
         
         let view = FavouritesViewController()
         let presenter = FavouritesPresenter()
@@ -22,6 +22,9 @@ class FavouritesRouter: FavouritesPresenterToRouterProtocol {
         presenter.router = router
         presenter.interactor = interactor
         interactor.presenter = presenter
+        
+        view.imageProvider = imageProvider
+        interactor.dataProvider = dataProvider
         
         return view
     }

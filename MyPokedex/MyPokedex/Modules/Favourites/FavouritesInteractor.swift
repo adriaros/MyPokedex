@@ -11,4 +11,9 @@ import UIKit
 class FavouritesInteractor: FavouritesPresenterToInteractorProtocol {
     
     var presenter: FavouritesInteractorToPresenterProtocol?
+    var dataProvider: FavouriteDiskRepository?
+    
+    func loadData() {
+        presenter?.didLoad(data: dataProvider?.fetchAll())
+    }
 }

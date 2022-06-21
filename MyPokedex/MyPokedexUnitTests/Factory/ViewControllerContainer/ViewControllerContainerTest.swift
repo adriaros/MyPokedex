@@ -50,6 +50,10 @@ class ViewControllerContainerTest: XCTestCase {
     func test_makeFavourites() throws {
         // Given a expected view controller
         var favouritesViewController: FavouritesViewController!
+        
+        // Given the dependencies
+        container.fakeFavouriteRepository = FakeFavouriteRepository()
+        container.fakeImageProvider = FakeImageProviderUseCase()
 
         // When the favourites view controller is made
         favouritesViewController = sut.makeFavourites()
