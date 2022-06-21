@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavouritesViewController" customModule="MyPokedex" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="lgA-hx-zNy" id="Ul2-cv-gsH"/>
                 <outlet property="view" destination="iN0-l3-epB" id="KXU-0M-dwc"/>
             </connections>
         </placeholder>
@@ -18,23 +19,41 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favourites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLk-8S-wHA">
-                    <rect key="frame" x="167.5" y="437.5" width="79" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch" translatesAutoresizingMaskIntoConstraints="NO" id="XeI-rN-zX9">
+                    <rect key="frame" x="0.0" y="64" width="414" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="vGu-fK-SZR"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="isg-rg-kVz">
+                    <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lgA-hx-zNy">
+                    <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="HLk-8S-wHA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="41k-6M-pLh"/>
-                <constraint firstItem="HLk-8S-wHA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="yos-hn-MAS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="lgA-hx-zNy" secondAttribute="bottom" id="3Ea-xR-hs8"/>
+                <constraint firstItem="XeI-rN-zX9" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="8yB-hB-JLa"/>
+                <constraint firstItem="XeI-rN-zX9" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="BMZ-lB-K7G"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="isg-rg-kVz" secondAttribute="bottom" id="D4t-vT-QsO"/>
+                <constraint firstItem="isg-rg-kVz" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="L4f-G2-DQa"/>
+                <constraint firstItem="lgA-hx-zNy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Sb9-yZ-fNb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lgA-hx-zNy" secondAttribute="trailing" id="YmR-5o-LW7"/>
+                <constraint firstItem="XeI-rN-zX9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ov6-lI-oe8"/>
+                <constraint firstItem="isg-rg-kVz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="oxu-te-ALq"/>
+                <constraint firstItem="isg-rg-kVz" firstAttribute="top" secondItem="XeI-rN-zX9" secondAttribute="bottom" id="weT-tC-kJd"/>
+                <constraint firstItem="lgA-hx-zNy" firstAttribute="top" secondItem="XeI-rN-zX9" secondAttribute="bottom" id="zoj-fi-Kpj"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="101"/>
+            <point key="canvasLocation" x="137.68115942028987" y="100.44642857142857"/>
         </view>
     </objects>
     <resources>
+        <image name="Launch" width="1280" height="471"/>
+        <image name="home_pokemon" width="1233.5" height="897"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
