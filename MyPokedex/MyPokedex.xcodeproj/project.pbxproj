@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		110601E327DA80F600A4023C /* HomeTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601E227DA80F600A4023C /* HomeTableViewDataSource.swift */; };
 		110601E527DA811100A4023C /* HomeTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601E427DA811100A4023C /* HomeTableViewDelegate.swift */; };
-		110601F627DA83B400A4023C /* DependencyContainerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601F527DA83B400A4023C /* DependencyContainerTest.swift */; };
 		110601FB27DA892400A4023C /* HomeCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601FA27DA892400A4023C /* HomeCoordinatorTest.swift */; };
 		110601FE27DA896500A4023C /* FakeDependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601FD27DA896500A4023C /* FakeDependencyFactory.swift */; };
 		1106020027DAA43B00A4023C /* FavouritesCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110601FF27DAA43B00A4023C /* FavouritesCoordinatorTest.swift */; };
@@ -154,6 +153,9 @@
 		11E6EFC627F237D900E4F19F /* MockPokemonListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6EFC527F237D900E4F19F /* MockPokemonListItem.swift */; };
 		11EC2A732861C94C0053B57D /* FavouritesTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EC2A722861C94C0053B57D /* FavouritesTableViewDataSource.swift */; };
 		11EC2A752861C9780053B57D /* FavouritesTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EC2A742861C9780053B57D /* FavouritesTableViewDelegate.swift */; };
+		11EC2A772861CA600053B57D /* ViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EC2A762861CA600053B57D /* ViewControllerContainer.swift */; };
+		11EC2A7B2861CCAF0053B57D /* FakeViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EC2A7A2861CCAF0053B57D /* FakeViewControllerContainer.swift */; };
+		11EC2A7D2861CD980053B57D /* ViewControllerContainerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EC2A7C2861CD980053B57D /* ViewControllerContainerTest.swift */; };
 		11F69599283AA9A1004FDAA3 /* TestScheduler+Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F69598283AA9A1004FDAA3 /* TestScheduler+Record.swift */; };
 		11F695A2283AABB1004FDAA3 /* GameListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F6959C283AABB1004FDAA3 /* GameListPresenter.swift */; };
 		11F695A3283AABB1004FDAA3 /* GameListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F6959D283AABB1004FDAA3 /* GameListRouter.swift */; };
@@ -181,7 +183,6 @@
 		110601E227DA80F600A4023C /* HomeTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDataSource.swift; sourceTree = "<group>"; };
 		110601E427DA811100A4023C /* HomeTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDelegate.swift; sourceTree = "<group>"; };
 		110601EA27DA833300A4023C /* MyPokedexUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPokedexUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		110601F527DA83B400A4023C /* DependencyContainerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainerTest.swift; sourceTree = "<group>"; };
 		110601FA27DA892400A4023C /* HomeCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorTest.swift; sourceTree = "<group>"; };
 		110601FD27DA896500A4023C /* FakeDependencyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDependencyFactory.swift; sourceTree = "<group>"; };
 		110601FF27DAA43B00A4023C /* FavouritesCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesCoordinatorTest.swift; sourceTree = "<group>"; };
@@ -328,6 +329,9 @@
 		11E6EFC527F237D900E4F19F /* MockPokemonListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPokemonListItem.swift; sourceTree = "<group>"; };
 		11EC2A722861C94C0053B57D /* FavouritesTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTableViewDataSource.swift; sourceTree = "<group>"; };
 		11EC2A742861C9780053B57D /* FavouritesTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTableViewDelegate.swift; sourceTree = "<group>"; };
+		11EC2A762861CA600053B57D /* ViewControllerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerContainer.swift; sourceTree = "<group>"; };
+		11EC2A7A2861CCAF0053B57D /* FakeViewControllerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeViewControllerContainer.swift; sourceTree = "<group>"; };
+		11EC2A7C2861CD980053B57D /* ViewControllerContainerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerContainerTest.swift; sourceTree = "<group>"; };
 		11F69598283AA9A1004FDAA3 /* TestScheduler+Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestScheduler+Record.swift"; sourceTree = "<group>"; };
 		11F6959C283AABB1004FDAA3 /* GameListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListPresenter.swift; sourceTree = "<group>"; };
 		11F6959D283AABB1004FDAA3 /* GameListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListRouter.swift; sourceTree = "<group>"; };
@@ -410,6 +414,7 @@
 		110601F427DA839A00A4023C /* Factory */ = {
 			isa = PBXGroup;
 			children = (
+				11EC2A782861CC630053B57D /* ViewControllerContainer */,
 				117D9886283108330088F956 /* DependencyContainer */,
 			);
 			path = Factory;
@@ -436,6 +441,7 @@
 			children = (
 				110E6A0227CE9FFD00C7768E /* Protocol */,
 				110E6A0527CEA03F00C7768E /* DependencyContainer.swift */,
+				11EC2A762861CA600053B57D /* ViewControllerContainer.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -784,7 +790,6 @@
 			isa = PBXGroup;
 			children = (
 				110601FC27DA895900A4023C /* Mock */,
-				110601F527DA83B400A4023C /* DependencyContainerTest.swift */,
 			);
 			path = DependencyContainer;
 			sourceTree = "<group>";
@@ -1235,6 +1240,23 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
+		11EC2A782861CC630053B57D /* ViewControllerContainer */ = {
+			isa = PBXGroup;
+			children = (
+				11EC2A792861CC6A0053B57D /* Mock */,
+				11EC2A7C2861CD980053B57D /* ViewControllerContainerTest.swift */,
+			);
+			path = ViewControllerContainer;
+			sourceTree = "<group>";
+		};
+		11EC2A792861CC6A0053B57D /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				11EC2A7A2861CCAF0053B57D /* FakeViewControllerContainer.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		11F69597283AA984004FDAA3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1479,9 +1501,9 @@
 			files = (
 				11AF1B3627DE19CB00BFD641 /* HomeTest.swift in Sources */,
 				11CE5EF52830115900D7E56F /* PokemonListItemTableViewCellTest.swift in Sources */,
-				110601F627DA83B400A4023C /* DependencyContainerTest.swift in Sources */,
 				119C1AF92801861A008F2A89 /* ImageRepositoryTest.swift in Sources */,
 				11CE5EF22830103C00D7E56F /* FakeImageProviderUseCase.swift in Sources */,
+				11EC2A7B2861CCAF0053B57D /* FakeViewControllerContainer.swift in Sources */,
 				11CE5EE728300C2A00D7E56F /* PokemonDetailImageTableViewCellTest.swift in Sources */,
 				119C1AFB280186CD008F2A89 /* FakeImageRepository.swift in Sources */,
 				1106020227DAA44900A4023C /* ProfileCoordinatorTest.swift in Sources */,
@@ -1502,6 +1524,7 @@
 				11CE5EE528300A4100D7E56F /* PokemonDetailTest.swift in Sources */,
 				1140FC952803788F00D54D33 /* MockPokemon.swift in Sources */,
 				11AF1B3427DE19BA00BFD641 /* HomeItemTableViewCellTest.swift in Sources */,
+				11EC2A7D2861CD980053B57D /* ViewControllerContainerTest.swift in Sources */,
 				11E6EFBE27F2336600E4F19F /* FakeNetworkManager.swift in Sources */,
 				1140FC972803798100D54D33 /* MockPokemonMove.swift in Sources */,
 				11C0660F283963F900856EA7 /* GameRepositoryTest.swift in Sources */,
@@ -1569,6 +1592,7 @@
 				1117825727CC0046008F8B8F /* FavouritesCoordinator.swift in Sources */,
 				1192078427DCB9A7004D963A /* HomeItemTableViewCell.swift in Sources */,
 				119C1B0928018FCF008F2A89 /* PokemonDetailRouter.swift in Sources */,
+				11EC2A772861CA600053B57D /* ViewControllerContainer.swift in Sources */,
 				114E0ACA27CD5A0800147365 /* HomeProtocols.swift in Sources */,
 				11CE5EEB28300D8200D7E56F /* ImageProviderUseCase.swift in Sources */,
 				110601E527DA811100A4023C /* HomeTableViewDelegate.swift in Sources */,

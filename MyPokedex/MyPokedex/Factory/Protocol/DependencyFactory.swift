@@ -8,5 +8,9 @@
 import Foundation
 
 protocol DependencyFactory {
-    
+    var favouriteRepository: FavouriteDiskRepository { get }
+    var pokemonRepository: PokemonCloudRepository { get }
+    var imageRepository: ImageCloudRepository & ImageCacheRepository { get }
+    var imageProvider: ImageProviderUseCase { get }
+    var gameRepository: GameCloudRepository { get }
 }

@@ -8,41 +8,31 @@
 import Foundation
 @testable import MyPokedex
 
-class FakeDependencyFactory: DependencyFactory, ViewControllerFactory {
+class FakeDependencyFactory: DependencyFactory {
     
-    var tabBarController: TabBarController!
-    var homeViewController: HomeViewController!
-    var favouritesViewController: FavouritesViewController!
-    var profileViewController: ProfileViewController!
-    var pokemonListViewController: PokemonListViewController!
-    var pokemonDetailViewController: PokemonDetailViewController!
-    var gameListViewController: GameListViewController!
+    var fakeFavouriteRepository: FavouriteDiskRepository!
+    var fakePokemonRepository: PokemonCloudRepository!
+    var fakeImageRepository: (ImageCloudRepository & ImageCacheRepository)!
+    var fakeImageProvider: ImageProviderUseCase!
+    var fakeGameRepository: GameCloudRepository!
     
-    func makeTabBar() -> TabBarController {
-        tabBarController
+    var favouriteRepository: FavouriteDiskRepository {
+        fakeFavouriteRepository
     }
     
-    func makeHome(coordinator: HomeCoordinator) -> HomeViewController {
-        homeViewController
+    var pokemonRepository: PokemonCloudRepository {
+        fakePokemonRepository
     }
     
-    func makeFavourites() -> FavouritesViewController {
-        favouritesViewController
+    var imageRepository: ImageCloudRepository & ImageCacheRepository {
+        fakeImageRepository
     }
     
-    func makeProfile() -> ProfileViewController {
-        profileViewController
+    var imageProvider: ImageProviderUseCase {
+        fakeImageProvider
     }
     
-    func makePokemonList(coordinator: HomeCoordinator) -> PokemonListViewController {
-        pokemonListViewController
-    }
-    
-    func makePokemonDetail(item: PokemonListItem) -> PokemonDetailViewController {
-        pokemonDetailViewController
-    }
-    
-    func makeGameList(coordinator: HomeCoordinator) -> GameListViewController {
-        gameListViewController
+    var gameRepository: GameCloudRepository {
+        fakeGameRepository
     }
 }

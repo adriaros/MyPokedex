@@ -41,34 +41,3 @@ class DependencyContainer: DependencyFactory {
         GameRepository(network: network)
     }()
 }
-
-extension DependencyContainer: ViewControllerFactory {
-    
-    func makeTabBar() -> TabBarController {
-        TabBarController()
-    }
-    
-    func makeHome(coordinator: HomeCoordinator) -> HomeViewController {
-        HomeRouter.create(coordinator: coordinator) as! HomeViewController
-    }
-    
-    func makeFavourites() -> FavouritesViewController {
-        FavouritesRouter.create() as! FavouritesViewController
-    }
-    
-    func makeProfile() -> ProfileViewController {
-        ProfileRouter.create() as! ProfileViewController
-    }
-    
-    func makePokemonList(coordinator: HomeCoordinator) -> PokemonListViewController {
-        PokemonListRouter.create(coordinator: coordinator, dataProvider: pokemonRepository, imageProvider: imageProvider) as! PokemonListViewController
-    }
-    
-    func makePokemonDetail(item: PokemonListItem) -> PokemonDetailViewController {
-        PokemonDetailRouter.create(item: item, dataProvider: pokemonRepository, imageProvider: imageProvider, favouriteProvider: favouriteRepository) as! PokemonDetailViewController
-    }
-    
-    func makeGameList(coordinator: HomeCoordinator) -> GameListViewController {
-        GameListRouter.createModule(coordinator: coordinator, dataProvider: gameRepository) as! GameListViewController
-    }
-}

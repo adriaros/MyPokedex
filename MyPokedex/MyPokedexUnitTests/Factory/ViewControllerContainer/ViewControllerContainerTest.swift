@@ -1,22 +1,25 @@
 //
-//  DependencyContainerTest.swift
+//  ViewControllerContainerTest.swift
 //  MyPokedexUnitTests
 //
-//  Created by Adrià Ros on 10/3/22.
+//  Created by Adrià Ros on 21/6/22.
 //
 
 import XCTest
 @testable import MyPokedex
 
-class DependencyContainerTest: XCTestCase {
+class ViewControllerContainerTest: XCTestCase {
     
-    var sut: (DependencyFactory & ViewControllerFactory)!
+    var sut: ViewControllerFactory!
+    var container: FakeDependencyFactory!
 
     override func setUpWithError() throws {
-        sut = DependencyContainer()
+        container = FakeDependencyFactory()
+        sut = ViewControllerContainer(container: container)
     }
 
     override func tearDownWithError() throws {
+        container = nil
         sut = nil
     }
 
@@ -74,6 +77,10 @@ class DependencyContainerTest: XCTestCase {
         // Given a home coordinator
         let homeCoordinator = HomeCoordinator(container: sut)
         
+        // Given the dependencies
+        container.fakePokemonRepository = FakePokemonRepository()
+        container.fakeImageProvider = FakeImageProviderUseCase()
+        
         // Given a expected view controller
         var pokemonListViewController: PokemonListViewController!
 
@@ -90,6 +97,11 @@ class DependencyContainerTest: XCTestCase {
         // Given a expected view controller
         var pokemonDetailViewController: PokemonDetailViewController!
         
+        // Given the dependencies
+        container.fakePokemonRepository = FakePokemonRepository()
+        container.fakeImageProvider = FakeImageProviderUseCase()
+        container.fakeFavouriteRepository = FakeFavouriteRepository()
+        
         // Given the item
         let pokemonListItem = PokemonListItem(MockPokemonListItem.data)
 
@@ -100,5 +112,24 @@ class DependencyContainerTest: XCTestCase {
         XCTAssertTrue(pokemonDetailViewController.presenter != nil)
         XCTAssertTrue(pokemonDetailViewController.presenter?.interactor != nil)
         XCTAssertTrue(pokemonDetailViewController.presenter?.router != nil)
+    }
+    
+    func test_makeGameList() throws {
+        // Given a expected view controller
+        var gameListViewController: GameListViewController!
+        
+        // Given a home coordinator
+        let homeCoordinator = HomeCoordinator(container: sut)
+        
+        // Given the dependencies
+        container.fakeGameRepository = FakeGameRepository()
+
+        // When the PokemonList view controller is made
+        gameListViewController = sut.makeGameList(coordinator: homeCoordinator)
+        
+        // Then the PokemonList module is created
+        XCTAssertTrue(gameListViewController.presenter != nil)
+        XCTAssertTrue(gameListViewController.presenter?.interactor != nil)
+        XCTAssertTrue(gameListViewController.presenter?.router != nil)
     }
 }

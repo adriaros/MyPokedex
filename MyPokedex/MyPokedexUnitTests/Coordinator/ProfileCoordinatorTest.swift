@@ -11,10 +11,10 @@ import XCTest
 class ProfileCoordinatorTest: XCTestCase {
     
     var sut: ProfileCoordinator!
-    var container: FakeDependencyFactory!
+    var container: FakeViewControllerContainer!
 
     override func setUpWithError() throws {
-        container = FakeDependencyFactory()
+        container = FakeViewControllerContainer()
         sut = ProfileCoordinator(container: container)
     }
 
